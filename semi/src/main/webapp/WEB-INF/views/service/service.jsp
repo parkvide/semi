@@ -47,12 +47,12 @@
     <main>
         <div id="side-bar">
             <div id="menu-box">
-                <div>고객센터메인</div>
-                <div>자주찾는질문</div>
-                <div>공지사항</div>
-                <div>대관문의</div>
-                <div>이벤트</div>
-                <div>사진</div>
+                <div class="tag"><a href="">고객센터메인</a></div>
+                <div class="tag"><a href="">자주찾는질문</a></div>
+                <div class="tag"><a href="">공지사항</a></div>
+                <div class="tag"><a href="">대관문의</a></div>
+                <div class="tag"><a href="">이벤트</a></div>
+                <div id="tag2"><a href=""><img id="src" src="/app/resources/img/범죄의도시4 포스터.jpg" alt=""></a></div>
              </div>
         </div>
         <div id="search-main">
