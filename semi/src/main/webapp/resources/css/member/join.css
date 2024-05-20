@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  user-select: none;
+}
+
+body {
+  background-color: #141414;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3em;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+nav .left {
+  display: flex;
+  margin-left: 2em;
+}
+nav .left .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 0.5em;
+  width: 8rem;
+}
+nav .left .logo a {
+  width: 100%;
+}
+nav .left .logo a img {
+  max-width: 100%;
+}
+nav .left .mobile-menu {
+  display: none;
+}
+nav .left .menu-list {
+  display: flex;
+}
+nav .left .menu-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0.2em 1em 0.5em 1em;
+}
+nav .left .menu-list li a {
+  font-size: 0.8rem;
+}
+nav .right {
+  display: flex;
+  margin-right: 2em;
+}
+nav .right .icon {
+  padding: 0.5em 1em 0.5em 1em;
+}
+nav .right .profile {
+  padding: 0;
+}
+nav .right .profile a {
+  display: flex;
+  align-items: center;
+}
+nav .right .profile a .avatar-box {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+nav .right .profile i {
+  transition: all 300ms;
+}
+nav .right .profile:hover i {
+  transform: rotate(180deg);
+}
+nav .right .search {
+  border: 1px solid white;
+  background-color: black;
+}
+nav .right .search .search-bar {
+  display: flex;
+}
+nav .right .search .search-bar i {
+  margin-right: 0.5em;
+}
+nav .right .search .search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  outline: none;
+}
+footer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+footer .wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+footer .wrap .social-icons i {
+  font-size: 1.5rem;
+  margin: 0 0.3em;
+}
+footer .wrap .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+footer .wrap .options .option {
+  color: #6f6f6f;
+}
+.container{
+  margin: 0;
+  top: 10%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: #141414;
+  border-radius: 9px;
+  border-top: 10px solid #141414;
+  
+  width: 400px;
+  height: 500px;
+ 
+}
+
+.box h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white; 
+  font-size: 18px;
+  margin-top:94px;;
+}
+
+.box h4 span {
+  color: #dfdeee;
+  font-weight: lighter;
+}
+
+
+
+.box input[type = "text"],.box input[type = "password"] {
+  display: block;
+  margin: 20px auto;
+  background: #262e49;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 320px;
+  outline: none;
+  color: #d6d6d6;
+      -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  
+}
+::-webkit-input-placeholder {
+  color: rgb(190, 190, 190);
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus {
+  border: 1px solid white;
+  
+}
+
+
+
+.btn1 {
+  border:0;
+  background: white;
+  color: black;
+  border-radius: 100px;
+  width: 340px;
+  height: 49px;
+  font-size: 16px;
+  position: absolute;
+  top: 130%;
+  left: 8%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background: rgb(190, 190, 190);
+}
+
+.rmb {
+  position: absolute;
+  margin-left: -14%;
+  margin-top: 0px;
+  color: #dfdeee;
+  font-size: 13px;
+}
+
+.forgetid{
+  position: relative;
+  float: right;
+  right: 40px;
+}
+.forgetpass {
+  position: relative;
+  float: right;
+  right: 28px;
+}
+
+.dnthave{
+    position: absolute;
+    top: 92%;
+    left: 24%;
+}
+
+[type=checkbox]:checked + span:before {/* <-- style its checked state */
+    font-family: FontAwesome;
+    font-size: 14px;
+    content: "\f00c";
+    position: absolute;
+    top: -4px;
+    color: white;
+    left: -1px;
+    width: 13px;
+    margin-top: 0px;
+}
+
+.typcn {
+  position: absolute;
+  left: 339px;
+  top: 282px;
+  color: #3b476b;
+  font-size: 22px;
+  cursor: pointer;
+}      
+
+.typcn.active {
+  color: #7f60eb;
+}
+
+.error {
+  background: #ff3333;
+  text-align: center;
+  width: 337px;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  position: absolute;
+  top: 31%;
+  left: 7.2%;
+  color: white;
+  display: none;
+}
+
+main{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

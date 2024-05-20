@@ -39,7 +39,7 @@
                 <a href="http://127.0.0.1:8888/app/member/login">로그인</a>
             </div>
             <div class="icon bell">
-                <a href="#">회원 가입</a>
+                <a href="http://127.0.0.1:8888/app/member/join">회원 가입</a>
             </div>
            
              <div class="icon search">
