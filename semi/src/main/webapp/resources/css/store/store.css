@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #000000;
   user-select: none;
 }
 
 body {
   background-color: #ffffff;
+  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -107,98 +109,6 @@ nav .right .search .search-bar input {
   outline: none;
 }
 
-main {
-  position: relative;
-}
-main .vidio.iframe {
-
-  width: 100%;
-  height: 100%;
-  max-height: 60vh;
-  object-fit: cover;
-}
-main .description {
-  position: absolute;
-  bottom: 30%;
-  left: 40px;
-  max-width: 500px;
-}
-main .description h1 {
-  margin: 0.5em 0;
-}
-main .description h3 {
-  margin: 0.5em 0;
-}
-main .description p {
-  margin: 0.8em 0 2em 0;
-}
-main .description .buttons {
-  display: flex;
-  gap: 10px;
-}
-main .description .buttons .play {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5em;
-}
-main .description .buttons .play:hover {
-  background-color: #cccccc;
-}
-main .description .buttons .play * {
-  color: black;
-}
-main .description .buttons .play i {
-  color: black;
-  font-size: 1.3rem;
-}
-main .description .buttons .play span {
-  font-size: 1rem;
-}
-main .description .buttons .detail {
-  background-color: rgba(109, 109, 110, 0.7);
-  display: flex;
-  align-items: center;
-  gap: 0.8em;
-}
-main .description .buttons .detail i {
-  font-size: 1.3rem;
-}
-main .description .buttons .detail:hover {
-  background-color: rgba(58, 58, 59, 0.7);
-}
-main .age-info {
-  position: absolute;
-  bottom: 30%;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-main .age-info i {
-  width: 35px;
-  height: 35px;
-  border: 2px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-main .age-info .age {
-  width: 80px;
-  background-color: rgba(51, 51, 51, 0.6);
-  padding: 0.5em 1em;
-  position: relative;
-}
-main .age-info .age:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 3px;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-}
-
 .store {
   display: flex;
   justify-content: center;
@@ -207,26 +117,24 @@ main .age-info .age:before {
   width: 55%;
   margin-left: 30px;
 }
-.store h3{
-  color: #333;
-  font-weight: 100;
-}
 .category-name {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center; 
 }
-.separator {
+.sep1 {
   width: 50%; /* 선의 길이를 조정 */
   border-top: 2px solid black; /* 위에 굵은 선 추가 */
   margin: 0 auto; /* 중앙 정렬 */
 }
-.sep1 ,.sep2, .sep3{
-  width: 100%; /* 선의 길이를 조정 */
-  border-top: 2px solid black; /* 위에 굵은 선 추가 */
-  margin: 0 auto; /* 중앙 정렬 */
+.sep2 {
+  width: 88%; /* 선의 길이를 조정 */
+  border-top: 2px solid rgb(126, 126, 126); /* 위에 굵은 선 추가 */
+  margin-left: 150px;
+  margin-top: 20px;
 }
+
 
 .category-name ul {
   list-style: none;
@@ -250,12 +158,146 @@ main .age-info .age:before {
   color: black; 
   font-size: 16px; 
   margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.c-n{
+  font-weight: bolder;
+  margin: 10px;
+  margin-right: 35px;
+}
+/* -------------------------------------------------------------------------------------------------- */
 
+/* ------------------------------메인 부분 추가한 코드------------------------------------------ */
+.prd-title {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 150px;
+}
+.prd-title .popcorn {
+  font-size: 2em; /* 1.5배 크게 */
+  margin-right: 15px; /* 오른쪽 마진 추가 */
+  font-weight: bolder;
+}
+.prd-detail {
+  font-size: 1em;
+}
+.prd-list {
+  width: 80%;
+  margin: 0 auto;
+}
+.list-style {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.list-style li {
+  width: calc(33.33% - 20px); /* 이미지 사이에 간격 추가 */
+  box-sizing: border-box;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.list-style li a span img :hover {
+  background-color: #949494; /* 연한 회색 */
+  z-index: auto;
+}
+.list-style li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.list-style li img {
+  width: 270px;
+  height: 270px;
+}
+.list-title, .list-name, .list-price-wrap {
+  display: block;
+  margin: 5px 0;
+}
+.list-title {
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+.prd-title {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 150px;
+}
+
+.prd-title .popcorn {
+  font-size: 2em; /* 1.5배 크게 */
+  margin-right: 15px; /* 오른쪽 마진 추가 */
+  font-weight: bolder;
+}
+
+.prd-detail {
+  font-size: 1em;
+}
+
+.prd-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-style {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.list-style li {
+  position: relative;
+  width: calc(33.33% - 20px); /* 이미지 사이 간격 추가 */
+  box-sizing: border-box;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  background-color: transparent; /* 기본 배경 투명 */
+}
+
+.list-style li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* 초기 배경 투명 */
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.list-style li:hover::after {
+  background-color: rgba(206, 206, 206, 0.5); /* 이미지 위에 반투명 레이어 */
+}
+
+.list-style li img {
+  width: 270px;
+  height: 270px;
+  background-color: transparent; /* 이미지 배경 투명 */
+  z-index: 1;
+}
+
+.list-title, .list-name, .list-price-wrap {
+  display: block;
+  margin: 5px 0;
+}
+
+/* ------------------------------------------------------------------------------------ */
 footer {
   width: 100%;
   margin-bottom: 2rem;
+  margin-top: 40px;
 }
 footer .wrap {
   width: 80%;
@@ -365,20 +407,6 @@ footer .wrap .options .option {
     outline: none;
   }
 }
-@media screen and (max-width: 768px) {
-  main .description h1 {
-    display: none;
-  }
-  main .description h3 {
-    display: none;
-  }
-  main .description p {
-    display: none;
-  }
 
-  button {
-    font-size: 0.5rem;
-  }
-}
 
 /*# sourceMappingURL=index.css.map */

@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/store")
-public class HomeStoreController extends HttpServlet{
+@WebServlet("/store/giftticket")
+public class GiftTicketStoreController extends HttpServlet{
 
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/store/store.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/store/giftticket.jsp").forward(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
