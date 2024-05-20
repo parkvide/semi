@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+  user-select: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3em;
+  background-color: black;
+}
+nav .left {
+  display: flex;
+  margin-left: 2em;
+}
+nav .left .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 0.5em;
+  width: 8rem;
+}
+nav .left .logo a {
+  width: 100%;
+  
+}
+nav .left .logo a img {
+  max-width: 100%;
+}
+nav .left .mobile-menu {
+  display: none;
+}
+nav .left .menu-list {
+  display: flex;
+}
+nav .left .menu-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0.2em 1em 0.5em 1em;
+}
+nav .left .menu-list li a {
+  font-size: 0.8rem;
+  color: white;
+}
+nav .right {
+  display: flex;
+  margin-right: 2em;
+}
+nav .right .icon {
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+nav .right .search {
+  border: 1px solid white;
+  background-color: black;
+}
+nav .right .search .search-bar {
+  display: flex;
+}
+nav .right .search .search-bar i {
+  margin-right: 0.5em;
+  
+}
+nav .right .search .search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  outline: none;
+}
+nav .icon-kids a {
+  color: white;
+}
+nav .icon-bell a {
+  color: white;
+}
+/* ------------------------------------------------------------ */
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem; /* Optional: Add gap between grid items */
+}
+
+.cinema_loc {
+  border-bottom: 2px solid black;
+  background-color: #0000005d;
+  color: white;
+}
+
+.cinema_loc ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 100px;
+}
+
+.cinema_loc ul li {
+  margin: 0 10px;
+}
+
+.cinema_loc ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.cinema_loc ul li a:hover {
+  color: rgb(176, 176, 176);
+}
+
+.cinema_name {
+  background-color: rgba(0, 0, 0, 0.422);
+  color: white;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.cinema_name ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid black;
+}
+
+.cinema_name ul li {
+  font-size: 12px;
+  margin: 5px 0;
+  flex: 1 0 calc(10% - 2px);
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid black;
+  padding: 0 10px;
+}
+
+.cinema_name ul li:nth-child(10n) {
+  border-right: none;
+}
+
+.cinema_name ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  line-height: 1.5em;
+}
+
+.cinema_name ul li a:hover {
+  color: rgb(176, 176, 176);
+}
+
+.cinema_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cinema_img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------------ */
+.name {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.rent-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: red;
+  width: auto;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.cinema_detail {
+  width: 100%;
+  height: 400px; 
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.149); /* 배경색을 검은색에 투명도 50%로 설정 */
+  border-radius: 15px;
+}
+
+.parking_detail {
+  margin:10px;
+}
+.address pre{
+  margin-top: 10px;
+  margin-left: -80px;
+}
+
+/* ------------------------------------------------------------ */
+footer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+footer .wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+footer .wrap .social-icons i {
+  font-size: 1.5rem;
+  margin: 0 0.3em;
+}
+footer .wrap .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+footer .wrap .options .option {
+  color: #6f6f6f;
+}
+
+@media screen and (max-width: 982px) {
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.3em;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  }
+  nav .left {
+    display: flex;
+    margin-left: 2em;
+  }
+  nav .left .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    padding: 0em;
+    width: 5rem;
+  }
+  nav .left .logo a {
+    width: 100%;
+  }
+  nav .left .logo a img {
+    max-width: 100%;
+  }
+  nav .left .mobile-menu {
+    z-index: 999;
+    display: block;
+    align-self: center;
+    margin-left: 10px;
+  }
+  nav .left .mobile-menu:hover + .menu-list {
+    display: flex;
+  }
+  nav .left .menu-list {
+    display: none;
+    top: 50px;
+    z-index: 999;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.67);
+    padding: 1em 4em;
+  }
+  nav .left .menu-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0.2em 1em 0.5em 1em;
+    margin: 0.3em 0;
+  }
+  nav .left .menu-list li a {
+    font-size: 0.8rem;
+  }
+  nav .left .menu-list:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
+  nav .right .search {
+    border: none;
+    background-color: transparent;
+  }
+  nav .right .search .search-bar {
+    display: flex;
+  }
+  nav .right .search .search-bar i {
+    margin-right: 0.5em;
+  }
+  nav .right .search .search-bar input {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    outline: none;
+  }
+}
+
+
+/*# sourceMappingURL=index.css.map */
