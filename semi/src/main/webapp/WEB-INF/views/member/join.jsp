@@ -61,7 +61,6 @@
                 <input type="password" name="passwordCheck" placeholder="PASSWORD CHECK"autocomplete="off">
                 <input type="text" name="name" placeholder="NAME" id="pwd" autocomplete="off">
                 <input type="text" name="birth" placeholder="BIRTH" id="pwd" autocomplete="off">
-                <input type="text" name="nick" placeholder="NICK" id="pwd" autocomplete="off">
                 <input type="text" name="email" placeholder="E-MAIL" id="pwd" autocomplete="off">
                 <input type="text" name="phone" placeholder="PHONE NUMBER" id="pwd" autocomplete="off">
                 <input type="submit" value="SIGN UP" class="btn1">
