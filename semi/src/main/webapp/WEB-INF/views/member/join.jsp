@@ -53,15 +53,14 @@
     <main>
     <div class="container">
             <span class="error animated tada" id="msg"></span>
-            <form name="form1" class="box" onsubmit="return checkStuff()">
+            <form name="form1" class="box" onsubmit="return checkStuff()" method="post">
               <h4>SIGN UP</h4>
                 <input type="text" name="id" placeholder="ID" autocomplete="off">
                 <i class="typcn typcn-eye" id="eye"></i>
-                <input type="password" name="password" placeholder="PASSWORD" id="pwd" autocomplete="off">
-                <input type="password" name="passwordCheck" placeholder="PASSWORD CHECK"autocomplete="off">
+                <input type="password" name="pwd" placeholder="PASSWORD" id="pwd" autocomplete="off">
+                <input type="password" name="pwd2" placeholder="PASSWORD CHECK"autocomplete="off">
                 <input type="text" name="name" placeholder="NAME" id="pwd" autocomplete="off">
                 <input type="text" name="birth" placeholder="BIRTH" id="pwd" autocomplete="off">
-                <input type="text" name="nick" placeholder="NICK" id="pwd" autocomplete="off">
                 <input type="text" name="email" placeholder="E-MAIL" id="pwd" autocomplete="off">
                 <input type="text" name="phone" placeholder="PHONE NUMBER" id="pwd" autocomplete="off">
                 <input type="submit" value="SIGN UP" class="btn1">
