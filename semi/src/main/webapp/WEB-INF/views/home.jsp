@@ -25,13 +25,13 @@
                     <a href="#">영화관</a>
                 </li>
                 <li>
-                    <a href="#">예매</a>
+                    <a href="http://127.0.0.1:8888/app/movie/ticketing">예매</a>
                 </li>
                 <li>
-                    <a href="#">스토어</a>
+                    <a href="http://127.0.0.1:8888/app/store">스토어</a>
                 </li>
                 <li>
-                    <a href="#">고객센터</a>
+                    <a href="http://127.0.0.1:8888/app/service/home">고객센터</a>
                 </li>
             </ul>
         </div>
@@ -73,21 +73,21 @@
         <div class="content-list">
             <h1>무비 차트</h1>
             <div class="slider">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/꼬마참새 리차드 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/내손끝에 너의 온도가 닿을때 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/디피컬트 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/모드 집에서의 하룻밤 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/별처럼 빛나는 너에게 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/비행사의 아내 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/클레르의 무릎 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/꼬마참새 리차드 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/내손끝에 너의 온도가 닿을때 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/디피컬트 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/모드 집에서의 하룻밤 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/별처럼 빛나는 너에게 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/비행사의 아내 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/클레르의 무릎 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
             
             </div>
             <div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
@@ -96,12 +96,12 @@
         <div class="content-list">
         <h1>이벤트</h1>
         	<div class="slider">
-        	<img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
-            <img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
+        	<img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
+            <img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
         	</div>
         	<div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
             <div class="next"><i class="fa-solid fa-angle-right"></i></div>
@@ -114,23 +114,23 @@
         		<li>
         			<div class="package">
         			<h2>패키지</h2>
-        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/범죄의도시4 포스터.jpg" alt=""></a></div>
+        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt=""></a></div>
         			<div> dkdkd</div>
-        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/범죄의도시4 포스터.jpg" alt=""></a></div>
+        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt=""></a></div>
         			<div>adaa</div>
-        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/범죄의도시4 포스터.jpg" alt=""></a></div>
+        			<div><a href="#"><img width="150" height="150" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt=""></a></div>
         			<div>adada</div>
         			
         			</div>
         		</li>
         		<li>
         			<div class="gift-ticket">
-        			<img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
+        			<img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
         			</div>
         		</li>
         		<li>
         			<div class="food">
-        			<img width="300" height="400" src="/app/resources/img/범죄의도시4 포스터.jpg" alt="">
+        			<img width="300" height="400" src="/app/resources/img/포스터/범죄의도시4 포스터.jpg" alt="">
         			</div>
         		</li>
         	</ul>

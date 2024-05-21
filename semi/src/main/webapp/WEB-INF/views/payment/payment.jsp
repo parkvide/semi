@@ -13,7 +13,7 @@
 <nav>
         <div class="left">
             <div class="logo">
-                <a href="#"><img src="/app/resources/img/logo.png" alt=""></a>
+                <a href="http://127.0.0.1:8888/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
             </div>
             <div class="mobile-menu">메뉴</div>
             <ul class="menu-list">
@@ -24,13 +24,13 @@
                     <a href="#">영화관</a>
                 </li>
                 <li>
-                    <a href="#">예매</a>
+                    <a href="http://127.0.0.1:8888/app/movie/tickeeting">예매</a>
                 </li>
                 <li>
-                    <a href="#">스토어</a>
+                    <a href="http://127.0.0.1:8888/app/store">스토어</a>
                 </li>
                 <li>
-                    <a href="#">고객센터</a>
+                    <a href="http://127.0.0.1:8888/app/service/home">고객센터</a>
                 </li>
             </ul>
         </div>
