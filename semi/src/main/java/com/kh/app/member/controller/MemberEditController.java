@@ -25,7 +25,8 @@ public class MemberEditController extends HttpServlet{
 			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
 			
 			if(loginMemberVo == null) {
-				throw new Exception("로그인 후 이용 가능합니다.");
+				session.setAttribute("alertMsg", "로그인 후 이용 가능합니다.");
+				resp.sendRedirect("/app/member/login");
 			}
 			req.getRequestDispatcher("/WEB-INF/views/member/edit.jsp").forward(req, resp);
 			
@@ -44,19 +45,17 @@ public class MemberEditController extends HttpServlet{
 			String id = req.getParameter("id");
 			String pwd = req.getParameter("pwd");
 			String pwd2 = req.getParameter("pwd2");
-			String email = req.getParameter("email");
-			String phone = req.getParameter("phone");
+
 			
 			MemberVo vo = new MemberVo();
 			vo.setNo(no);
 			vo.setId(id);
 			vo.setPwd(pwd);
 			vo.setPwd2(pwd2);
-			vo.setEmail(email);
-			vo.setPhone(phone);
+
 			
 			MemberService ms = new MemberService();
-			int result = ms.edit(vo);
+			int result = ms.pwdEdit(vo);
 			
 			if(result != 1) {
 				throw new Exception("회원정보 수정 실패..");

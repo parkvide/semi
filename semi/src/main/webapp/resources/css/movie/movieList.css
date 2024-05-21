@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+  user-select: none;
+}
+
+body {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3em;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+nav .left {
+  display: flex;
+  margin-left: 2em;
+}
+nav .left .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 0.5em;
+  width: 8rem;
+}
+nav .left .logo a {
+  width: 100%;
+}
+nav .left .logo a img {
+  max-width: 100%;
+}
+nav .left .mobile-menu {
+  display: none;
+}
+nav .left .menu-list {
+  display: flex;
+}
+nav .left .menu-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0.2em 1em 0.5em 1em;
+}
+nav .left .menu-list li a {
+  font-size: 0.8rem;
+}
+nav .right {
+  display: flex;
+  margin-right: 2em;
+}
+nav .right .icon {
+  padding: 0.5em 1em 0.5em 1em;
+}
+nav .right .profile {
+  padding: 0;
+}
+nav .right .profile a {
+  display: flex;
+  align-items: center;
+}
+nav .right .profile a .avatar-box {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+nav .right .profile i {
+  transition: all 300ms;
+}
+nav .right .profile:hover i {
+  transform: rotate(180deg);
+}
+nav .right .search {
+  border: 1px solid white;
+  background-color: black;
+}
+nav .right .search .search-bar {
+  display: flex;
+}
+nav .right .search .search-bar i {
+  margin-right: 0.5em;
+}
+nav .right .search .search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  outline: none;
+}
+
+.store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 55%;
+  margin-left: 30px;
+}
+.category-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+.sep1 {
+  width: 50%; /* 선의 길이를 조정 */
+  border-top: 2px solid black; /* 위에 굵은 선 추가 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+.sep2 {
+  width: 88%; /* 선의 길이를 조정 */
+  border-top: 2px solid rgb(126, 126, 126); /* 위에 굵은 선 추가 */
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+
+.category-name ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px; 
+  display: inline-flex;
+}
+.category-name ul.c2 {
+  border-left: 1px solid black; /* c2 왼쪽에 1px 실선 추가 */
+ 
+  padding-top: 1px; /* 실선의 길이를 줄이기 위해 추가 */
+  padding-bottom: 1px; /* 실선의 길이를 줄이기 위해 추가 */
+}
+
+.category-name ul li {
+  margin: 10px 0;
+}
+
+.category-name ul li a {
+  text-decoration: none;
+  color: black; 
+  font-size: 16px; 
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-n{
+  font-weight: bolder;
+  margin: 10px;
+  margin-right: 35px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------메인 부분 추가한 코드------------------------------------------ */
+.prd-title {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 150px;
+}
+.prd-title .popcorn {
+  font-size: 2em; /* 1.5배 크게 */
+  margin-right: 15px; /* 오른쪽 마진 추가 */
+  font-weight: bolder;
+}
+.movie-list {
+  width: 80%; /* set the width to 80% */
+  margin: 0 auto; /* center align with automatic left and right margins */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.prd-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-style {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-style li {
+  flex: 0 1 calc(25% - 20px); /* 25% width minus some margin for spacing */
+  margin: 10px; /* space between items */
+  box-sizing: border-box; /* include padding and border in element's total width and height */
+}
+
+.list-style a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-style img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px; /* center image and add spacing */
+  transition: background-color 0.3s; /* smooth transition for hover effect */
+}
+
+.list-style li a:hover {
+  background-color: #f0f0f0; /* light gray background on hover */
+}
+
+.list-title, .list-name {
+  display: block;
+}
+/* ------------------------------------------------------------------------------------ */
+footer {
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 40px;
+}
+footer .wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+footer .wrap .social-icons i {
+  font-size: 1.5rem;
+  margin: 0 0.3em;
+}
+footer .wrap .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+footer .wrap .options .option {
+  color: #6f6f6f;
+}
+
+@media screen and (max-width: 1437px) {
+  main .description {
+    bottom: 10%;
+  }
+}
+@media screen and (max-width: 982px) {
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.3em;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  }
+  nav .left {
+    display: flex;
+    margin-left: 2em;
+  }
+  nav .left .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    padding: 0em;
+    width: 5rem;
+  }
+  nav .left .logo a {
+    width: 100%;
+  }
+  nav .left .logo a img {
+    max-width: 100%;
+  }
+  nav .left .mobile-menu {
+    z-index: 999;
+    display: block;
+    align-self: center;
+    margin-left: 10px;
+  }
+  nav .left .mobile-menu:hover + .menu-list {
+    display: flex;
+  }
+  nav .left .menu-list {
+    display: none;
+    top: 50px;
+    z-index: 999;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.67);
+    padding: 1em 4em;
+  }
+  nav .left .menu-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0.2em 1em 0.5em 1em;
+    margin: 0.3em 0;
+  }
+  nav .left .menu-list li a {
+    font-size: 0.8rem;
+  }
+  nav .left .menu-list:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
+  nav .right .search {
+    border: none;
+    background-color: transparent;
+  }
+  nav .right .search .search-bar {
+    display: flex;
+  }
+  nav .right .search .search-bar i {
+    margin-right: 0.5em;
+  }
+  nav .right .search .search-bar input {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    outline: none;
+  }
+}
+
+
+/*# sourceMappingURL=index.css.map */
