@@ -20,6 +20,9 @@ button {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  margin-top : 2px;
+  background-color:gray;
+  color:white;
 }
 
 nav {
@@ -193,7 +196,7 @@ border: 6px double #5c5c5c;
 
 .sname{
 	/* width: 22%; */
-	width: 242px;
+	width: 282px;
 	overflow: auto;
 	height: 429px;
 	font-weight: bold;
@@ -213,14 +216,14 @@ border: 6px double #5c5c5c;
 
 .s1{
 	/* width: 15%; */
-	width: 135px;
+	width: 150px;
 	height: 429px;
 	overflow: hidden;
 	font-weight: bold;
 }
 
 .s2{
-	width: 185px;
+	width: 245px;
 	font-weight: bold;
 }
 
@@ -239,16 +242,16 @@ border: 6px double #5c5c5c;
 .s4{
 	/* width: 16%; */
 font-weight: bold;
-	width:71px;
+	width:111px;
 	height: 429px;
 	overflow: hidden;
-
+	
 }
 
 .s5{
 	/* width: 15.7%; */
 	/* width:168px; */
-	width:205px;
+	width:241px;
 	padding-left: 20px;
 	height: 429px;
 }
@@ -454,3 +457,8 @@ font-weight: bold;
     margin-left: 1160px;
     margin-top: -120px;
 }
+button:hover{
+	background-color:#ccc;
+}
+
+
