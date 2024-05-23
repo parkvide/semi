@@ -10,7 +10,7 @@
 	<select id="selectMovieList" resultType="com.kh.app.member.vo.MovieVo">
 	 	SELECT M.TITLE 
 	 	FROM SCREEN_INFO SI 
-	 	JOIN MOVIE M 
+	 	JOIN MOVIE M  
 		ON SI.MOVIE_NO = M.NO
 		WHERE M.DEL_YN = 'N'
 	</select>
