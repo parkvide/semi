@@ -21,40 +21,40 @@
                 <li class="side-menu side-menu-movies">영화</li>
     
                 <div class="menu-lists hidden">
-                  <li class="side-menu menu-list"><a href="/admin/movie/list">영화 목록</a></li>
-                  <li class="side-menu menu-list"><a href="/admin/movie/insert">영화 등록</a></li>
-                  <li class="side-menu menu-list"><a href="/admin/movie/time">상영시간 등록</a></li>
-                  <li class="side-menu menu-list"><a href="/admin/movie/timelist">상영시간 목록</a></li>
+                  <li class="side-menu menu-list"><a href="/app/admin/movie/list">영화 목록</a></li>
+                  <li class="side-menu menu-list"><a href="/app/admin/movie/insert">영화 등록</a></li>
+                  <li class="side-menu menu-list"><a href="/app/admin/movie/time">상영시간 등록</a></li>
+                  <li class="side-menu menu-list"><a href="/app/admin/movie/timelist">상영시간 목록</a></li>
                 </div>
     
                 <li class="side-menu side-menu-theater">극장</li>
     
                 <div class="theater-lists hidden">
-                  <li class="side-menu theater-list"><a href="/admin/theater/insert">극장 등록</a></li>
-                  <li class="side-menu theater-list"><a href="/admin/theater/list">극장 목록</a></li>
-                  <li class="side-menu theater-list"><a href="/admin/theater/price">가격 등록</a></li>
-                  <li class="side-menu theater-list"><a href="/admin/theater/pricelist">가격 목록</a></li>
+                    <li class="side-menu theater-list"><a href="/app/admin/theater/list">극장 목록</a></li>
+                    <li class="side-menu theater-list"><a href="/app/admin/theater/price">가격 등록</a></li>
+                    <li class="side-menu theater-list"><a href="/app/admin/theater/pricelist">가격 목록</a></li>
+                    <li class="side-menu theater-list"><a href="/app/admin/theater/insert">극장 등록</a></li>
                 </div>
     
                 <li class="side-menu side-menu-evt">이벤트</li>
     
                 <div class="evt-lists hidden">
-                  <li class="side-menu evt-list"><a href="/admin/evt/insrt">이벤트 등록</a></li>
-                  <li class="side-menu evt-list"><a href="/admin/evt/list">이벤트 목록</a></li>
+                  <li class="side-menu evt-list"><a href="/app/admin/evt/insrt">이벤트 등록</a></li>
+                  <li class="side-menu evt-list"><a href="/app/admin/evt/list">이벤트 목록</a></li>
                 </div>
     
                 <li class="side-menu side-menu-not">공지사항</li>
     
                 <div class="not-lists hidden">
-                  <li class="side-menu not-list"><a href="/admin/not/insert">공지사항 등록</a></li>
-                  <li class="side-menu not-list"><a href="/admin/not/list">공지사항 목록</a></li>
+                  <li class="side-menu not-list"><a href="/app/admin/not/insert">공지사항 등록</a></li>
+                  <li class="side-menu not-list"><a href="/app/admin/not/list">공지사항 목록</a></li>
                 </div>
     
                 <li class="side-menu side-menu-store">스토어</li>
     
                 <div class="store-lists hidden">
-                  <li class="side-menu store-list"><a href="/admin/store/insert">상품 등록</a></li>
-                  <li class="side-menu store-list"><a href="/admin/store/list">상품 목록</a></li>
+                  <li class="side-menu store-list"><a href="/app/admin/store/insert">상품 등록</a></li>
+                  <li class="side-menu store-list"><a href="/app/admin/store/list">상품 목록</a></li>
                 </div>
             </ul>
         </div>

@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin.css">
-    <script src="/app/resources/js/admin/admin.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-evtinsert.css">
+    <script src="/app/resources/js/admin/admin-evtinsert.js"></script>
   </head>
 
   <body>
@@ -68,7 +68,7 @@
 
         <div id="list">
           <div id="name">
-            <span>홈 화면</span>
+            <span>이벤트 등록</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">
@@ -102,7 +102,7 @@
                   <div class="birth">생년월일 자바코드임</div>
                   <div class="date">가입날짜 자바코드임</div>
                   <div class="ny">상태 자바코드임</div>
-                  <div class="modify">탈퇴날짜 자바코드임</div>
+                  <div class="modify">탈퇴날짜 자바코드임</div>s
                 </div>
               </c:forEach>
             </div>
