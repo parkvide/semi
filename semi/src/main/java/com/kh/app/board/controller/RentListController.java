@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.board.service.RentService;
 import com.kh.app.board.vo.RentVo;
 
-@WebServlet("/service/rent")
+@WebServlet("/service/rentlist")
 public class RentListController extends HttpServlet{
 	
 	@Override
