@@ -1,4 +1,4 @@
-package com.kh.app.service.center.controller;
+package com.kh.app.admin.controller;
 
 import java.io.IOException;
 
@@ -8,15 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/service/faq")
-public class ServiceEvtController extends HttpServlet {
+@WebServlet("/admin/evt/list")
+public class AdminEvtListControlle extends HttpServlet {
 
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	req.getRequestDispatcher("/WEB-INF/views/service/service-rent.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/admin/admin-evtlist.jsp").forward(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 	}
 }
+
