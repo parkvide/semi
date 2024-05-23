@@ -12,6 +12,7 @@ public class MovieVo {
 	private String runningTime;
 	private String delYn;
 	private String poster;
+	
 	public MovieVo(String no, String title, String type, String movieAge, String summary, String cast, String director,
 			String runningTime, String delYn, String poster) {
 		super();

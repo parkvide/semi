@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -87,17 +88,14 @@
 
 					<!-- 받아온 영화제목 -->
 					
-
 					<!-- 영화제목 선택 -->
 					<div class="sname s">
 						<table class="sul">
-							
+						<c:forEach items="${requestScope.voList}" var="vo">
 								<tr class="movietitle">
-									<td class="mtd1">${vo.title} </td>>
-									
-									<td class="mtitle mtd"></td>
+									<td class="mtd1"><button class="titlebtn">${vo.title}</button></td>
 								</tr>
-							
+						</c:forEach>
 						</table>
 					</div>
 
@@ -105,11 +103,12 @@
 					<!-- 영화 지역선택 -->
 					<div class="s s1">
 						<table class="sul" id="theaterNameSelect">
+						<c:forEach items="${requestScope.voList}" var="vo">
 							
 								<tr class="loc">
-									<td class="mtd">${loc.cinema_loc}</td>
+									<td class="mtd"></td>
 								<tr>
-							
+							</c:forEach>
 						</table>
 					</div>
 

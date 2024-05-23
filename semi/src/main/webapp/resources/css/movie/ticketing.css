@@ -336,6 +336,7 @@ font-weight: bold;
 }
 
 .mtd1 {
+	color:black;
     vertical-align: middle;
     padding-left: 10px;
     padding-top: 3px;
@@ -410,6 +411,9 @@ font-weight: bold;
 	padding-left: 10px;
 }
 
+.movietitle tr{
+	color:black;
+}
 .timeSelect{
     width: 56px;
     text-align: center;

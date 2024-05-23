@@ -10,8 +10,8 @@ import com.kh.app.movie.vo.MovieVo;
 public class MovieDao {
 
 	public List<MovieVo> selectMovieList(SqlSession ss) {
-		
-		return ss.selectList("MovieMapper.selectMovieList");	 
+			
+		 return ss.selectList("MovieMapper.selectMovieList");	 
 		
 	}
 
