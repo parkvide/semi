@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.movie.service.MovieTicketingService;
 import com.kh.app.movie.vo.MovieVo;
 
+
 @WebServlet("/movie/ticketing")
 public class ticketingController extends HttpServlet{
 @Override
@@ -22,11 +23,13 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	
 	try {
 		List<MovieVo> voList = mts.selectMovieList();
+
+		req.setAttribute("voList", voList);
+		req.getRequestDispatcher("/WEB-INF/views/movie/ticketing.jsp").forward(req, resp);
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 	
-	req.getRequestDispatcher("/WEB-INF/views/movie/ticketing.jsp").forward(req, resp);
 	
 	
 }

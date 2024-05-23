@@ -17,5 +17,6 @@
   <mappers>
     <mapper resource="/member-mapper.xml"/>
     <mapper resource="/board-mapper.xml"/>
+    <mapper resource="/selectMovieList.xml"/>
   </mappers>
 </configuration>
