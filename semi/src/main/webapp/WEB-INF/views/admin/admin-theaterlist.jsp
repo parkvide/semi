@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin.css">
-    <script src="/app/resources/js/admin/admin.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-theaterlist.css">
+    <script src="/app/resources/js/admin/admin-theaterlist.js"></script>
   </head>
 
   <body>
@@ -68,7 +68,7 @@
 
         <div id="list">
           <div id="name">
-            <span>홈 화면</span>
+            <span>극장 목록</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">
