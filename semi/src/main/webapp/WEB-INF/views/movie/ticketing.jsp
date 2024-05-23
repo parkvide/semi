@@ -86,39 +86,18 @@
 				<div id="secMain">
 
 					<!-- 받아온 영화제목 -->
-					<c:if test="${not empty movieInfo_name}">
-						<input type="hidden" value="${movieInfo_name}" id="selectMovieName">
-					</c:if>
+					
 
 					<!-- 영화제목 선택 -->
 					<div class="sname s">
 						<table class="sul">
-							<c:forEach items="${movieTitle}" var="title">
+							
 								<tr class="movietitle">
-									<td class="mtd1">
-									<c:choose>
-											<c:when test="${title.movieInfo_grade eq '전체 관람가'}">
-												<img class="age" alt=""
-													src="/app/resources/img/m1.png">
-											</c:when>
-											<c:when test="${title.movieInfo_grade eq '12세 관람가'}">
-												<img class="age" alt=""
-													src="/app/resources/img/m2.png">
-											</c:when>
-											<c:when test="${title.movieInfo_grade eq '15세 관람가'}">
-												<img class="age" alt=""
-													src="/app/resources/img/m3.png">
-											</c:when>
-											<c:when test="${title.movieInfo_grade eq '청소년 관람불가'}">
-												<img class="age" alt=""
-													src="/app/resources/img/m4.png">
-											</c:when>
-										</c:choose></td>
-
-									<td class="mtitle mtd" title="${title.movieInfo_num}">${title.movieInfo_title}</td>
-
+									<td class="mtd1">${vo.title} </td>>
+									
+									<td class="mtitle mtd"></td>
 								</tr>
-							</c:forEach>
+							
 						</table>
 					</div>
 
@@ -126,11 +105,11 @@
 					<!-- 영화 지역선택 -->
 					<div class="s s1">
 						<table class="sul" id="theaterNameSelect">
-							<c:forEach items="${movieLoc}" var="loc">
+							
 								<tr class="loc">
 									<td class="mtd">${loc.cinema_loc}</td>
 								<tr>
-							</c:forEach>
+							
 						</table>
 					</div>
 
@@ -147,6 +126,15 @@
 					<div class="s s4">
 					<img class="corn3" alt="" src="/app/resources/img/pop_cornT.png">
 						<table class="sul" id="movieDateSelect">
+							<tr>
+							<button class="btn1"></button>
+							<button class="btn2"></button>
+							<button class="btn3"></button>
+							<button class="btn4"></button>
+							<button class="btn5"></button>
+							<button class="btn6"></button>
+							<button class="btn7"></button>
+							</tr>
 						</table>
 					</div>
 
