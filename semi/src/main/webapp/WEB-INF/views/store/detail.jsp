@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
       integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/app/resources/css/detail/detail.css">
+    <link rel="stylesheet" href="/app/resources/css/store/storeDetail.css">
     <!-- <script src="/app/resources/js/detail/detail.js"></script> -->
     <script src="
     https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
@@ -119,7 +119,7 @@
         </div>
         <div class="buy-btn">
           <button>장바구니</button>
-          <button>선물하기</button>
+          
           <button>구매하기</button>
         </div>
       </div>
