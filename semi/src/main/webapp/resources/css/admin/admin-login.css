@@ -7,12 +7,60 @@
 }
 
 body{
+  display: flex;
   margin: 0;
   width: 100vw;
   height: 100vh;
   background-color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 #main{
-  
+  width: 50%;
+  height: 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main h1{
+  color: black;
+  margin-bottom: 20px;
+}
+
+.login{
+  width: 70%;
+  height: 50px;
+  color: black;
+  margin: 25px;
+  border-radius: 10px;
+  border-color: lightgray;
+
+}
+
+form span{
+  color: black;
+  margin: 0;
+  width: 70%;
+  text-align: start;
+  font-size: x-large;
+  font-weight: 550;
+}
+
+#btn{
+  width: 150px;
+  height: 30px;
+  color: black;
 }

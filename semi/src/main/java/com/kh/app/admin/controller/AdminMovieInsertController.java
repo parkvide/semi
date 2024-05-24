@@ -9,12 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/admin/movie/insert")
-public class AdminMovieInsertController extends HttpServlet{
+public class AdminMovieInsertController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/admin/admin-movieinsert.jsp").forward(req, resp);
+		String type = req.getParameter("type");
+		String age = req.getParameter("age");
+		String sumry = req.getParameter("sumry");
+		String cast = req.getParameter("cast");
+	
 	}
+	
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
