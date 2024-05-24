@@ -15,4 +15,8 @@ public class MovieDao {
 		
 	}
 
+	public List<MovieVo> selectMovieHome(SqlSession ss) {
+		return ss.selectList("MovieMapper.selectMovieHome");
+	}
+
 }

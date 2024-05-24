@@ -1,10 +1,11 @@
 package com.kh.app.movie.service;
 
+import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
+
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.kh.app.db.SqlSessionTemplate;
 import com.kh.app.movie.dao.MovieDao;
 import com.kh.app.movie.vo.MovieVo;
 
@@ -21,10 +22,21 @@ public class MovieTicketingService {
 	
 	public List<MovieVo> selectMovieList() throws Exception {
 		
-		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		SqlSession ss = getSqlSession();
 		
 		List<MovieVo> voList = dao.selectMovieList(ss);
 		
+		ss.close();
+		
+		return voList;
+	}
+
+
+
+	public List<MovieVo> selectMovieHome() throws Exception {
+		
+		SqlSession ss = getSqlSession();
+		List<MovieVo> voList = dao.selectMovieHome(ss);
 		ss.close();
 		
 		return voList;
