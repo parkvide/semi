@@ -32,7 +32,7 @@ public class MovieTicketingService {
 	}
 
 
-
+	//최우성 작성
 	public List<MovieVo> selectMovieHome() throws Exception {
 		
 		SqlSession ss = getSqlSession();
@@ -40,6 +40,17 @@ public class MovieTicketingService {
 		ss.close();
 		
 		return voList;
+	}
+
+
+
+	public List<MovieVo> selectMovieDetail(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		List<MovieVo> voList = dao.selectMovieDetail(ss, no);
+		ss.close();
+		
+		return voList;
+		
 	}
 
 }

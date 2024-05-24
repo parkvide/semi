@@ -15,8 +15,14 @@ public class MovieDao {
 		
 	}
 
+	//최우성 작성
 	public List<MovieVo> selectMovieHome(SqlSession ss) {
 		return ss.selectList("MovieMapper.selectMovieHome");
+	}
+
+	public List<MovieVo> selectMovieDetail(SqlSession ss, String no) {
+		return ss.selectOne("MovieMapper.selectMovieDetail" ,no);
+		
 	}
 
 }
