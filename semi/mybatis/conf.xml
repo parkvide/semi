@@ -18,5 +18,7 @@
     <mapper resource="/mapper/member-mapper.xml"/>
     <mapper resource="/mapper/board-mapper.xml"/>
     <mapper resource="/mapper/admin-mapper.xml"/>
+    <mapper resource="/mapper/movie-mapper.xml"/>
+    <mapper resource="/mapper/product-mapper.xml"/>
   </mappers>
 </configuration>
