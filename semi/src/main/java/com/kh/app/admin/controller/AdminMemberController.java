@@ -1,7 +1,7 @@
 package com.kh.app.admin.controller;
 
+
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.app.admin.member.service.AdminMemberService;
-import com.kh.app.admin.member.vo.PageVo;
-import com.kh.app.member.vo.MemberVo;
+
 
 @WebServlet("/admin/member")
 public class AdminMemberController extends HttpServlet {

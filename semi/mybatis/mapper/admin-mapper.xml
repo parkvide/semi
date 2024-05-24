@@ -13,9 +13,31 @@
         
     </select>
     
-    <select id="adminlist">
-    
-    </select>
+  	<insert id="movieInsert">
+  	INSERT INTO MOVIE 
+  		(
+  		 NO ,
+  		 TYPE ,
+  		 MOVIE_AGE ,
+  		 SUMMARY ,
+  		 CAST ,
+  		 DIRECTOR ,
+  		 RUNNING_TIME ,
+  		 DEL_YN ,
+  		 POSTER 
+  		 )
+  		 VALUES( 
+  		 SEQ_MOVIE.NEXTVAL ,
+  		 #{type} ,
+  		 #{movie_age} ,
+  		 #{summary} ,
+  		 #{cast} ,
+  		 #{director} ,
+  		 #{running_time} ,
+  		 #{del_yn} ,
+  		 #{poster} 
+  		 );
+  	</insert>
 
 
 </mapper>
