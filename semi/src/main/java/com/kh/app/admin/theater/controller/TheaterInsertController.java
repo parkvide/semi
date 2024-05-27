@@ -1,4 +1,4 @@
-package com.kh.app.admin.movie.controller;
+package com.kh.app.admin.theater.controller;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.kh.app.admin.movie.service.AdminMovieService;
-import com.kh.app.admin.movie.vo.AdminMovieVo;
+import com.kh.app.admin.theater.service.AdminTheaterService;
+import com.kh.app.admin.theater.vo.AdminTheaterVo;
 
-@WebServlet("/admin/movie/insert")
-public class MovieInsertController extends HttpServlet {
+@WebServlet("/admin/theater/insert")
+public class TheaterInsertController extends HttpServlet {
 
 	
 	@Override
@@ -25,28 +25,24 @@ public class MovieInsertController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+		
 		try {
 			
 			String type = req.getParameter("type");
-			String age = req.getParameter("age");
-			String summary =req.getParameter("summary");
-			String cast = req.getParameter("cast");
-			String director = req.getParameter("director");
-			String time = req.getParameter("time");
-			Part poster = req.getPart("poster");
+			String price = req.getParameter("price");
+			Part img = req.getPart("img");
 			
-			String poster2 = "";
-			if(poster.getSize() > 0) {
+			String img2 = ""; 
+			if(img.getSize() > 0) {
 				// 파일을 서버에 저장하기
-				String originFileName = poster.getSubmittedFileName();
-				InputStream is = poster.getInputStream();
+				String originFileName = img.getSubmittedFileName();
+				InputStream is = img.getInputStream();
 				
 				String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
 				String random = UUID.randomUUID().toString();
 				String ext = originFileName.substring(originFileName.lastIndexOf("."));
-				poster2 = System.currentTimeMillis() + "_" + random + ext;
-				FileOutputStream fos = new FileOutputStream(path + poster2);
+				img2 = System.currentTimeMillis() + "_" + random + ext;
+				FileOutputStream fos = new FileOutputStream(path + img2);
 				
 				byte[] buf = new byte[1024];
 				int size = 0;
@@ -58,31 +54,24 @@ public class MovieInsertController extends HttpServlet {
 				fos.close();
 			}
 			
-			AdminMovieVo vo = new AdminMovieVo();
+			AdminTheaterVo vo = new AdminTheaterVo();
 			vo.setType(type);
-			vo.setMovieAge(age);
-			vo.setSummary(summary);
-			vo.setCast(cast);
-			vo.setDirector(director);
-			vo.setRunningTime(time);
-			vo.setPoster(poster2);
-			
-			AdminMovieService as = new AdminMovieService();
-			int result = as.insert(vo);
+			vo.setTheaterImg(img2);
+			vo.setPrice(price);
+
+			AdminTheaterService ats = new AdminTheaterService();
+			int result = ats.insert(vo);
 			
 			if(result == 1) {
 				System.out.println("등록성공");
 			}else {
-				System.out.println("등록실팬");
+				System.out.println("등록실패");
 			}
 			
-			
 		} catch (Exception e) {
+
 			e.printStackTrace();
-		
 		}
-		
-	
 	}
 	
 }

@@ -1,37 +1,38 @@
 package com.kh.app.admin.movie.vo;
 
-public class MovieVo {
+public class AdminMovieVo {
 	
 	private String no;
 	private String type;
-	private String movie_age;
+	private String movieAge;
 	private String summary;
 	private String cast;
 	private String director;
-	private String running_time;
-	private String del_yn;
+	private String runningTime;
+	private String delYn;
 	private String poster;
+	
 	@Override
 	public String toString() {
-		return "MovieVo [no=" + no + ", type=" + type + ", movie_age=" + movie_age + ", summary=" + summary + ", cast="
-				+ cast + ", director=" + director + ", running_time=" + running_time + ", del_yn=" + del_yn
+		return "AdminMovieVo [no=" + no + ", type=" + type + ", movieAge=" + movieAge + ", summary=" + summary
+				+ ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn=" + delYn
 				+ ", poster=" + poster + "]";
 	}
-	public MovieVo() {
+	public AdminMovieVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MovieVo(String no, String type, String movie_age, String summary, String cast, String director,
-			String running_time, String del_yn, String poster) {
+	public AdminMovieVo(String no, String type, String movieAge, String summary, String cast, String director,
+			String runningTime, String delYn, String poster) {
 		super();
 		this.no = no;
 		this.type = type;
-		this.movie_age = movie_age;
+		this.movieAge = movieAge;
 		this.summary = summary;
 		this.cast = cast;
 		this.director = director;
-		this.running_time = running_time;
-		this.del_yn = del_yn;
+		this.runningTime = runningTime;
+		this.delYn = delYn;
 		this.poster = poster;
 	}
 	public String getNo() {
@@ -46,11 +47,11 @@ public class MovieVo {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String getMovie_age() {
-		return movie_age;
+	public String getMovieAge() {
+		return movieAge;
 	}
-	public void setMovie_age(String movie_age) {
-		this.movie_age = movie_age;
+	public void setMovieAge(String movieAge) {
+		this.movieAge = movieAge;
 	}
 	public String getSummary() {
 		return summary;
@@ -70,17 +71,17 @@ public class MovieVo {
 	public void setDirector(String director) {
 		this.director = director;
 	}
-	public String getRunning_time() {
-		return running_time;
+	public String getRunningTime() {
+		return runningTime;
 	}
-	public void setRunning_time(String running_time) {
-		this.running_time = running_time;
+	public void setRunningTime(String runningTime) {
+		this.runningTime = runningTime;
 	}
-	public String getDel_yn() {
-		return del_yn;
+	public String getDelYn() {
+		return delYn;
 	}
-	public void setDel_yn(String del_yn) {
-		this.del_yn = del_yn;
+	public void setDelYn(String delYn) {
+		this.delYn = delYn;
 	}
 	public String getPoster() {
 		return poster;

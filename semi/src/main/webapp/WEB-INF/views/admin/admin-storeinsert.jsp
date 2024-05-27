@@ -68,45 +68,19 @@
 
         <div id="list">
           <div id="name">
-            <span>상품 등록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
+            <span>상품등록하기</span>
           </div>
           <div id="line"></div>
-          <div id="list-main">
-            <div id="title">
-              <div class="no">번호</div>
-              <div class="id">아이디</div>
-              <div class="name">이름</div>
-              <div class="num">연락처</div>
-              <div class="email">이메일</div>
-              <div class="birth">생년월일</div>
-              <div class="date">가입날짜</div>
-              <div class="ny">상태</div>
-              <div class="modify">탈퇴날짜</div>
-            </div>
-            <div id="content">
-              <c:forEach items="${voList}" var="vo">
-                <div id="contentlist">
-                  <div class="no">번호 자바코드임</div>
-                  <div class="id">아이디 자바코드임</div>
-                  <div class="name">이름 자바코드임</div>
-                  <div class="num">연락처 자바코드임</div>
-                  <div class="email">이메일 자바코드임</div>
-                  <div class="birth">생년월일 자바코드임</div>
-                  <div class="date">가입날짜 자바코드임</div>
-                  <div class="ny">상태 자바코드임</div>
-                  <div class="modify">탈퇴날짜 자바코드임</div>
-                </div>
-              </c:forEach>
-            </div>
-          </div>
+          <form action="/app/admin/store/insert" method="post" id="zzz" enctype="multipart/form-data">
+            <input type="text" name="category" placeholder="카테고리">
+            <input type="text" name="name" placeholder="이름">
+            <input type="text" name="price" placeholder="가격">
+            <input type="text" name="origin" placeholder="원산지">
+            <input type="file" name="nutrientne" placeholder="영양성분">
+            <input type="file" name="product" placeholder="사진">
+            <input type="submit" value="등록하기">
+          </form>
+          
         </div>
       </div>
 
