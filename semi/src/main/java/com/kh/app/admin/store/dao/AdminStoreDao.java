@@ -13,13 +13,12 @@ public class AdminStoreDao {
 		return ss.insert("AdminMapper.storeInsert" , vo);
 	}
 
-	  public List<AdminStoreVo> getAllProducts(SqlSession ss) {
-	        return ss.selectList("AdminMapper.getAllProducts");
+	  public List<AdminStoreVo> list(SqlSession ss) {
+	        return ss.selectList("AdminMapper.storeList");
 	    }
 
 	public int delete(SqlSession ss, String no) {
-		// TODO Auto-generated method stub
-		return 0;
+		return ss.delete("AdminMapper.StoreDelete", no);
 	}
 
 }

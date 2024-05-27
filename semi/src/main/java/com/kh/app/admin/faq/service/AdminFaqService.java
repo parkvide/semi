@@ -4,6 +4,8 @@ import com.kh.app.admin.faq.dao.AdminFaqDao;
 import com.kh.app.admin.faq.vo.AdminFaqVo;
 import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 public class AdminFaqService {
@@ -29,6 +31,30 @@ public class AdminFaqService {
 		return result;
 		
 		
+	}
+
+	public List<AdminFaqVo> list() throws Exception {
+
+		SqlSession ss = getSqlSession();
+		List<AdminFaqVo> voList = dao.list(ss);
+		
+		ss.close();
+		return voList;
+	
+	}
+
+	public int delete(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.delete(ss, no);
+		
+		if(result == 1) {
+			ss.commit();
+		} else {
+			ss.rollback();
+		}
+		ss.close();
+		return result;
+	
 	}
 
 	

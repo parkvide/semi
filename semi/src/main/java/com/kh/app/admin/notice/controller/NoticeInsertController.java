@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.kh.app.admin.faq.service.AdminFaqService;
 import com.kh.app.admin.faq.vo.AdminFaqVo;
-import com.kh.app.admin.notice.service.AdminNoticService;
+import com.kh.app.admin.notice.service.AdminNoticeService;
 
 @WebServlet
 public class NoticeInsertController extends HttpServlet{
@@ -32,7 +32,7 @@ public class NoticeInsertController extends HttpServlet{
 			vo.setTitle(title);
 			vo.setContent(content);
 			
-			AdminNoticService ans = new AdminNoticService();
+			AdminNoticeService ans = new AdminNoticeService();
 			int result = ans.insert(vo);
 			
 			if(result == 1) {
