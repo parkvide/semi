@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 		,maxFileSize = 1024*1024*50
 		,maxRequestSize = 1024*1024*500
 		)
-@WebServlet("/service/event/insert")
-public class EventInsertController extends HttpServlet{
+@WebServlet("/board/rent/insert")
+public class RentInsertController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/service/").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/board/rentInsert.jsp").forward(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
