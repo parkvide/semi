@@ -1,5 +1,6 @@
 package com.kh.app.member.service;
 
+import java.io.Closeable;
 import java.sql.Connection;
 
 import org.apache.ibatis.session.SqlSession;
@@ -79,6 +80,17 @@ public class MemberService {
 		ss.close();
 		
 		return result;
+	}
+
+	//아이디 중복검사
+	public boolean checkIdDup(String id) throws Exception {
+		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		int result = dao.checkIdDup(ss,id);
+		if(result ==1 ) {
+			
+		}
+		ss.close();
+		return result==0;
 	}
 
 }

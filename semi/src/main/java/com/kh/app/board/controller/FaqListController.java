@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.FaqService;
+import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.FaqVo;
 
-@WebServlet("/service/faqlist")
+@WebServlet("/board/faqlist")
 public class FaqListController extends HttpServlet{
 	
 	//게시물 조회
@@ -20,10 +20,10 @@ public class FaqListController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			
-			FaqService fs = new FaqService();
-			List<FaqVo> voList = fs.selectFaqList();
+			BoardService bs = new BoardService();
+			List<FaqVo> voList = bs.selectFaqList();
 			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("WEB-INF/views/service/faq.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/faq.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

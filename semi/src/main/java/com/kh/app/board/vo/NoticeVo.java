@@ -6,28 +6,28 @@ public class NoticeVo {
 	private String writerNo;
 	private String title;
 	private String content;
-	private String uploadDate;
 	private String views;
+	private String uploadDate;
 	private String delYn;
 	public NoticeVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public NoticeVo(String no, String writerNo, String title, String content, String uploadDate, String views,
+	public NoticeVo(String no, String writerNo, String title, String content, String views, String uploadDate,
 			String delYn) {
 		super();
 		this.no = no;
 		this.writerNo = writerNo;
 		this.title = title;
 		this.content = content;
-		this.uploadDate = uploadDate;
 		this.views = views;
+		this.uploadDate = uploadDate;
 		this.delYn = delYn;
 	}
 	@Override
 	public String toString() {
 		return "NoticeVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", content=" + content
-				+ ", uploadDate=" + uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
+				+ ", views=" + views + ", uploadDate=" + uploadDate + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -53,17 +53,17 @@ public class NoticeVo {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getUploadDate() {
-		return uploadDate;
-	}
-	public void setUploadDate(String uploadDate) {
-		this.uploadDate = uploadDate;
-	}
 	public String getViews() {
 		return views;
 	}
 	public void setViews(String views) {
 		this.views = views;
+	}
+	public String getUploadDate() {
+		return uploadDate;
+	}
+	public void setUploadDate(String uploadDate) {
+		this.uploadDate = uploadDate;
 	}
 	public String getDelYn() {
 		return delYn;

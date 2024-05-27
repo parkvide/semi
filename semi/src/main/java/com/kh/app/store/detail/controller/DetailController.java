@@ -1,7 +1,6 @@
-package com.kh.app.board.controller;
+package com.kh.app.store.detail.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,20 +8,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.BoardService;
-import com.kh.app.board.vo.NoticeVo;
+import com.kh.app.store.service.ProductService;
+import com.kh.app.store.vo.ProductVo;
 
-@WebServlet("/board/noticelist")
-public class NoticeListController extends HttpServlet{
-
+@WebServlet("/store/detail")
+public class DetailController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			BoardService bs = new BoardService();
-			List<NoticeVo> voList = bs.getNoticeList();
+			String no = req.getParameter("no");
 			
-			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("/WEB-INF/views/board/notice.jsp").forward(req, resp);
+			ProductService ps = new ProductService();
+			ProductVo vo = ps.getPrdByNo(no);
+			
+			if(vo == null) {
+				throw new Exception("상품조회 실패...");
+			}
+			req.setAttribute("vo", vo);
+			req.getRequestDispatcher("/WEB-INF/views/store/detail.jsp").forward(req, resp);
+
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());
@@ -33,4 +37,5 @@ public class NoticeListController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
+
 }
