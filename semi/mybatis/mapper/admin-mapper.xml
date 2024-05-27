@@ -58,6 +58,38 @@
    	<select id="movieSelect">
    	
    	</select>
+   	
+   	<insert id="storeInsert" parameterType="com.kh.app.admin.store.vo.AdminStoreVo">
+	INSERT INTO
+	PRODUCT
+	(
+		NO
+		,CATERGORY
+		,NAME
+		,PRICE
+		,ORIGIN_COUNTRY
+		,NUTRIENTE_IMG
+		,PRODUCT_IMG
+	)
+	VALUES
+	(
+		SEQ_PRODUCT.NEXTVAL
+		,#{category}
+		,#{name}
+		,#{price}
+		,#{originCountry}
+		,#{nutrienteImg}
+		,#{productImg}
+	)
+   	</insert>
+   	
+	<select id="getAllProducts" resultType="com.kh.app.admin.store.vo.AdminStoreVo">
+		   SELECT * FROM PRODUCT
+	</select>
+   	
+   	<update id="storeUpdate">
+   		UPDATE
+   	</update>
 
 
 </mapper>

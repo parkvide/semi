@@ -4,6 +4,7 @@ import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
 import org.apache.ibatis.session.SqlSession;
 
 import com.kh.app.admin.dao.AdminDao;
+import com.kh.app.admin.movie.vo.AdminMovieVo;
 import com.kh.app.admin.vo.AdminVo;
 
 
@@ -23,5 +24,6 @@ public class AdminService {
 		
 		return loginAdminVo;
 	}
+
 
 }

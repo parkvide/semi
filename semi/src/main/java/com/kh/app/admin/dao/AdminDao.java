@@ -10,4 +10,5 @@ public class AdminDao {
 		return ss.selectOne("AdminMapper.adminlogin", vo);
 	}
 
+
 }
