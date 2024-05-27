@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ProductMapper">
 	<select id="selectPopList" resultType="com.kh.app.store.vo.ProductVo">
-		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG
+		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG ,C.NO
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY_NO = C.NO
@@ -14,7 +14,7 @@
 	</select>
 	
 	<select id="selectPackList" resultType="com.kh.app.store.vo.ProductVo">
-		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG
+		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG,C.NO
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY_NO = C.NO
@@ -23,6 +23,42 @@
 		P.DEL_YN = 'N'
 	
 	</select>
+	
+	<select id="selectGiftTicket" resultType="com.kh.app.store.vo.ProductVo">
+		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG,C.NO
+		FROM PRODUCT P
+		JOIN  CATEGORY C
+		ON P.CATEGORY_NO = C.NO
+		WHERE C.NO = "관람권 번호" 
+		AND
+		P.DEL_YN = 'N'
+	</select>
     
+    <select id="selectDrinkList" resultType="com.kh.app.store.vo.ProductVo">
+   		SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG,C.NO
+		FROM PRODUCT P
+		JOIN  CATEGORY C
+		ON P.CATEGORY_NO = C.NO
+		WHERE C.NO = "음료 번호" 
+		AND
+		P.DEL_YN = 'N'
+    </select>
+    
+    <select id="selectComboList" resultType="com.kh.app.store.vo.ProductVo">
+    	SELECT P.NO , C.TYPE, P,NAME , P.PRICE, P.PRODUCT_IMG,C.NO
+		FROM PRODUCT P
+		JOIN  CATEGORY C
+		ON P.CATEGORY_NO = C.NO
+		WHERE C.NO = "콤보 번호" 
+		AND
+		P.DEL_YN = 'N'
+    </select>
 
+	<select id="getPrdByNo">
+		SELECT P.NO , P.NAME , P.PRICE , P.ORIGIN_COUNTRY, P.NUTRIENTE_IMG, P.PRODUCT_IMG, C.TYPE  
+		FROM PRODUCT P 
+		JOIN CATEGORY C 
+		ON P.CATEGORY_NO = C.NO 
+		WHERE B.NO = #{no} AND B.DEL_YN = 'N'
+	</select>
 </mapper>
