@@ -13,9 +13,51 @@
         
     </select>
     
-    <select id="adminlist">
-    
-    </select>
+   	<insert id="movieInsert">
+   	
+   		INSERT INTO 
+   		ADMIN 
+   		(
+   		NO
+   		,TYPE
+   		,MOVIE_AGE
+   		,SUMMARY
+   		,CAST
+   		,DIRECRTOR
+   		,RUNNING_TIME
+   		,DEL_YN
+   		,POSTER
+   		)
+   		values
+   		(
+   		SEQ_MOVIE.NEXTVAL
+   		,#{type}
+   		,#{movie_age}
+   		,#{summary}
+   		,#{cast}
+   		,#{director}
+   		,#{running_time}
+   		,'N'
+   		,#{poster}
+   		)
+   	</insert>
+   	
+   	<update id="movieEdit">
+   		UPDATE ADMIN SET 
+   		TYPE = #{type} 
+   		, MOVIE_AGE = #{movie_age} 
+   		, SUMMARY = #{summary} 
+   		, CAST = #{cast}
+   		, DIRECTOR = #{director}
+   		, RUNNING_TIME = #{running_time}
+   		, POSTER = #{poster}
+   		WHERE NO = ?
+  
+   	</update>
+   	
+   	<select id="movieSelect">
+   	
+   	</select>
 
 
 </mapper>
