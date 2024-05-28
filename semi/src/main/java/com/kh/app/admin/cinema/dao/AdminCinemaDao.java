@@ -20,4 +20,8 @@ public class AdminCinemaDao {
 		return ss.delete("AdminMapper.cinemaDelete", no);
 	}
 
+	public int edit(SqlSession ss, AdminCinemaVo vo) {
+		return ss.update("AdminMapper.cinemaEdit" , vo);
+	}
+
 }

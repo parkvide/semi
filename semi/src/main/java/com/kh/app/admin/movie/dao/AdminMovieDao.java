@@ -22,4 +22,8 @@ public class AdminMovieDao {
 		return ss.delete("AdminMapper.movieDelete", no);
 	}
 
+	public int edit(SqlSession ss, AdminMovieVo vo) {
+		return ss.update("AdminMapper.movieEdit" , vo);
+	}
+
 }

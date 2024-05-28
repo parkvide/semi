@@ -20,4 +20,8 @@ public class AdminFaqDao {
 		return ss.delete("AdminMapper.faqDelete", no);
 	}
 
+	public int edit(SqlSession ss , AdminFaqVo vo) {
+		return ss.update("AdminMapper.faqEdit" , vo);
+	}
+
 }

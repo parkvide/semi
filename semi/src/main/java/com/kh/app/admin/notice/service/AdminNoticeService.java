@@ -7,19 +7,19 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.kh.app.admin.faq.vo.AdminFaqVo;
-import com.kh.app.admin.notice.dao.AdminNoticDao;
+import com.kh.app.admin.notice.dao.AdminNoticeDao;
 import com.kh.app.admin.notice.vo.AdminNoticeVo;
 
 public class AdminNoticeService {
 	
-	private final AdminNoticDao dao;
+	private final AdminNoticeDao dao;
 	
 	public AdminNoticeService() {
-		this.dao = new AdminNoticDao();
+		this.dao = new AdminNoticeDao();
 	}
 	
 
-	public int insert(AdminFaqVo vo) throws Exception {
+	public int insert(AdminNoticeVo vo) throws Exception {
 
 		SqlSession ss = getSqlSession();
 		int result = dao.insert(ss, vo);
@@ -56,6 +56,23 @@ public class AdminNoticeService {
 		}
 		ss.close();
 		return result;
+	}
+
+
+	public int edit(AdminNoticeVo vo) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.edit(ss , vo);
+		
+		if(result == 1) {
+			ss.commit();
+		}else {
+			ss.rollback();
+		}
+		ss.close();
+		return result;
+		
+		
+		
 	}
 
 }

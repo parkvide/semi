@@ -1,7 +1,7 @@
-package com.kh.app.admin.event.dao;
+package com.kh.app.admin.event.vo;
 
 public class AdminEventVo {
-	
+		
 	private String no;
 	private String writerNo;
 	private String title;
@@ -9,6 +9,15 @@ public class AdminEventVo {
 	private String uploadDate;
 	private String views;
 	private String delYn;
+	@Override
+	public String toString() {
+		return "AdminEventVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", contentImg=" + contentImg
+				+ ", uploadDate=" + uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
+	}
+	public AdminEventVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public String getNo() {
 		return no;
 	}
@@ -61,15 +70,8 @@ public class AdminEventVo {
 		this.uploadDate = uploadDate;
 		this.views = views;
 		this.delYn = delYn;
-	}
-	@Override
-	public String toString() {
-		return "AdminEventVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", contentImg=" + contentImg
-				+ ", uploadDate=" + uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
-	}
-	public AdminEventVo() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	} 
+	
+
 
 }

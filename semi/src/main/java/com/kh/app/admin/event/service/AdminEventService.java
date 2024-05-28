@@ -1,7 +1,10 @@
 package com.kh.app.admin.event.service;
 
 import com.kh.app.admin.event.dao.AdminEventDao;
-import com.kh.app.admin.event.dao.AdminEventVo;
+import com.kh.app.admin.event.vo.AdminEventVo;
+
+import oracle.jdbc.proxy.annotation.GetCreator;
+
 import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
 
 import java.util.List;
@@ -53,6 +56,22 @@ public class AdminEventService {
 		}
 		ss.close();
 		return result;
+	}
+
+	public int edit(AdminEventVo vo) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.edit(ss, vo);
+		
+		if(result == 1) {
+			ss.commit();
+			
+		}else {
+			ss.rollback();
+		}
+		ss.close();
+		
+		return result;
+	
 	}
 
 }
