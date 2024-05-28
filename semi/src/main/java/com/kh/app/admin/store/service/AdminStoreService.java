@@ -2,6 +2,8 @@ package com.kh.app.admin.store.service;
 
 import com.kh.app.admin.store.dao.AdminStoreDao;
 import com.kh.app.admin.store.vo.AdminStoreVo;
+import com.kh.app.admin.theater.vo.AdminTheaterVo;
+import com.kh.app.board.vo.EventVo;
 import com.kh.app.db.SqlSessionTemplate;
 
 import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
@@ -35,11 +37,11 @@ public class AdminStoreService {
 		return result;
 	}
 
-	   public List<AdminStoreVo> getAllProducts() throws Exception {
-	        SqlSession ss = getSqlSession();
-	        List<AdminStoreVo> storeList = dao.getAllProducts(ss);
-	        ss.close();
-	        return storeList;
+	   public List<AdminStoreVo> list() throws Exception {
+			SqlSession ss = getSqlSession();
+			List<AdminStoreVo> storeList = dao.list(ss);
+			ss.close();
+			return storeList;
 	    }
 
 	public int delete(String no) throws Exception {
@@ -58,6 +60,8 @@ public class AdminStoreService {
 		
 	
 	}
+
+
 
 
 

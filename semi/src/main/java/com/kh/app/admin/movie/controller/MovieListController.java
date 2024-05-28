@@ -1,6 +1,7 @@
-package com.kh.app.admin.cinema.controller;
+package com.kh.app.admin.movie.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,30 +9,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.admin.cinema.service.AdminCinemaService;
+import com.kh.app.admin.movie.service.AdminMovieService;
+import com.kh.app.admin.movie.vo.AdminMovieVo;
 
-@WebServlet("/admin/cinema/delete")
-public class CinemaDeleteController extends HttpServlet{
-	
+@WebServlet("/admin/movie/list")
+public class MovieListController extends HttpServlet {
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+			
 		try {
-			String no = req.getParameter("no");
-			AdminCinemaService ss = new AdminCinemaService();
-			int result = ss.delete(no);
-			if(result == 1) {
-				resp.sendRedirect("/admin/cinema/list");
-			} else {
-			}
+			AdminMovieService ams = new AdminMovieService();
+			List<AdminMovieVo> voList = ams.list();
+			
+			req.setAttribute("voList", voList);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-movielist").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
+		
 		}
-	}
 	
+	
+	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	}
 	
-
 }

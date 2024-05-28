@@ -2,6 +2,8 @@ package com.kh.app.admin.movie.service;
 
 import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.kh.app.admin.movie.dao.AdminMovieDao;
@@ -32,6 +34,28 @@ public class AdminMovieService {
 		
 		
 	
+	}
+
+	public List<AdminMovieVo> list() throws Exception {
+		SqlSession ss = getSqlSession();
+		List<AdminMovieVo> voList =dao.list(ss);
+		ss.close();
+		return voList;
+	}
+
+	public int delete(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.delete(ss , no);
+		
+		if(result == 1) {
+			ss.commit();
+		} else {
+			ss.rollback();
+		}
+		ss.close();
+		return result;
+		
+		
 	}
 
 

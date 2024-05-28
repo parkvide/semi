@@ -21,7 +21,7 @@ public class StoreListController extends HttpServlet {
 		
 	     try {
 	            AdminStoreService ass = new AdminStoreService();
-	            List<AdminStoreVo> storeList = ass.getAllProducts();
+	            List<AdminStoreVo> storeList = ass.list();
 	            
 	            req.setAttribute("storeList", storeList);
 	            req.getRequestDispatcher("/WEB-INF/views/admin/admin-storelist.jsp").forward(req, resp);

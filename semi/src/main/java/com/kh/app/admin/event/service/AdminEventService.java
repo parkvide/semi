@@ -4,6 +4,8 @@ import com.kh.app.admin.event.dao.AdminEventDao;
 import com.kh.app.admin.event.dao.AdminEventVo;
 import static com.kh.app.db.SqlSessionTemplate.getSqlSession;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 public class AdminEventService {
@@ -30,6 +32,27 @@ public class AdminEventService {
 		
 		
 	
+	}
+
+	public List<AdminEventVo> list() throws Exception {
+		SqlSession ss = getSqlSession();
+		List<AdminEventVo> voList = dao.list(ss);
+		
+		ss.close();
+		return voList;
+	}
+
+	public int delete(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.delete(ss, no);
+		
+		if(result == 1) {
+			ss.commit();
+		} else {
+			ss.rollback();
+		}
+		ss.close();
+		return result;
 	}
 
 }
