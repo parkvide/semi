@@ -3,8 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="AdminMapper">
-
-    <select id="adminlogin" parameterType="com.kh.app.admin.vo.AdminVo" resultType="com.kh.app.admin.vo.AdminVo">
+	<!--관리자 로그인 -->
+    <select id="adminlogin" parameterType="AdminVo" resultType="AdminVo">
         SELECT 
             NO, ID, PWD, NICK 
         FROM ADMIN 
@@ -12,7 +12,7 @@
         AND PWD = #{pwd}
         
     </select>
-    
+    <!--영화 등록하기  -->
    	<insert id="movieInsert">
    	
    		INSERT INTO 
@@ -23,7 +23,7 @@
    		,MOVIE_AGE
    		,SUMMARY
    		,CAST
-   		,DIRECRTOR
+   		,DIRECTOR
    		,RUNNING_TIME
    		,DEL_YN
    		,POSTER
@@ -41,25 +41,8 @@
    		,#{poster}
    		)
    	</insert>
-   	
-   	<update id="movieEdit">
-   		UPDATE ADMIN SET 
-   		TYPE = #{type} 
-   		, MOVIE_AGE = #{movie_age} 
-   		, SUMMARY = #{summary} 
-   		, CAST = #{cast}
-   		, DIRECTOR = #{director}
-   		, RUNNING_TIME = #{running_time}
-   		, POSTER = #{poster}
-   		WHERE NO = ?
-  
-   	</update>
-   	
-   	<select id="movieSelect">
-   	
-   	</select>
-   	
-   	<insert id="storeInsert" parameterType="com.kh.app.admin.store.vo.AdminStoreVo">
+   	<!-- 상품 등록하기 -->
+   	<insert id="storeInsert">
 	INSERT INTO
 	PRODUCT
 	(
@@ -83,13 +66,177 @@
 	)
    	</insert>
    	
-	<select id="getAllProducts" resultType="com.kh.app.admin.store.vo.AdminStoreVo">
-		   SELECT * FROM PRODUCT
-	</select>
+   	<!-- 영화관 등록하기 -->
+   	<insert id="cinemaInsert">
+   		
+   		INSERT INTO CINEMA(
+         NO
+        ,CINEMA_NAME 
+        ,CINEMA_ADDRESS 
+        ,CINEMA_TEL
+        ,DEL_YN 
+        ,CINEMA_IMG
+        )VALUES
+        (
+        SEQ_CINEMA.NEXTVAL 
+        , #{cinemaName} 
+        , #{cinemaAddress}
+        , #{cinemaTel}
+        ,'N' 
+        , #{cinemaImg}
+        )
+   	</insert>
+   	<!--이벤트 등록 -->
+	<insert id="eventInsert">
+		INSERT INTO EVENT(
+		NO
+		,WRITER_NO
+		,TITLE
+		,CONTENT_IMG
+		,UPLOAD_DATE
+		,VIEWS
+		,DEL_YN
+		)VALUES
+		(
+		SEQ_EVENT.NEXTVAL
+		,#{writerNo}
+		,#{title}
+		,#{contentImg}
+		,CURRENT_TIMESTAMP
+		,#{views}
+		,'N'
+		)
+   	</insert>
+   	<!-- 자주묻는 질문 등록 -->
+   	<insert id="faqInsert">
+
+		INSERT INTO FAQ(
+		 NO
+		,WRITER_NO
+		,TITLE
+		,CONTENT
+		,VIEWS
+		,UPLOAD_DATE
+		,DEL_YN
+		)VALUES
+		(
+		SEQ_FAQ.NEXTVAL
+		,#{writerNo}
+		,#{title}
+		,#{content}
+		,#{views}
+		,CURRENT_TIMESTAMP
+		,'N'
+		)
    	
-   	<update id="storeUpdate">
-   		UPDATE
-   	</update>
+   	</insert>
+   	<!-- 공지사항 등록 -->
+   	<insert id="noticeInsert">
 
+		INSERT INTO NOTICE(
+		NO
+		,WRITER_NO
+		,TITLE
+		,CONTENT
+		,UPLOAD_DATE
+		,VIEWS
+		,DEL_YN
+		)VALUES
+		(
+		SEQ_NOTICE.NEXTVAL
+		,#{writerNo}
+		,#{title}
+		,#{content}
+		,CURRENT_TIMESTAMP
+		,#{views}
+		,'N'
+		)
+   	</insert>
+   	<!-- 관 등록 -->
+   	<insert id="theaterInsert">
+		INSERT INTO "THEATER-TYPE" (
+		NO
+		,TYPE
+		,THEATER_IMG
+		,PRICE
+		) VALUES
+		(
+		SEQ_THEATER_TYPE.NEXTVAL
+		,#{type}
+		,#{theaterImg}
+		,#{price}
+		
+		)
+   	</insert>
+<!--    	영화관 리스트 -->
+   	<select id="cinemaList" resultType="AdminCinemaVo">
+	SELECT *
+	FROM CINEMA
+   	</select>
+<!-- 	스토어리스트 -->
+	<select id="storeList" resultType="AdminStoreVo">
+		SELECT *
+		FROM PRODUCT
+	</select>
+<!--    	이벤트 리스트 -->
+   	<select id="eventList" resultType="AdminEventVo">
+	SELECT *
+	FROM EVENT
+   	</select>
+<!--    	자주묻는질문 리스트 -->
+   	<select id="faqList" resultType="AdminFaqVo">
+	SELECT *
+	FROM FAQ
+   	</select>
+<!--    	영화 리스트 -->
+   	<select id="movieList" resultType="AdminMovieVo">
+	SELECT *
+	FROM MOVIE
+   	</select>
+<!--    	공지사항 리스트 -->
+   	<select id="noticeList" resultType="AdminNoticeVo">
+	SELECT *
+	FROM NOTICE
+   	</select>
+<!--    	관 리스트 -->
+   	<select id="theaterList" resultType="AdminTheaterVo">
+	SELECT *
+	FROM "THEATER-TYPE"
+   	</select>
+   	
+   	<delete id="cinemaDelete">
+   		 DELETE FROM CINEMA
+   		 WHERE NO = ${no} 
+   	</delete>
 
+	<delete id="eventDelete">
+		DELETE FROM EVENT
+		WHERE NO = ${no}
+	</delete>
+
+	<delete id="faqDelete">
+		DELETE FROM FAQ
+		WHERE NO = ${no}
+	</delete>
+
+	<delete id="movieDelete">
+		DELETE FROM MOVIE
+		WHERE NO = ${no}
+	</delete>   	
+
+	<delete id="noticeDelete">
+		DELETE FROM NOTICE
+		WHERE NO = ${no}
+	</delete>   
+
+	<delete id="storeDelete">
+		DELETE FROM PRODUCT
+		WHERE NO = ${no}
+	</delete>  
+
+	<delete id="theaterDelete">
+		DELETE FROM "THEATER-TYPE"
+		WHERE NO = ${no}
+	</delete>	
+	
 </mapper>

@@ -57,6 +57,21 @@ public class AdminFaqService {
 	
 	}
 
+	public int edit(AdminFaqVo vo) throws Exception {
+		
+		SqlSession ss = getSqlSession();
+		int result = dao.edit(ss,vo);
+		
+		if(result == 1) {
+			ss.commit();
+		}else {
+			ss.rollback();
+		}
+		ss.close();
+		
+		return result;
+	}
+
 	
 
 }

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.admin.event.dao.AdminEventVo;
+import com.kh.app.admin.event.vo.AdminEventVo;
 import com.kh.app.admin.event.service.AdminEventService;
 
 @WebServlet("/admin/evt/list")
