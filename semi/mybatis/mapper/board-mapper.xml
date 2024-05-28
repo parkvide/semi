@@ -74,4 +74,25 @@
 		 SET HIT = HIT + 1 
 		 WHERE NO = #{no} AND DEL_YN = 'N'
 	</update>
+	
+	<insert id="insertRent">
+		INSERT INTO RENT
+		(
+		 	NO
+		 	,WRITER_NO
+		 	,CINEMA_NO
+		 	,TITLE
+		 	,CONTENT
+		 	,RENTAL_DATE
+		)
+		VALUES
+		(
+			SEQ_RENT.NEXTVAL
+			,#{writerNo}
+			,#{cinemaNo}
+			,#{title}
+			,#{content}
+			,#{rentalDate}
+		)
+	</insert>
 </mapper>

@@ -153,6 +153,20 @@ public class BoardService {
 		
 		return rentVo;
 	}
+	
+	//회원 대관 insert
+	public int insertRent(RentVo rentVo) throws Exception {
+		SqlSession ss = getSqlSession();
+		int result = dao.insertRent(ss, rentVo);
+		if(result == 1) {
+			ss.commit();
+		}else {
+			ss.rollback();
+		}
+		ss.close();
+		
+		return result;
+	}
 
 }
 

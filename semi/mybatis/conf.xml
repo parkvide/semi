@@ -21,5 +21,7 @@
     <mapper resource="/mapper/movie-mapper.xml"/>
     <mapper resource="/mapper/product-mapper.xml"/>
     <mapper resource="/mapper/cart-mapper.xml"/>
+    <mapper resource="/mapper/cinema-mapper.xml"/>
+    <mapper resource="/mapper/movie-review-mapper.xml"/>
   </mappers>
 </configuration>
