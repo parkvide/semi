@@ -21,9 +21,9 @@ public class FaqListController extends HttpServlet{
 		try {
 			
 			AdminFaqService afs = new AdminFaqService();
-			List<AdminFaqVo> voList = afs.list();
+			List<AdminFaqVo> adminFaqvoList = afs.list();
 			
-			req.setAttribute("voList", voList);
+			req.setAttribute("adminFaqvoList", adminFaqvoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-faqlist.jsp").forward(req, resp);
 			
 		} catch (Exception e) {

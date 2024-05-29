@@ -20,9 +20,9 @@ public class TheaterListController extends HttpServlet{
 	
 	     try {
 	            AdminTheaterService ats = new AdminTheaterService();
-	            List<AdminTheaterVo> theaterVoList = ats.list();
+	            List<AdminTheaterVo> admintheaterVoList = ats.list();
 	            
-	            req.setAttribute("theaterVoList", theaterVoList);
+	            req.setAttribute("admintheaterVoList", admintheaterVoList);
 	            req.getRequestDispatcher("/WEB-INF/views/admin/admin-theaterlist.jsp").forward(req, resp);
 	        } catch (Exception e) {
 	            e.printStackTrace();
