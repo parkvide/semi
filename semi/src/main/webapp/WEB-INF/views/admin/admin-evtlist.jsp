@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
   <!DOCTYPE html>
   <html lang="en">
 
@@ -82,19 +81,29 @@
           <div id="line"></div>
           <div id="list-main">
             <div id="title">
-              <div>번호</div>
-              <div>작성자 이름</div>
-              <div>제목</div>
-              <div>등록날짜</div>
-              <div>조회수</div>
+              <div class="no">번호</div>
+              <div class="id">아이디</div>
+              <div class="name">이름</div>
+              <div class="num">연락처</div>
+              <div class="email">이메일</div>
+              <div class="birth">생년월일</div>
+              <div class="date">가입날짜</div>
+              <div class="ny">상태</div>
+              <div class="modify">탈퇴날짜</div>
             </div>
             <div id="content">
-              <c:forEach items="${adminEventvoList}" var="vo">
-                <div>${vo.no}</div>
-                <div>${vo.writerNo}</div>
-                <div>${vo.title}</div>
-                <div>${vo.uploadDate}</div>
-                <div>${vo.views}</div>
+              <c:forEach items="${voList}" var="vo">
+                <div id="contentlist">
+                  <div class="no">번호 자바코드임</div>
+                  <div class="id">아이디 자바코드임</div>
+                  <div class="name">이름 자바코드임</div>
+                  <div class="num">연락처 자바코드임</div>
+                  <div class="email">이메일 자바코드임</div>
+                  <div class="birth">생년월일 자바코드임</div>
+                  <div class="date">가입날짜 자바코드임</div>
+                  <div class="ny">상태 자바코드임</div>
+                  <div class="modify">탈퇴날짜 자바코드임</div>
+                </div>
               </c:forEach>
             </div>
           </div>

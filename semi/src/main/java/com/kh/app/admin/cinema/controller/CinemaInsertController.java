@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,21 +15,11 @@ import javax.servlet.http.Part;
 import com.kh.app.admin.cinema.service.AdminCinemaService;
 import com.kh.app.admin.cinema.vo.AdminCinemaVo;
 
-
-@MultipartConfig(
-		maxFileSize = 1024*1024*10 ,
-		maxRequestSize = 1024*1024*50 ,
-		fileSizeThreshold = 1024*1024*10
-)
-
-
 @WebServlet("/admin/cinema/insert")
 public class CinemaInsertController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/admin/admin-cinemainsert.jsp").forward(req, resp);
-		
 	}
 	
 	@Override
@@ -74,9 +63,8 @@ public class CinemaInsertController extends HttpServlet{
 			AdminCinemaService acs = new AdminCinemaService();
 			int result = acs.insert(vo);
 			
-			
 			if(result == 1) {
-				resp.sendRedirect("/app/admin/cinema/list");
+				System.out.println("등록성공");
 			}else {
 				System.out.println("등록실패");
 			}

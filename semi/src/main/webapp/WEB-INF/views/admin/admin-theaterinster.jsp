@@ -80,13 +80,31 @@
           </div>
           <div id="line"></div>
           <div id="list-main">
-            <div id="theater">
-              <form action="/app/admin/theater/insert" method="post" enctype="multipart/form-data">
-                <input type="text" name="type" placeholder="이름">
-                <input type="text" name="price" placeholder="가격">
-                <input type="file" name="img" placeholder="관사진">
-                <input type="submit" value="등록하기">
-              </form>
+            <div id="title">
+              <div class="no">번호</div>
+              <div class="id">아이디</div>
+              <div class="name">이름</div>
+              <div class="num">연락처</div>
+              <div class="email">이메일</div>
+              <div class="birth">생년월일</div>
+              <div class="date">가입날짜</div>
+              <div class="ny">상태</div>
+              <div class="modify">탈퇴날짜</div>
+            </div>
+            <div id="content">
+              <c:forEach items="${voList}" var="vo">
+                <div id="contentlist">
+                  <div class="no">번호 자바코드임</div>
+                  <div class="id">아이디 자바코드임</div>
+                  <div class="name">이름 자바코드임</div>
+                  <div class="num">연락처 자바코드임</div>
+                  <div class="email">이메일 자바코드임</div>
+                  <div class="birth">생년월일 자바코드임</div>
+                  <div class="date">가입날짜 자바코드임</div>
+                  <div class="ny">상태 자바코드임</div>
+                  <div class="modify">탈퇴날짜 자바코드임</div>
+                </div>
+              </c:forEach>
             </div>
           </div>
         </div>

@@ -22,10 +22,10 @@ public class CinemaListController extends HttpServlet {
 		try {
 			
 			AdminCinemaService acs = new AdminCinemaService();
-			List<AdminCinemaVo> adminCinemavoList = acs.list();
+			List<AdminCinemaVo> voList = acs.list();
 		
-			req.setAttribute("adminCinemavoList", adminCinemavoList );
-			req.getRequestDispatcher("/WEB-INF/views/admin/admin-cinemalist.jsp").forward(req, resp);
+			req.setAttribute("voList", voList);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-cinemali0st.jsp").forward(req, resp);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

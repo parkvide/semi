@@ -22,9 +22,9 @@ public class EventListController extends HttpServlet {
 		try {
 			
 			AdminEventService aes = new AdminEventService();
-			List<AdminEventVo> adminEventvoList = aes.list();
+			List<AdminEventVo> voList = aes.list();
 			
-			req.setAttribute("adminEventvoList", adminEventvoList);
+			req.setAttribute("voList", voList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-evtlist.jsp").forward(req, resp);
 			
 		} catch (Exception e) {

@@ -10,6 +10,8 @@ public class AdminMovieDao {
 
 	public int insert(SqlSession ss, AdminMovieVo vo) {
 		return ss.insert("AdminMapper.movieInsert" , vo);
+		
+	
 	}
 
 	public List<AdminMovieVo> list(SqlSession ss) {

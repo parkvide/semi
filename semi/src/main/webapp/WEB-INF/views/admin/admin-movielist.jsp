@@ -78,25 +78,32 @@
                 </div>
                 <div id="line"></div>
                 <div id="list-main">
-		            <div id="title">
-		              <div>번호</div>
-		              <div>장르</div>
-		              <div>관람연령</div>
-		              <div>내용</div>
-		              <div>감독</div>
-		              <div>상영시간</div>
-		            </div>
-		            <div id="content">
-		              <c:forEach items="${AdminMovievoList}" var="vo">
-		                <div>${vo.no}</div>
-		                <div>${vo.type}</div>
-		                <div>${vo.movieAge}</div>
-		                <div>${vo.summary}</div>
-		                <div>${vo.cast}</div>
-		                <div>${vo.director}</div>
-		                <div>${vo.runningTime}</div>
-		              </c:forEach>
-		            </div>
+                    <div id="title">
+                        <div class="no">번호</div>
+                        <div class="id">아이디</div>
+                        <div class="name">이름</div>
+                        <div class="num">연락처</div>
+                        <div class="email">이메일</div>
+                        <div class="birth">생년월일</div>
+                        <div class="date">가입날짜</div>
+                        <div class="ny">상태</div>
+                        <div class="modify">탈퇴날짜</div>
+                    </div>
+                    <div id="content">
+                        <c:forEach items="${voList}" var="vo" >
+                        <div id="contentlist">
+                            <div class="no">번호 자바코드임</div>
+                            <div class="id">아이디 자바코드임</div>
+                            <div class="name">이름 자바코드임</div>
+                            <div class="num">연락처 자바코드임</div>
+                            <div class="email">이메일 자바코드임</div>
+                            <div class="birth">생년월일 자바코드임</div>
+                            <div class="date">가입날짜 자바코드임</div>
+                            <div class="ny">상태 자바코드임</div>
+                            <div class="modify">탈퇴날짜 자바코드임</div>
+                        </div>
+                        </c:forEach>
+                    </div>
                 </div>
             </div>
          </div>
