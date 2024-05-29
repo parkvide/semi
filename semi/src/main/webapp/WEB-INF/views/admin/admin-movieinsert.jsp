@@ -71,17 +71,18 @@
             <span>영화 등록</span>
           </div>
           <div id="line"></div>
-          <form action="" method="post">
-            <input type="text" name="type" placeholder="장르">
-            <input type="text" name="age" placeholder="관람연령가">
-            <input type="text" name="summary" placeholder="내용" >
-            <input type="text" name="cast" placeholder="출연배우">
-            <input type="text" name="director" placeholder="감독">
-            <input type="text" name="time" placeholder="상영시간">
-            <input type="file" name="post" >
-            <input type="submit" value="등록하기">
-
-          </form>
+          <div>
+            <form action="/app/admin/movie/insert" method="post" enctype="multipart/form-data">
+              <input type="text" name="type" placeholder="장르">
+              <input type="text" name="age" placeholder="관람연령가">
+              <input type="text" name="summary" placeholder="내용" >
+              <input type="text" name="cast" placeholder="출연배우">
+              <input type="text" name="director" placeholder="감독">
+              <input type="text" name="time" placeholder="상영시간">
+              <input type="file" name="poster" >
+              <input type="submit" value="등록하기">
+            </form>
+          </div>
           
         </div>
       </div>

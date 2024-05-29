@@ -4,13 +4,55 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="AdminMapper">
 <!-- 관리자 로그인  -->
-<select id="adminlogin" parameterType="AdminVo" resultType="AdminVo"> SELECT NO, ID, PWD, NICK FROM ADMIN WHERE ID = #{id} AND PWD = #{pwd} </select>
+<select id="adminlogin" parameterType="AdminVo" resultType="AdminVo"> 
+SELECT NO, ID, PWD, NICK FROM ADMIN 
+WHERE ID = #{id} AND PWD = #{pwd} 
+</select>
 <!-- 영화 등록하기   -->
-<insert id="movieInsert"> INSERT INTO ADMIN ( NO ,TYPE ,MOVIE_AGE ,SUMMARY ,CAST ,DIRECTOR ,RUNNING_TIME ,DEL_YN ,POSTER ) values ( SEQ_MOVIE.NEXTVAL ,#{type} ,#{movie_age} ,#{summary} ,#{cast} ,#{director} ,#{running_time} ,'N' ,#{poster} ) </insert>
+<insert id="movieInsert"> 
+INSERT INTO MOVIE ( 
+		NO ,
+		TYPE 
+		,MOVIE_AGE 
+		,SUMMARY 
+		,CAST 
+		,DIRECTOR 
+		,RUNNING_TIME 
+		,DEL_YN 
+		,POSTER 
+		) VALUES ( 
+		SEQ_MOVIE.NEXTVAL 
+		,${type} 
+		,${movieAge} 
+		,#{summary} 
+		,#{cast} 
+		,#{director} 
+		,#{runningTime} 
+		,'N' 
+		,#{poster} 
+		) 
+</insert>
 <!--  상품 등록하기  -->
 <insert id="storeInsert"> INSERT INTO PRODUCT ( NO ,CATERGORY ,NAME ,PRICE ,ORIGIN_COUNTRY ,NUTRIENTE_IMG ,PRODUCT_IMG ) VALUES ( SEQ_PRODUCT.NEXTVAL ,#{category} ,#{name} ,#{price} ,#{originCountry} ,#{nutrienteImg} ,#{productImg} ) </insert>
 <!--  영화관 등록하기  -->
-<insert id="cinemaInsert"> INSERT INTO CINEMA( NO ,CINEMA_NAME ,CINEMA_ADDRESS ,CINEMA_TEL ,DEL_YN ,CINEMA_IMG )VALUES ( SEQ_CINEMA.NEXTVAL , #{cinemaName} , #{cinemaAddress} , #{cinemaTel} ,'N' , #{cinemaImg} ) </insert>
+<insert id="cinemaInsert"> 
+INSERT INTO CINEMA( 
+		NO 
+		,CINEMA_NAME 
+		,CINEMA_ADDRESS 
+		,CINEMA_TEL 
+		,DEL_YN 
+		,CINEMA_IMG 
+		)VALUES 
+		( 
+		SEQ_CINEMA.NEXTVAL 
+		, #{cinemaName} 
+		, #{cinemaAddress} 
+		, #{cinemaTel} 
+		,'N' 
+		, #{cinemaImg} 
+		) 
+</insert>
 <!-- 이벤트 등록  -->
 <insert id="eventInsert"> INSERT INTO EVENT( NO ,WRITER_NO ,TITLE ,CONTENT_IMG ,UPLOAD_DATE ,VIEWS ,DEL_YN )VALUES ( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} ,CURRENT_TIMESTAMP ,#{views} ,'N' ) </insert>
 <!--  자주묻는 질문 등록  -->
@@ -48,13 +90,33 @@
 </update>
 <update id="eventUpdate">
 	UPDATE EVENT
-	SET TITLE_NAME = #{title}
+	SET TITLE = #{title}
 	WHERE NO = ${NO}
 </update>
-<update id="faqEdit"></update>
-<update id="movieEdit"></update>
-<update id="noticeEdit"></update>
-<update id="storeEdit"></update>
-<update id="theaterEdit"></update>
+<update id="faqEdit">
+	UPDATE FAQ
+	SET TITLE = #{title}
+	WHERE NO = ${NO}
+</update>
+<update id="movieEdit">
+	UPDATE MOVIE
+	SET SUMMARY = #{summary}
+	WHERE NO = ${NO}
+</update>
+<update id="noticeEdit">
+	UPDATE NOTICE
+	SET CONTENT = #{content}
+	WHERE NO = ${NO}
+</update>
+<update id="storeEdit">
+	UPDATE PRODUCT
+	SET PRICE = #{price}
+	WHERE NO = ${NO}
+</update>
+<update id="theaterEdit">
+	UPDATE THEATER
+	SET TYPE = #{type}
+	WHERE NO = ${NO}
+</update>
 
 </mapper>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -6,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-lent.css">
-    <script src="/app/resources/js/admin/admin-lent.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-cinemalist.css">
+    <script src="/app/resources/js/admin/admin-cinamelist.js"></script>
   </head>
 
   <body>
@@ -68,7 +69,7 @@
 
         <div id="list">
           <div id="name">
-            <span>대관문의</span>
+            <span>가격 목록</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">
@@ -81,29 +82,17 @@
           <div id="line"></div>
           <div id="list-main">
             <div id="title">
-              <div class="no">번호</div>
-              <div class="id">아이디</div>
-              <div class="name">이름</div>
-              <div class="num">연락처</div>
-              <div class="email">이메일</div>
-              <div class="birth">생년월일</div>
-              <div class="date">가입날짜</div>
-              <div class="ny">상태</div>
-              <div class="modify">탈퇴날짜</div>
+              <div>번호</div>
+              <div class="no">상영관 이름</div>
+              <div class="id">주소</div>
+              <div class="name">전화번호</div>
             </div>
             <div id="content">
-              <c:forEach items="${voList}" var="vo">
-                <div id="contentlist">
-                  <div class="no">번호 자바코드임</div>
-                  <div class="id">아이디 자바코드임</div>
-                  <div class="name">이름 자바코드임</div>
-                  <div class="num">연락처 자바코드임</div>
-                  <div class="email">이메일 자바코드임</div>
-                  <div class="birth">생년월일 자바코드임</div>
-                  <div class="date">가입날짜 자바코드임</div>
-                  <div class="ny">상태 자바코드임</div>
-                  <div class="modify">탈퇴날짜 자바코드임</div>
-                </div>
+              <c:forEach items="${adminCinemavoList}" var="vo">
+                <div>${vo.no}</div>
+                <div class="no">${vo.cinemaName}</div>
+                <div class="id">${vo.cinemaAddress}</div>
+                <div class="name">${vo.cinemaTel}</div>
               </c:forEach>
             </div>
           </div>
