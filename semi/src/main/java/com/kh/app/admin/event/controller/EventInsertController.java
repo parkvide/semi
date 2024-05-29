@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,19 +15,12 @@ import javax.servlet.http.Part;
 import com.kh.app.admin.event.vo.AdminEventVo;
 import com.kh.app.admin.event.service.AdminEventService;
 
-
-@MultipartConfig(
-		maxFileSize = 1024*1024*10 ,
-		maxRequestSize = 1024*1024*50 ,
-		fileSizeThreshold = 1024*1024*10
-)
-
 @WebServlet("/admin/evt/insert")
 public class EventInsertController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/admin/admin-evtinsert.jsp").forward(req, resp);
+
 	}
 	
 	@Override

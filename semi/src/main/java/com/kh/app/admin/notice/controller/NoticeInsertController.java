@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.admin.notice.service.AdminNoticeService;
 import com.kh.app.admin.notice.vo.AdminNoticeVo;
 
-@WebServlet("/admin/not/insert")
+@WebServlet
 public class NoticeInsertController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		req.getRequestDispatcher("/WEB-INF/views/admin/admin-notinsert.jsp").forward(req, resp);
+		// TODO Auto-generated method stub
+		super.doGet(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-cinemainsert.css">
-    <script src="/app/resources/js/admin/admin-cinameinsert.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-theaterpricelist.css">
+    <script src="/app/resources/js/admin/admin-theaterpricelist.js"></script>
   </head>
 
   <body>
@@ -32,10 +32,10 @@
           <li class="side-menu side-menu-theater">극장</li>
 
           <div class="theater-lists hidden">
-            <li class="side-menu theater-list"><a href="/app/admin/cinema/insert">영화관 등록</a></li>
-            <li class="side-menu theater-list"><a href="/app/admin/cinema/list">영화관 목록</a></li>
+            <li class="side-menu theater-list"><a href="/app/admin/theater/list">극장 목록</a></li>
             <li class="side-menu theater-list"><a href="/app/admin/theater/insert">극장 등록</a></li>
-            <li class="side-menu theater-list"><a href="/app/admin/theater/list">극장 리스트</a></li>
+            <li class="side-menu theater-list"><a href="/app/admin/theater/price">가격 등록</a></li>
+            <li class="side-menu theater-list"><a href="/app/admin/theater/pricelist">가격 목록</a></li>
           </div>
 
           <li class="side-menu side-menu-evt">이벤트</li>
@@ -50,13 +50,6 @@
           <div class="not-lists hidden">
             <li class="side-menu not-list"><a href="/app/admin/not/insert">공지사항 등록</a></li>
             <li class="side-menu not-list"><a href="/app/admin/not/list">공지사항 목록</a></li>
-          </div>
-
-          <li class="side-menu side-menu-not">자주묻는질문</li>
-
-          <div class="not-lists hidden">
-            <li class="side-menu not-list"><a href="/app/admin/not/insert">자주묻는질문 등록</a></li>
-            <li class="side-menu not-list"><a href="/app/admin/not/list">자주묻는질문 목록</a></li>
           </div>
 
           <li class="side-menu side-menu-store">스토어</li>
@@ -75,7 +68,7 @@
 
         <div id="list">
           <div id="name">
-            <span>영화관 등록</span>
+            <span>가격 목록</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">
@@ -87,14 +80,31 @@
           </div>
           <div id="line"></div>
           <div id="list-main">
-            <div>
-              <form action="/app/admin/cinema/insert" method="post" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="영화지점 이름">
-                <input type="text" name="address" placeholder="주소">
-                <input type="text" name="tel" placeholder="전화번호">
-                <input type="file" name="img" >
-                <input type="submit" value="등록하기">
-              </form>
+            <div id="title">
+              <div class="no">번호</div>
+              <div class="id">아이디</div>
+              <div class="name">이름</div>
+              <div class="num">연락처</div>
+              <div class="email">이메일</div>
+              <div class="birth">생년월일</div>
+              <div class="date">가입날짜</div>
+              <div class="ny">상태</div>
+              <div class="modify">탈퇴날짜</div>
+            </div>
+            <div id="content">
+              <c:forEach items="${voList}" var="vo">
+                <div id="contentlist">
+                  <div class="no">번호 자바코드임</div>
+                  <div class="id">아이디 자바코드임</div>
+                  <div class="name">이름 자바코드임</div>
+                  <div class="num">연락처 자바코드임</div>
+                  <div class="email">이메일 자바코드임</div>
+                  <div class="birth">생년월일 자바코드임</div>
+                  <div class="date">가입날짜 자바코드임</div>
+                  <div class="ny">상태 자바코드임</div>
+                  <div class="modify">탈퇴날짜 자바코드임</div>
+                </div>
+              </c:forEach>
             </div>
           </div>
         </div>
