@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.EventService;
+import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.EventVo;
 
 @WebServlet("/service/eventlist")
@@ -19,8 +19,8 @@ public class EventListController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			
-			EventService es = new EventService();
-			List<EventVo> voList = es.selectEventList();
+			BoardService bs = new BoardService();
+			List<EventVo> voList = bs.selectEventList();
 			
 			req.setAttribute("volist", voList);
 			req.getRequestDispatcher("/WEB-INF/views/service/event.jsp").forward(req, resp);

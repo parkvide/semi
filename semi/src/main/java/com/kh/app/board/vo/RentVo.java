@@ -3,7 +3,11 @@ package com.kh.app.board.vo;
 public class RentVo {
 
 	private String no;
-
+	private String writerNo;
+	private String cinemaNo;
+	private String managerNo;
+	private String title;
+	private String content;
 	private String rentalDate;
 	private String uploadDate;
 	private String delYn;
