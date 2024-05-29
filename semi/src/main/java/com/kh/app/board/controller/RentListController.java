@@ -9,22 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.BoardService;
+import com.kh.app.board.service.RentService;
 import com.kh.app.board.vo.RentVo;
 
-@WebServlet("/board/rentlist")
+@WebServlet("/service/rentlist")
 public class RentListController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
-			BoardService bs = new BoardService();
-			
-			List<RentVo> voList = bs.selectRentList();
+			RentService rs = new RentService();
+			List<RentVo> voList = rs.selectRentList();
 			
 			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("/WEB-INF/views/board/rent.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/service/rent.jsp").forward(req, resp);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
