@@ -9,7 +9,7 @@ import com.kh.app.admin.cinema.vo.AdminCinemaVo;
 public class AdminCinemaDao {
 
 	public int insert(SqlSession ss , AdminCinemaVo vo) {
-		return ss.insert("AdminMaper.cinemaInsert" , vo);
+		return ss.insert("AdminMapper.cinemaInsert" , vo);
 	}
 
 	public List<AdminCinemaVo> list(SqlSession ss) {

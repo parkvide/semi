@@ -40,7 +40,7 @@ public class AdminLoginController extends HttpServlet {
 			HttpSession session =req.getSession();
 			if (loginAdminVo == null) {
 				session.setAttribute("alertMsg", "로그인실패");
-			    resp.sendRedirect("/app/admin/login");
+			    resp.sendRedirect("/app/admin/home");
 			    return;
 			} 
 			// 로그인 성공
