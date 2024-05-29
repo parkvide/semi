@@ -23,7 +23,7 @@ public class AdminStoreDao {
 	}
 
 	public int edit(SqlSession ss ,AdminStoreVo vo) {
-		return ss.update("AdminMapper.storeUpdate" , vo);
+		return ss.update("AdminMapper.storeEdit" , vo);
 	}
 
 }
