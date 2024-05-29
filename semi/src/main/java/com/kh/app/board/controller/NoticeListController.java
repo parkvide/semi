@@ -23,7 +23,7 @@ public class NoticeListController extends HttpServlet{
 			List<NoticeVo> voList = bs.getNoticeList();
 			
 			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("/WEB-INF/views/service/notice.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/notice.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

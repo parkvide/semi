@@ -3,7 +3,7 @@ package com.kh.app.board.vo;
 public class NoticeVo {
 
 	private String no;
-	private String writerNo;
+	private String id;
 	private String title;
 	private String content;
 	private String uploadDate;
@@ -13,11 +13,10 @@ public class NoticeVo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public NoticeVo(String no, String writerNo, String title, String content, String uploadDate, String views,
-			String delYn) {
+	public NoticeVo(String no, String id, String title, String content, String uploadDate, String views, String delYn) {
 		super();
 		this.no = no;
-		this.writerNo = writerNo;
+		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.uploadDate = uploadDate;
@@ -26,8 +25,8 @@ public class NoticeVo {
 	}
 	@Override
 	public String toString() {
-		return "NoticeVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", content=" + content
-				+ ", uploadDate=" + uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
+		return "NoticeVo [no=" + no + ", id=" + id + ", title=" + title + ", content=" + content + ", uploadDate="
+				+ uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -35,11 +34,11 @@ public class NoticeVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getWriterNo() {
-		return writerNo;
+	public String getId() {
+		return id;
 	}
-	public void setWriterNo(String writerNo) {
-		this.writerNo = writerNo;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;

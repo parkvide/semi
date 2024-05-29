@@ -2,7 +2,7 @@ package com.kh.app.board.vo;
 
 public class FaqVo {
 	private String no;
-	private String writerNo;
+	private String id;
 	private String title;
 	private String content;
 	private String views;
@@ -12,11 +12,10 @@ public class FaqVo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public FaqVo(String no, String writerNo, String title, String content, String views, String uploadDate,
-			String delYn) {
+	public FaqVo(String no, String id, String title, String content, String views, String uploadDate, String delYn) {
 		super();
 		this.no = no;
-		this.writerNo = writerNo;
+		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.views = views;
@@ -25,8 +24,8 @@ public class FaqVo {
 	}
 	@Override
 	public String toString() {
-		return "FaqVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", content=" + content + ", views="
-				+ views + ", uploadDate=" + uploadDate + ", delYn=" + delYn + "]";
+		return "FaqVo [no=" + no + ", id=" + id + ", title=" + title + ", content=" + content + ", views=" + views
+				+ ", uploadDate=" + uploadDate + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -34,11 +33,11 @@ public class FaqVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getWriterNo() {
-		return writerNo;
+	public String getId() {
+		return id;
 	}
-	public void setWriterNo(String writerNo) {
-		this.writerNo = writerNo;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;

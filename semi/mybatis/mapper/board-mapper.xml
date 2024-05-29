@@ -6,27 +6,94 @@
 <mapper namespace="BoardMapper">
 
 	<select id="selectNoticeList" resultType="com.kh.app.board.vo.NoticeVo">
-		SELECT NO, WRITER_NO, TITLE, CONTENT, VIEWS, UPLOAD_DATE
-		FROM NOTICE
+		SELECT N.NO, A.ID , N.TITLE, N.CONTENT, N.VIEWS, N.UPLOAD_DATE, N.DEL_YN
+		FROM NOTICE N
+		JOIN ADMIN A ON N.WRITER_NO = A.NO
 		WHERE DEL_YN = 'N'
 	</select>
 
 	<select id="selectFaqList" resultType="com.kh.app.board.vo.FaqVo">
-		SELECT NO, WRITER_NO, TITLE, CONTENT, VIEWS, UPLOAD_DATE
-		FROM FAQ
+		SELECT F.NO, A.ID, F.TITLE, F.CONTENT, F.VIEWS, F.UPLOAD_DATE, F.DEL_YN
+		FROM FAQ F
+		JOIN ADMIN A ON F.WRITER_NO = A.NO
 		WHERE DEL_YN = 'N'
 	</select>
 
 	<select id="selectEventList" resultType="com.kh.app.board.vo.EventVo">
-		SELECT NO, WRITER_NO, TITLE, CONTENT_IMG, UPLOAD_DATE, VIEWS
-		FROM EVENT
+		SELECT E.NO, A.ID, E.TITLE, E.CONTENT_IMG, E.UPLOAD_DATE, E.VIEWS, E.DEL_YN
+		FROM EVENT E
+		JOIN ADMIN A ON E.WRITER_NO = A.NO
 		WHERE DEL_YN = 'N'
 	</select>
 	
 	<select id="selectRentList" resultType="com.kh.app.board.vo.RentVo">
-		SELECT NO, WRITER_NO, CINEMA_NO, MANAGER_NO, RENTAL_DATE, UPLOAD_DATE
-		FROM RENT
-		WHERE DEL_YN = 'N'
+		SELECT R.NO, M.ID AS WRITER_ID,M.NO AS WRITER_NO, C.CINEMA_NAME, TT.TYPE, T.THEATER_NAME, A.ID AS ADMIN_ID,
+     	R.RENTAL_DATE, R.UPLOAD_DATE, R.TITLE, R.CONTENT, R.DEL_YN
+		FROM RENT R
+		LEFT JOIN MEMBER M ON R.WRITER_NO = M.NO
+		LEFT JOIN ADMIN A ON R.MANAGER_NO = A.NO
+		LEFT JOIN CINEMA C ON R.CINEMA_NO = C.NO
+		LEFT JOIN THEATER T ON C.NO = T.CINEMA_NO
+		LEFT JOIN "THEATER-TYPE" TT ON T.TYPE = TT.NO
+		WHERE R.DEL_YN = 'N'
 	</select>
-
+	
+	<select id="selectEventListByNo" resultType="com.kh.app.board.vo.EventVo">
+		SELECT E.NO, A.ID, E.TITLE, E.CONTENT_IMG, E.UPLOAD_DATE, E.VIEWS, E.DEL_YN
+		FROM EVENT E
+		JOIN ADMIN A ON E.WRITER_NO = A.NO
+		WHERE DEL_YN = 'N' AND NO = #{no}
+	</select>
+	
+	<select id="selectFaqListByNo" resultType="com.kh.app.board.vo.FaqVo">
+		SELECT F.NO, A.ID, F.TITLE, F.CONTENT, F.VIEWS, F.UPLOAD_DATE, F.DEL_YN
+		FROM FAQ F
+		JOIN ADMIN A ON F.WRITER_NO = A.NO
+		WHERE DEL_YN = 'N' AND NO = #{no}
+	</select>
+	
+	<select id="selectNoticeListByNo" resultType="com.kh.app.board.vo.NoticeVo">
+		SELECT N.NO, A.ID , N.TITLE, N.CONTENT, N.VIEWS, N.UPLOAD_DATE, N.DEL_YN
+		FROM NOTICE N
+		JOIN ADMIN A ON N.WRITER_NO = A.NO
+		WHERE DEL_YN = 'N' AND NO = #{no}
+	</select>
+	
+	<select id="selectRentListByNo" resultType="com.kh.app.board.vo.RentVo">
+		SELECT R.NO, M.ID, C.CINEMA_NAME, TT.TYPE , T.THEATER_NAME , A.ID, R.RENTAL_DATE, R.UPLOAD_DATE, R.DEL_YN
+		FROM RENT R
+		LEFT JOIN MEMBER M ON R.WRITER_NO = M.NO
+		LEFT JOIN ADMIN A ON R.MANAGER_NO = A.NO
+		LEFT JOIN CINEMA C ON R.CINEMA_NO = C.NO
+		LEFT JOIN THEATER T ON C.NO = T.CINEMA_NO
+		LEFT JOIN "THEATER-TYPE" TT ON T.TYPE = TT.NO
+		WHERE R.DEL_YN = 'N' AND M.NO = #{no}
+	</select>
+	
+	<update id="increaseHit">
+		UPDATE ${type}
+		 SET HIT = HIT + 1 
+		 WHERE NO = #{no} AND DEL_YN = 'N'
+	</update>
+	
+	<insert id="insertRent">
+		INSERT INTO RENT
+		(
+		 	NO
+		 	,WRITER_NO
+		 	,CINEMA_NO
+		 	,TITLE
+		 	,CONTENT
+		 	,RENTAL_DATE
+		)
+		VALUES
+		(
+			SEQ_RENT.NEXTVAL
+			,#{writerNo}
+			,#{cinemaNo}
+			,#{title}
+			,#{content}
+			,#{rentalDate}
+		)
+	</insert>
 </mapper>

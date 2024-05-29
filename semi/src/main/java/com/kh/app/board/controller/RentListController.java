@@ -20,10 +20,10 @@ public class RentListController extends HttpServlet{
 		
 		try {
 			BoardService bs = new BoardService();
-			List<RentVo> voList = bs.selectRentList();
+			List<RentVo> rentVoList = bs.selectRentList();
 			
-			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("/WEB-INF/views/service/rent.jsp").forward(req, resp);
+			req.setAttribute("rentVoList", rentVoList);
+			req.getRequestDispatcher("/WEB-INF/views/board/rent.jsp").forward(req, resp);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

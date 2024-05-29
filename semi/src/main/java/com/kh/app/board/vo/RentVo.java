@@ -2,26 +2,35 @@ package com.kh.app.board.vo;
 
 public class RentVo {
 
-	private String no;
-	private String writerNo;
-	private String cinemaNo;
-	private String managerNo;
-	private String title;
-	private String content;
-	private String rentalDate;
-	private String uploadDate;
-	private String delYn;
+    private String no;
+    private String writerNo;
+    private String writerId;
+    private String cinemaName;
+    private String cinemaNo;
+    private String type;
+    private String theaterName;
+    private String adminId;
+    private String title;
+    private String content;
+    private String rentalDate;
+    private String uploadDate;
+    private String delYn;  // 추가된 필드
 	public RentVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RentVo(String no, String writerNo, String cinemaNo, String managerNo, String title, String content,
-			String rentalDate, String uploadDate, String delYn) {
+	public RentVo(String no, String writerNo, String writerId, String cinemaName, String cinemaNo, String type,
+			String theaterName, String adminId, String title, String content, String rentalDate, String uploadDate,
+			String delYn) {
 		super();
 		this.no = no;
 		this.writerNo = writerNo;
+		this.writerId = writerId;
+		this.cinemaName = cinemaName;
 		this.cinemaNo = cinemaNo;
-		this.managerNo = managerNo;
+		this.type = type;
+		this.theaterName = theaterName;
+		this.adminId = adminId;
 		this.title = title;
 		this.content = content;
 		this.rentalDate = rentalDate;
@@ -30,7 +39,8 @@ public class RentVo {
 	}
 	@Override
 	public String toString() {
-		return "RentVo [no=" + no + ", writerNo=" + writerNo + ", cinemaNo=" + cinemaNo + ", managerNo=" + managerNo
+		return "RentVo [no=" + no + ", writerNo=" + writerNo + ", writerId=" + writerId + ", cinemaName=" + cinemaName
+				+ ", cinemaNo=" + cinemaNo + ", type=" + type + ", theaterName=" + theaterName + ", adminId=" + adminId
 				+ ", title=" + title + ", content=" + content + ", rentalDate=" + rentalDate + ", uploadDate="
 				+ uploadDate + ", delYn=" + delYn + "]";
 	}
@@ -46,17 +56,41 @@ public class RentVo {
 	public void setWriterNo(String writerNo) {
 		this.writerNo = writerNo;
 	}
+	public String getWriterId() {
+		return writerId;
+	}
+	public void setWriterId(String writerId) {
+		this.writerId = writerId;
+	}
+	public String getCinemaName() {
+		return cinemaName;
+	}
+	public void setCinemaName(String cinemaName) {
+		this.cinemaName = cinemaName;
+	}
 	public String getCinemaNo() {
 		return cinemaNo;
 	}
 	public void setCinemaNo(String cinemaNo) {
 		this.cinemaNo = cinemaNo;
 	}
-	public String getManagerNo() {
-		return managerNo;
+	public String getType() {
+		return type;
 	}
-	public void setManagerNo(String managerNo) {
-		this.managerNo = managerNo;
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getTheaterName() {
+		return theaterName;
+	}
+	public void setTheaterName(String theaterName) {
+		this.theaterName = theaterName;
+	}
+	public String getAdminId() {
+		return adminId;
+	}
+	public void setAdminId(String adminId) {
+		this.adminId = adminId;
 	}
 	public String getTitle() {
 		return title;
@@ -89,6 +123,6 @@ public class RentVo {
 		this.delYn = delYn;
 	}
 	
-	
+    
 	
 }
