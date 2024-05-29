@@ -62,6 +62,7 @@
                     <span>공지사항</span>
                     <div id="line"></div>
                 </div>
+                
                 <div id="side-category">
                         <div><a href="" class="ca">자주찾는질문</a></div>
                         <div><a href="" class="ca">공지사항</a></div>
