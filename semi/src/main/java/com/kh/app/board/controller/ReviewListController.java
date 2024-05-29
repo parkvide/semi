@@ -23,12 +23,12 @@ public class ReviewListController extends HttpServlet{
 			MovieReviewService mrs = new MovieReviewService();
 			List<ReviewVo> reviewVoList = mrs.selectReviewByMovieNo(movieNo);
 			
-			 Gson gson = new Gson();
-	         String str = gson.toJson(reviewVoList);
+//			 Gson gson = new Gson();
+//	         String str = gson.toJson(reviewVoList);
 	         
 	         resp.setContentType("text/html; charset=UTF-8");// 한글처리 컨트롤러에서 나갈때 생기는 판단.
 	         PrintWriter out = resp.getWriter();
-	         out.write(str);
+//	         out.write(str);
 	         
 		}catch(Exception e) {
 			e.printStackTrace();

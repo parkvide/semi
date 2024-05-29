@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.cinema.service.CinemaService;
 import com.kh.app.cinema.vo.CinemaVo;
 
-@WebServlet("/cinema")
+@WebServlet("/cinema/detail")
 public class CinemaDetailController extends HttpServlet{
 
 	@Override
