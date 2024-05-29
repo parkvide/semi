@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/service/home")
-public class ServiceHomeController extends HttpServlet{
+public class BoardHomeController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/WEB-INF/views/service/service.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/board/boardHome.jsp").forward(req, resp);
 
 	}
 	@Override

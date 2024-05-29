@@ -23,7 +23,7 @@ public class EventListController extends HttpServlet{
 			List<EventVo> voList = bs.selectEventList();
 			
 			req.setAttribute("volist", voList);
-			req.getRequestDispatcher("/WEB-INF/views/service/event.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/event.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

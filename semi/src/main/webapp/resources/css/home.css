@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+
   user-select: none;
 }
 
 body {
-  background-color: #141414;
+  background-color: white;
 }
 
 a {
@@ -250,6 +250,9 @@ footer .wrap .options {
   grid-gap: 1em;
 }
 footer .wrap .options .option {
+  color: #6f6f6f;
+}
+footer .wrap .option a {
   color: #6f6f6f;
 }
 

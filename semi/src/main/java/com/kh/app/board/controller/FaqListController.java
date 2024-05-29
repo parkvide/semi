@@ -23,7 +23,7 @@ public class FaqListController extends HttpServlet{
 			BoardService bs = new BoardService();
 			List<FaqVo> voList = bs.selectFaqList();
 			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("WEB-INF/views/service/faq.jsp").forward(req, resp);
+			req.getRequestDispatcher("WEB-INF/views/board/faq.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

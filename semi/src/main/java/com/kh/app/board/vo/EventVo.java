@@ -3,7 +3,7 @@ package com.kh.app.board.vo;
 public class EventVo {
 
 	private String no;
-	private String writerNo;
+	private String id;
 	private String title;
 	private String contentImg;
 	private String uploadDate;
@@ -13,11 +13,11 @@ public class EventVo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public EventVo(String no, String writerNo, String title, String contentImg, String uploadDate, String views,
+	public EventVo(String no, String id, String title, String contentImg, String uploadDate, String views,
 			String delYn) {
 		super();
 		this.no = no;
-		this.writerNo = writerNo;
+		this.id = id;
 		this.title = title;
 		this.contentImg = contentImg;
 		this.uploadDate = uploadDate;
@@ -26,8 +26,8 @@ public class EventVo {
 	}
 	@Override
 	public String toString() {
-		return "EventVo [no=" + no + ", writerNo=" + writerNo + ", title=" + title + ", contentImg=" + contentImg
-				+ ", uploadDate=" + uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
+		return "EventVo [no=" + no + ", id=" + id + ", title=" + title + ", contentImg=" + contentImg + ", uploadDate="
+				+ uploadDate + ", views=" + views + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -35,11 +35,11 @@ public class EventVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getWriterNo() {
-		return writerNo;
+	public String getId() {
+		return id;
 	}
-	public void setWriterNo(String writerNo) {
-		this.writerNo = writerNo;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;
@@ -71,6 +71,7 @@ public class EventVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
+	
 	
 	
 }

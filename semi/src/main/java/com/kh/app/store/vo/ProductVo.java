@@ -3,34 +3,38 @@ package com.kh.app.store.vo;
 public class ProductVo {
 
 	private String no;
-	private String catrgoryNo;
+	private String categoryNo;
 	private String name;
 	private String price;
 	private String originCountry;
 	private String nutrienteImg;
 	private String productImg;
 	private String delYn;
+	private String detail;
+	private String type;
 	public ProductVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ProductVo(String no, String catrgoryNo, String name, String price, String originCountry, String nutrienteImg,
-			String productImg, String delYn) {
+	public ProductVo(String no, String categoryNo, String name, String price, String originCountry, String nutrienteImg,
+			String productImg, String delYn, String detail, String type) {
 		super();
 		this.no = no;
-		this.catrgoryNo = catrgoryNo;
+		this.categoryNo = categoryNo;
 		this.name = name;
 		this.price = price;
 		this.originCountry = originCountry;
 		this.nutrienteImg = nutrienteImg;
 		this.productImg = productImg;
 		this.delYn = delYn;
+		this.detail = detail;
+		this.type = type;
 	}
 	@Override
 	public String toString() {
-		return "ProductVo [no=" + no + ", catrgoryNo=" + catrgoryNo + ", name=" + name + ", price=" + price
+		return "ProductVo [no=" + no + ", categoryNo=" + categoryNo + ", name=" + name + ", price=" + price
 				+ ", originCountry=" + originCountry + ", nutrienteImg=" + nutrienteImg + ", productImg=" + productImg
-				+ ", delYn=" + delYn + "]";
+				+ ", delYn=" + delYn + ", detail=" + detail + ", type=" + type + "]";
 	}
 	public String getNo() {
 		return no;
@@ -38,11 +42,11 @@ public class ProductVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getCatrgoryNo() {
-		return catrgoryNo;
+	public String getCategoryNo() {
+		return categoryNo;
 	}
-	public void setCatrgoryNo(String catrgoryNo) {
-		this.catrgoryNo = catrgoryNo;
+	public void setCategoryNo(String categoryNo) {
+		this.categoryNo = categoryNo;
 	}
 	public String getName() {
 		return name;
@@ -80,6 +84,19 @@ public class ProductVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
+	public String getDetail() {
+		return detail;
+	}
+	public void setDetail(String detail) {
+		this.detail = detail;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	
 	
 	
 }
