@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.dao.MovieDao;
 import com.kh.app.movie.vo.MovieVo;
+import com.kh.app.screeninfo.vo.ScreenInfoVo;
 import com.kh.app.theater.vo.TheaterVo;
 
 
@@ -57,16 +58,32 @@ public class MovieTicketingService {
 
 
 
-	public List<CinemaVo> selectCinemaList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CinemaVo> selectCinemaList() throws Exception {
+		SqlSession ss = getSqlSession();
+		List<CinemaVo> voList = dao.selectCinemaList(ss);
+		ss.close();
+		
+		return voList;
 	}
 
 
 
-	public List<TheaterVo> selectTheaterList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TheaterVo> selectTheaterList() throws Exception {
+		SqlSession ss = getSqlSession();
+		List<TheaterVo> voList = dao.selectTheaterList(ss);
+		ss.close();
+		
+		return voList;
+	}
+
+
+
+	public List<ScreenInfoVo> selectDateList() throws Exception {
+		SqlSession ss = getSqlSession();
+		List<ScreenInfoVo> voList = dao.selectDateList(ss);
+		ss.close();
+		
+		return voList;	
 	}
 
 }

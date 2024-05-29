@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/app/resources/css/movie/ticketing.css">
 <script defer src="/app/resources/js/movie/ticketing.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -93,7 +94,7 @@
 						<table class="sul">
 						<c:forEach items="${requestScope.voList}" var="vo">
 								<tr class="movietitle">
-									<td class="mtd1"><button class="titlebtn">${vo.title}</button></td>
+									<td class="mtd1"><button class="titlebtn" data-movietitle="${vo.title}">${vo.title}</button></td>
 								</tr>
 						</c:forEach>
 						</table>
@@ -102,13 +103,8 @@
 
 					<!-- 영화 지역선택 -->
 					<div class="s s1">
-						<table class="sul" id="theaterNameSelect">
-						<c:forEach items="${requestScope.voList}" var="vo">
-							
-								<tr class="loc">
-									<td class="mtd"></td>
-								<tr>
-							</c:forEach>
+						<table class="sul" id="cinemaNameSelect">
+						
 						</table>
 					</div>
 
@@ -116,7 +112,8 @@
 
 					<!-- 영화 지역에 따른 영화관 선택 -->
 					<div class="s3 s2">
-						<table class="sul" id="cinemaNameSelect">
+						<table class="sul" id="theaterNameSelect">
+						
 						</table>
 					</div>
 
@@ -125,15 +122,7 @@
 					<div class="s s4">
 					<img class="corn3" alt="" src="/app/resources/img/pop_cornT.png">
 						<table class="sul" id="movieDateSelect">
-							<tr>
-							<button class="btn1"></button>
-							<button class="btn2"></button>
-							<button class="btn3"></button>
-							<button class="btn4"></button>
-							<button class="btn5"></button>
-							<button class="btn6"></button>
-							<button class="btn7"></button>
-							</tr>
+							
 						</table>
 					</div>
 
