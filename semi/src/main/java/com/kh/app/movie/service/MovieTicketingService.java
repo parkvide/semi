@@ -6,11 +6,8 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.dao.MovieDao;
 import com.kh.app.movie.vo.MovieVo;
-import com.kh.app.screeninfo.vo.ScreenInfoVo;
-import com.kh.app.theater.vo.TheaterVo;
 
 
 public class MovieTicketingService {
@@ -54,25 +51,6 @@ public class MovieTicketingService {
 		
 		return voList;
 		
-	}
-	
-	public List<CinemaVo>selectCinemaList() throws Exception{
-		
-		SqlSession ss = getSqlSession();
-		List<CinemaVo> screenList = dao.selectCinemaList(ss);
-		ss.close();
-		
-		return screenList;
-	}
-
-
-
-	public List<TheaterVo> selectTheaterList() throws Exception{
-		SqlSession ss = getSqlSession();
-		List <TheaterVo> theaterList =dao.selectTheaterList(ss);
-		ss.close();
-		
-		return theaterList;
 	}
 
 }

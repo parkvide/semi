@@ -16,19 +16,4 @@
 		WHERE NO = #{no}
 		AND DEL_YN = 'N'
 	</select>
-	
-	<select id="selectMovieList" resultType="com.kh.app.movie.vo.MovieVo">
-	 	SELECT * 
-	 	FROM MOVIE   
-		WHERE DEL_YN ='N'
-	</select>
-	
-	<select id="selectCinemaList" resultType="com.kh.app.cinema.vo.CinemaVo">
-		SELECT * 
-		FROM MOVIE M JOIN
-		SCREEN_INFO S ON M.NO = S.MOVIE_NO JOIN
-		THEATER T ON S.THEATER_NO = T.NO JOIN
-		CINEMA C ON T.CINEMA_NO = C.NO
-		WHERE M.DEL_YN = 'N'
-	</select>
 </mapper>

@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  user-select: none;
+}
+
+body {
+  background-color: #141414;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top : 2px;
+  background-color:gray;
+  color:white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3em;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+nav .left {
+  display: flex;
+  margin-left: 2em;
+}
+nav .left .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  padding: 0.5em;
+  width: 8rem;
+}
+nav .left .logo a {
+  width: 100%;
+}
+nav .left .logo a img {
+  max-width: 100%;
+}
+nav .left .mobile-menu {
+  display: none;
+}
+nav .left .menu-list {
+  display: flex;
+}
+nav .left .menu-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0.2em 1em 0.5em 1em;
+}
+nav .left .menu-list li a {
+  font-size: 0.8rem;
+}
+nav .right {
+  display: flex;
+  margin-right: 2em;
+}
+nav .right .icon {
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+nav .right .search {
+  border: 1px solid white;
+  background-color: black;
+}
+nav .right .search .search-bar {
+  display: flex;
+}
+nav .right .search .search-bar i {
+  margin-right: 0.5em;
+}
+nav .right .search .search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  outline: none;
+}
+footer {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+footer .wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+footer .wrap .social-icons i {
+  font-size: 1.5rem;
+  margin: 0 0.3em;
+}
+footer .wrap .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+footer .wrap .options .option {
+  color: #6f6f6f;
+}
+ main {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .seats-selection {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seats-selection div {
+        flex: 1;
+        margin-right: 10px;
+    }
+    .seats-selection div:last-child {
+        margin-right: 0;
+    }
+    .seats-selection div label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .seats-selection div select {
+        width: 100%;
+        padding: 5px;
+    }
+    .details {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .screen {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .screen p {
+        margin: 10px 0;
+    }
+    .seating-chart {
+        display: flex;
+        justify-content: center;
+    }
+    .seating-chart table {
+        border-collapse: collapse;
+    }
+    .seating-chart td {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .seating-chart td.selected {
+        background-color: red;
+    }
+    .seating-chart td.booked {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+    }
+    .seating-chart td.not-available {
+        background-color: #eee;
+        cursor: not-allowed;
+    }
+    .seating-chart td.wheelchair {
+        background-color: lightgreen;
+    }
+    .legend {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .legend span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+    .legend .selected { background-color: red; }
+    .legend .booked { background-color: #d3d3d3; }
+    .legend .not-available { background-color: #eee; }
+    .legend .wheelchair { background-color: lightgreen; }

@@ -1,10 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/app/resources/css/movie/ticketing.css">
 <script defer src="/app/resources/js/movie/ticketing.js"></script>
@@ -17,38 +17,38 @@
             <div class="logo">
                 <a href="http://127.0.0.1:8888/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
             </div>
-            <div class="mobile-menu">ë©”ë‰´</div>
+            <div class="mobile-menu">¸Þ´º</div>
             <ul class="menu-list">
                 <li>
-                    <a href="#">ì˜í™”</a>
+                    <a href="#">¿µÈ­</a>
                 </li>
                 <li>
-                    <a href="#">ì˜í™”ê´€</a>
+                    <a href="#">¿µÈ­°ü</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/movie/ticketing">ì˜ˆë§¤</a>
+                    <a href="http://127.0.0.1:8888/app/movie/ticketing">¿¹¸Å</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/store">ìŠ¤í† ì–´</a>
+                    <a href="http://127.0.0.1:8888/app/store">½ºÅä¾î</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1/app/service/home">ê³ ê°ì„¼í„°</a>
+                    <a href="http://127.0.0.1/app/service/home">°í°´¼¾ÅÍ</a>
                 </li>
             </ul>
         </div>
         <div class="right">
            
             <div class="icon kids">
-                <a href="http://127.0.0.1:8888/app/member/login">ë¡œê·¸ì¸</a>
+                <a href="http://127.0.0.1:8888/app/member/login">·Î±×ÀÎ</a>
             </div>
             <div class="icon bell">
-                <a href="http://127.0.0.1:8888/app/member/join">íšŒì› ê°€ìž…</a>
+                <a href="http://127.0.0.1:8888/app/member/join">È¸¿ø °¡ÀÔ</a>
             </div>
             
              <div class="icon search">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="ì œëª©, ì‚¬ëžŒ, ìž¥ë¥´"/>
+                    <input type="text" placeholder="Á¦¸ñ, »ç¶÷, Àå¸£"/>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<!-- date ë -->
+				<!-- date ³¡ -->
 
 
 				<div id="secMidTitle">
@@ -86,38 +86,42 @@
 
 				<div id="secMain">
 
-					<!-- ë°›ì•„ì˜¨ ì˜í™”ì œëª© -->
+					<!-- ¹Þ¾Æ¿Â ¿µÈ­Á¦¸ñ -->
 					
-					<!-- ì˜í™”ì œëª© ì„ íƒ -->
+					<!-- ¿µÈ­Á¦¸ñ ¼±ÅÃ -->
 					<div class="sname s">
 						<table class="sul">
 						<c:forEach items="${requestScope.voList}" var="vo">
 								<tr class="movietitle">
-									<td class="mtd1"> <button class="titlebtn" onclick="cinemaList('${vo.title}')">${vo.title}</button></td>
+									<td class="mtd1"><button class="titlebtn">${vo.title}</button></td>
 								</tr>
 						</c:forEach>
 						</table>
 					</div>
 
 
-					<!-- ì˜í™” ì§€ì—­ì„ íƒ -->
+					<!-- ¿µÈ­ Áö¿ª¼±ÅÃ -->
 					<div class="s s1">
-						<table class="sul" id="cinemaList">
-						
-						</table>
-					</div>
-
-
-
-					<!-- ì˜í™” ì§€ì—­ì— ë”°ë¥¸ ì˜í™”ê´€ ì„ íƒ -->
-					<div class="s3 s2">
-						<table class="sul" id="theaterList">
+						<table class="sul" id="theaterNameSelect">
+						<c:forEach items="${requestScope.voList}" var="vo">
 							
+								<tr class="loc">
+									<td class="mtd"></td>
+								<tr>
+							</c:forEach>
 						</table>
 					</div>
 
 
-					<!-- ë‚ ì§œì„ íƒ  -->
+
+					<!-- ¿µÈ­ Áö¿ª¿¡ µû¸¥ ¿µÈ­°ü ¼±ÅÃ -->
+					<div class="s3 s2">
+						<table class="sul" id="cinemaNameSelect">
+						</table>
+					</div>
+
+
+					<!-- ³¯Â¥¼±ÅÃ  -->
 					<div class="s s4">
 					<img class="corn3" alt="" src="/app/resources/img/pop_cornT.png">
 						<table class="sul" id="movieDateSelect">
@@ -134,7 +138,7 @@
 					</div>
 
 
-					<!-- ì‹œê°„ì„ íƒ  -->
+					<!-- ½Ã°£¼±ÅÃ  -->
 					<div class="s s5">
 					<img class="corn4" alt="" src="/app/resources/img/pop_corn_D.png">
 						<table class="sul" id="movieTimeSelect">
@@ -143,7 +147,7 @@
 					</div>
 
 					<form action="../member/movieLogin" id="frm" method="post">
-						 <a href="/app/movie/seat"><img id="btn" alt="" src="/app/resources/img/seat.png"></a> 
+						 <img id="btn" alt="" src="/app/resources/img/seat.png"> 
 					</form>
 
 
@@ -159,19 +163,19 @@
                 <i class="fa-brands fa-youtube"></i>
             </div>
             <div class="options">
-                <div class="option">ìžë§‰ ë° ìŒì„±</div>
-                <div class="option">ìŒì„± ì§€ì›</div>
-                <div class="option">ê³ ê° ì„¼í„°</div>
-                <div class="option">ê¸°í”„íŠ¸ì¹´ë“œ</div>
-                <div class="option">ë¯¸ë””ì–´ ì„¼í„°</div>
-                <div class="option">íˆ¬ìž ì •ë³´(IR)</div>
-                <div class="option">ìž…ì‚¬ ì •ë³´</div>
-                <div class="option">ì´ìš© ì•½ê´€</div>
-                <div class="option">ê°œì¸ ì •ë³´</div>
-                <div class="option">ë²•ì  ê³ ì§€</div>
-                <div class="option">ì¿ í‚¤ ì„¤ì •</div>
-                <div class="option">íšŒì‚¬ ì •ë³´</div>
-                <div class="option">ë¬¸ì˜í•˜ê¸°</div>
+                <div class="option">ÀÚ¸· ¹× À½¼º</div>
+                <div class="option">À½¼º Áö¿ø</div>
+                <div class="option">°í°´ ¼¾ÅÍ</div>
+                <div class="option">±âÇÁÆ®Ä«µå</div>
+                <div class="option">¹Ìµð¾î ¼¾ÅÍ</div>
+                <div class="option">ÅõÀÚ Á¤º¸(IR)</div>
+                <div class="option">ÀÔ»ç Á¤º¸</div>
+                <div class="option">ÀÌ¿ë ¾à°ü</div>
+                <div class="option">°³ÀÎ Á¤º¸</div>
+                <div class="option">¹ýÀû °íÁö</div>
+                <div class="option">ÄíÅ° ¼³Á¤</div>
+                <div class="option">È¸»ç Á¤º¸</div>
+                <div class="option">¹®ÀÇÇÏ±â</div>
             </div>
         </div>
     </footer>
