@@ -6,8 +6,10 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.dao.MovieDao;
 import com.kh.app.movie.vo.MovieVo;
+import com.kh.app.theater.vo.TheaterVo;
 
 
 public class MovieTicketingService {
@@ -51,6 +53,20 @@ public class MovieTicketingService {
 		
 		return voList;
 		
+	}
+
+
+
+	public List<CinemaVo> selectCinemaList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	public List<TheaterVo> selectTheaterList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
