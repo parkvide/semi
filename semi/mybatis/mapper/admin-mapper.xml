@@ -41,8 +41,16 @@
 <delete id="storeDelete"> DELETE FROM PRODUCT WHERE NO = ${no} </delete>
 <delete id="theaterDelete"> DELETE FROM "THEATER-TYPE" WHERE NO = ${no} </delete>
 
-<update id="cinemaEdit"></update>
-<update id="eventUpdate"></update>
+<update id="cinemaEdit">
+	UPDATE CINEMA
+	SET CINEMA_NAME = #{cinemaName}
+	WHERE NO = ${NO}
+</update>
+<update id="eventUpdate">
+	UPDATE EVENT
+	SET TITLE_NAME = #{title}
+	WHERE NO = ${NO}
+</update>
 <update id="faqEdit"></update>
 <update id="movieEdit"></update>
 <update id="noticeEdit"></update>
