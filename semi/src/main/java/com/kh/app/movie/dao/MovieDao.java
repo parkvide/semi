@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.vo.MovieVo;
+import com.kh.app.screeninfo.vo.ScreenInfoVo;
+import com.kh.app.theater.vo.TheaterVo;
 
 
 public class MovieDao {
@@ -24,5 +27,13 @@ public class MovieDao {
 		return ss.selectOne("MovieMapper.selectMovieDetail" ,no);
 		
 	}
+	
+	public List<CinemaVo> selectCinemaList(SqlSession ss){
+		return ss.selectList("MovieMapper.selectCinemaList");
+	}
 
+	public List<TheaterVo> selectTheaterList(SqlSession ss) {
+		return ss.selectList("MovieMapper.selectCinemaList");
+	}
+	
 }
