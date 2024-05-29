@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="MovieReviewMapper">
+
+	<insert id="writeReply">
+		INSERT INTO REVIEW
+		(
+			NO
+			,TICKETING_NO
+			,CONTENT
+			,STAR_RATING
+		)
+		VALUES
+		(
+			SEQ_REVIEW.NEXTVAL
+			,#{ticketingNo}
+			,#{content}
+			,#{starRating}
+		)
+	</insert>
+	
+	<select id="selectReviewByMovieNo" resultType="com.kh.app.board.vo.ReviewVo">
+	SELECT
+	R.NO,
+	R.TICKETING_NO,
+	M.NO,
+	MB.ID,
+	R.CONTENT,
+	R.STAR_RATING,
+	R.ENROLL_DATE,
+	R.MODIFY_DATE,
+	R.DEL_YN
+	FROM REVIEW R
+	JOIN TICKETING T
+	ON R.TICKETING_NO = T.NO
+	JOIN SCREEN_INFO SI
+	ON T.SCREEN_INFO = SI.NO
+	JOIN MEMBER MB
+	ON T.BUYER_NO = MB.NO
+	JOIN MOVIE M
+	ON SI.MOVIE_NO = M.NO
+	WHERE M.NO = '1' AND
+	R.DEL_YN = 'N'
+	ORDER BY R.NO DESC
+	</select>
+
+</mapper>

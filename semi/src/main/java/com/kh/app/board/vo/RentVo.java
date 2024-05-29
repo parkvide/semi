@@ -6,6 +6,8 @@ public class RentVo {
 	private String writerNo;
 	private String cinemaNo;
 	private String managerNo;
+	private String title;
+	private String content;
 	private String rentalDate;
 	private String uploadDate;
 	private String delYn;
@@ -13,13 +15,15 @@ public class RentVo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RentVo(String no, String writerNo, String cinemaNo, String managerNo, String rentalDate, String uploadDate,
-			String delYn) {
+	public RentVo(String no, String writerNo, String cinemaNo, String managerNo, String title, String content,
+			String rentalDate, String uploadDate, String delYn) {
 		super();
 		this.no = no;
 		this.writerNo = writerNo;
 		this.cinemaNo = cinemaNo;
 		this.managerNo = managerNo;
+		this.title = title;
+		this.content = content;
 		this.rentalDate = rentalDate;
 		this.uploadDate = uploadDate;
 		this.delYn = delYn;
@@ -27,7 +31,8 @@ public class RentVo {
 	@Override
 	public String toString() {
 		return "RentVo [no=" + no + ", writerNo=" + writerNo + ", cinemaNo=" + cinemaNo + ", managerNo=" + managerNo
-				+ ", rentalDate=" + rentalDate + ", uploadDate=" + uploadDate + ", delYn=" + delYn + "]";
+				+ ", title=" + title + ", content=" + content + ", rentalDate=" + rentalDate + ", uploadDate="
+				+ uploadDate + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -53,6 +58,18 @@ public class RentVo {
 	public void setManagerNo(String managerNo) {
 		this.managerNo = managerNo;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	public String getRentalDate() {
 		return rentalDate;
 	}
@@ -71,6 +88,7 @@ public class RentVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
+	
 	
 	
 }

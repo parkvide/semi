@@ -97,6 +97,16 @@
         <ul class="list-style">
             <li>
                 <a href="">
+                    <span><img height="270" width="270" src="vo의 이미지" alt=""></span>
+                    <span class="list-title">vo.이름? 타입</span>
+                    <span class="list-name">vo.디테일</span>
+                    <span class="list-price-wrap">
+                        <span class="detail-price">vo.가격</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
                     <span><img height="270" width="270" src="/app/resources/img/콤보/더블콤보.jpg" alt=""></span>
                     <span class="list-title">더블콤보</span>
                     <span class="list-name">팝콘(M)2+탄산(M)2</span>
@@ -105,36 +115,6 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <span><img height="270" width="270" src="/app/resources/img/콤보/라지콤보.jpg" alt=""></span>
-                    <span class="list-title">라지콤보</span>
-                    <span class="list-name">팝콘(L)2+탄산음료(L)2</span>
-                    <span class="list-price-wrap">
-                        <span class="detail-price">15,000원</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span><img height="270" width="270" src="/app/resources/img/콤보/스몰콤보.jpg" alt=""></span>
-                    <span class="list-title">스몰콤보</span>
-                    <span class="list-name">팝콘(M)1+탄산음료(M)1</span>
-                    <span class="list-price-wrap">
-                        <span class="detail-price">7,000원</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-              <a href="">
-                  <span><img height="270" width="270" src="/app/resources/img/콤보/cgv콤보.jpg" alt=""></span>
-                  <span class="list-title">FOURS콤보</span>
-                  <span class="list-name">팝콘(L)1+탄산음료(M)2</span>
-                  <span class="list-price-wrap">
-                      <span class="detail-price">10,000원</span>
-                  </span>
-              </a>
-          </li>
         </ul>
     </div>
     <div class="sep2"></div>

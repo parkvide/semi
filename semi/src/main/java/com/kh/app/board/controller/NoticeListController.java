@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.NoticeService;
+import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.NoticeVo;
 
 @WebServlet("/service/noticelist")
@@ -18,8 +18,9 @@ public class NoticeListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			NoticeService ns = new NoticeService();
-			List<NoticeVo> voList = ns.getNoticeList();
+			BoardService bs = new BoardService();
+			
+			List<NoticeVo> voList = bs.getNoticeList();
 			
 			req.setAttribute("voList", voList);
 			req.getRequestDispatcher("/WEB-INF/views/service/notice.jsp").forward(req, resp);
