@@ -37,14 +37,6 @@ public class MemberDao {
 		return ss.update("MemberMapper.pwdEdit", vo);
 	}
 
-	//아이디 중복확인
-	public int checkIdDup(SqlSession ss, String id) {
-		
-		return ss.selectOne("MemberMapper.checkIdDup",id);
-	}
-
-	
-
 	
 
 }

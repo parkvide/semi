@@ -8,31 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.member.service.MemberService;
-
-@WebServlet("/member/id-dup")
+@WebServlet("/member/dupcheck")
 public class MemberIdDupCheckController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		try {
-			String id = req.getParameter("id");
-			
-			MemberService ms = new MemberService();
-			boolean isAvailable = ms.checkIdDup(id);
-			
-			if(!isAvailable) {
-				throw new Exception("중복검사 실패...");
-			}
-			resp.getWriter().write("good");
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-			resp.getWriter().write("bad");
-		}
+		// TODO Auto-generated method stub
+		super.doGet(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
 	}
 }

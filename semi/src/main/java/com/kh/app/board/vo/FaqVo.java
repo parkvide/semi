@@ -1,7 +1,6 @@
 package com.kh.app.board.vo;
 
 public class FaqVo {
-	
 	private String no;
 	private String writerNo;
 	private String title;
@@ -71,7 +70,6 @@ public class FaqVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
-	
 	
 	
 }
