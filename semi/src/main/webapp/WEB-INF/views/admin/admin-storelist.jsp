@@ -82,31 +82,30 @@
           <div id="list-main">
             <div id="title">
               <div class="no">번호</div>
-              <div class="category">카테고리</div>
-              <div class="name">상품명</div>
-              <div class="price">가격</div>
-              <div class="origin">원산지</div>
-              <div class="nutrientne">영양성분</div>
-              <div class="product">상품이미지</div>
+              <div class="id">아이디</div>
+              <div class="name">이름</div>
+              <div class="num">연락처</div>
+              <div class="email">이메일</div>
+              <div class="birth">생년월일</div>
+              <div class="date">가입날짜</div>
+              <div class="ny">상태</div>
+              <div class="modify">탈퇴날짜</div>
             </div>
             <div id="content">
-              <!-- 상품 목록 데이터 출력 -->
-              <c:forEach items="${storeList}" var="product">
-                  <div id="contentlist">
-                      <div class="no">${product.no}</div>
-                      <div class="category">${product.category}</div>
-                      <div class="name">${product.name}</div>
-                      <div class="price">${product.price}</div>
-                      <div class="origin">${product.originCountry}</div>
-                      <div class="nutrientne">
-                          <img src="/app/resources/img/admin/${product.nutrienteImg}" alt="영양성분">
-                      </div>
-                      <div class="product">
-                          <img src="/app/resources/img/admin/${product.productImg}" alt="상품이미지">
-                      </div>
-                  </div>
+              <c:forEach items="${voList}" var="vo">
+                <div id="contentlist">
+                  <div class="no">번호 자바코드임</div>
+                  <div class="id">아이디 자바코드임</div>
+                  <div class="name">이름 자바코드임</div>
+                  <div class="num">연락처 자바코드임</div>
+                  <div class="email">이메일 자바코드임</div>
+                  <div class="birth">생년월일 자바코드임</div>
+                  <div class="date">가입날짜 자바코드임</div>
+                  <div class="ny">상태 자바코드임</div>
+                  <div class="modify">탈퇴날짜 자바코드임</div>
+                </div>
               </c:forEach>
-          </div>
+            </div>
           </div>
         </div>
       </div>

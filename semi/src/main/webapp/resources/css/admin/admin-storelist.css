@@ -154,12 +154,6 @@ ul{
   height: 10%;
   display: flex;
 }
-
-#content #contentlist {
-  color: #000; /* 검은색 텍스트 색상 */
-}
-
-
 #content #contentlist{
   width: 100%;
   height: 100%;

@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.app.board.service.BoardService;
+import com.kh.app.board.service.NoticeService;
 import com.kh.app.board.vo.NoticeVo;
 
-@WebServlet("/board/noticelist")
+@WebServlet("/service/noticelist")
 public class NoticeListController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			BoardService bs = new BoardService();
-			List<NoticeVo> voList = bs.getNoticeList();
+			NoticeService ns = new NoticeService();
+			List<NoticeVo> voList = ns.getNoticeList();
 			
 			req.setAttribute("voList", voList);
-			req.getRequestDispatcher("/WEB-INF/views/board/notice.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/service/notice.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

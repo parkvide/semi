@@ -6,47 +6,56 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.kh.app.admin.movie.service.AdminMovieService;
-import com.kh.app.admin.movie.vo.AdminMovieVo;
+import com.kh.app.admin.movie.service.MovieService;
+import com.kh.app.admin.movie.vo.MovieVo;
+
+@MultipartConfig(
+		maxFileSize = 1024*1024*10 ,
+		maxRequestSize = 1024*1024*50 ,
+		fileSizeThreshold = 1024*1024*10
+)
 
 @WebServlet("/admin/movie/insert")
-public class MovieInsertController extends HttpServlet {
-
+public class MovieInsertController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.getRequestDispatcher("/WEB-INF/views/admin/admin-movieinsert.jsp").forward(req, resp);
+	
+	
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+		
 		try {
-			
 			String type = req.getParameter("type");
 			String age = req.getParameter("age");
-			String summary =req.getParameter("summary");
+			String summary = req.getParameter("summary");
 			String cast = req.getParameter("cast");
 			String director = req.getParameter("director");
 			String time = req.getParameter("time");
-			Part poster = req.getPart("poster");
+			Part poster = req.getPart("post");
 			
-			String poster2 = "";
+			String photo = ""; 
 			if(poster.getSize() > 0) {
 				// 파일을 서버에 저장하기
 				String originFileName = poster.getSubmittedFileName();
 				InputStream is = poster.getInputStream();
 				
-				String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
+				String path = "D:\\dev\\servletWorkspace\\prj99semi\\src\\main\\webapp\\resources\\upload\\";
 				String random = UUID.randomUUID().toString();
 				String ext = originFileName.substring(originFileName.lastIndexOf("."));
-				poster2 = System.currentTimeMillis() + "_" + random + ext;
-				FileOutputStream fos = new FileOutputStream(path + poster2);
+				photo = System.currentTimeMillis() + "_" + random + ext;
+				FileOutputStream fos = new FileOutputStream(path + photo);
 				
 				byte[] buf = new byte[1024];
 				int size = 0;
@@ -58,31 +67,31 @@ public class MovieInsertController extends HttpServlet {
 				fos.close();
 			}
 			
-			AdminMovieVo vo = new AdminMovieVo();
+			
+			
+			MovieVo vo = new MovieVo();
 			vo.setType(type);
-			vo.setMovieAge(age);
+			vo.setMovie_age(age);
 			vo.setSummary(summary);
 			vo.setCast(cast);
 			vo.setDirector(director);
-			vo.setRunningTime(time);
-			vo.setPoster(poster2);
+			vo.setRunning_time(time);
+			vo.setPoster(photo);
 			
-			AdminMovieService as = new AdminMovieService();
-			int result = as.insert(vo);
+			MovieService ms = new MovieService();
+			int result = ms.insert(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/movie/list");
 			}else {
-				System.out.println("등록실팬");
+				//등록실패
 			}
 			
 			
 		} catch (Exception e) {
-			e.printStackTrace();
-		
+			//등록중 에러발생
 		}
 		
-	
 	}
-	
+
 }
