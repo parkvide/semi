@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
 import com.kh.app.board.service.MovieReviewService;
 import com.kh.app.board.vo.ReviewVo;
 
@@ -23,12 +24,12 @@ public class ReviewListController extends HttpServlet{
 			MovieReviewService mrs = new MovieReviewService();
 			List<ReviewVo> reviewVoList = mrs.selectReviewByMovieNo(movieNo);
 			
-//			 Gson gson = new Gson();
-//	         String str = gson.toJson(reviewVoList);
+			 Gson gson = new Gson();
+	         String str = gson.toJson(reviewVoList);
 	         
 	         resp.setContentType("text/html; charset=UTF-8");// 한글처리 컨트롤러에서 나갈때 생기는 판단.
 	         PrintWriter out = resp.getWriter();
-//	         out.write(str);
+	         out.write(str);
 	         
 		}catch(Exception e) {
 			e.printStackTrace();
