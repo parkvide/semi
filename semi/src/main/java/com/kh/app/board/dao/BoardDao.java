@@ -59,5 +59,10 @@ public class BoardDao {
 		
 		return ss.update("BoardMapper.increaseHit",map);
 	}
+
+	//rent insert
+	public int insertRent(SqlSession ss, RentVo rentVo) {
+		return ss.insert("BoardMapper.insertRent" ,rentVo);
+	}
 }
 
