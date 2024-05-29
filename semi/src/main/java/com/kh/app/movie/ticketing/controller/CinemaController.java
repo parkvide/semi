@@ -2,7 +2,9 @@ package com.kh.app.movie.ticketing.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletResponse;
@@ -15,6 +17,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.service.MovieTicketingService;
+import com.kh.app.screeninfo.vo.ScreenInfoVo;
 import com.kh.app.theater.vo.TheaterVo;
 
 @WebServlet("/cinemas")
@@ -25,17 +28,24 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	MovieTicketingService mts = new MovieTicketingService();
 	try {
 		List<CinemaVo> screenList = mts.selectCinemaList();
-		// Gson 라이브러리 \로 리스트를 json 형태로 바꿈
 		List<TheaterVo> theaterList = mts.selectTheaterList();
+		List<ScreenInfoVo> dateList = mts.selectDateList();
+		
+		Map<String, Object> responseMap = new HashMap<>();
+        responseMap.put("cinemas", screenList);
+        responseMap.put("theaters", theaterList);
+        responseMap.put("times", dateList);
+		
 		Gson gson = new Gson();
-    
-		String json1 = gson.toJson(screenList);
-		String json2 = gson.toJson(theaterList);
+		String jsonResponse = gson.toJson(responseMap);
+		
+		resp.setContentType("application/json");
+		resp.setCharacterEncoding("UTF-8");
+		
+		System.out.println("jsonResponse: " + jsonResponse);
 		
 		PrintWriter out = resp.getWriter();
-		System.out.println("json : " + json1);
-         out.write(json1);
-         out.write(json2);
+        out.write(jsonResponse);
 	}catch(Exception e){
 		e.printStackTrace();
 	}
