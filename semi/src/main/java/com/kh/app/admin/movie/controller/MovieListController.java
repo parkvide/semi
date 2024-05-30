@@ -20,9 +20,9 @@ public class MovieListController extends HttpServlet {
 			
 		try {
 			AdminMovieService ams = new AdminMovieService();
-			List<AdminMovieVo> AdminMovievoList = ams.list();
+			List<AdminMovieVo> adminMovievoList = ams.list();
 			
-			req.setAttribute("AdminMovievoList", AdminMovievoList);
+			req.setAttribute("adminMovievoList", adminMovievoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-movielist.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();

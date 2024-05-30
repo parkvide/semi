@@ -21,9 +21,9 @@ public class StoreListController extends HttpServlet {
 		
 	     try {
 	            AdminStoreService ass = new AdminStoreService();
-	            List<AdminStoreVo> storeList = ass.list();
+	            List<AdminStoreVo> AdminstoreList = ass.list();
 	            
-	            req.setAttribute("storeList", storeList);
+	            req.setAttribute("AdminstoreList", AdminstoreList);
 	            req.getRequestDispatcher("/WEB-INF/views/admin/admin-storelist.jsp").forward(req, resp);
 	        } catch (Exception e) {
 	            e.printStackTrace();

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.admin.notice.service.AdminNoticeService;
 import com.kh.app.admin.notice.vo.AdminNoticeVo;
 
-@WebServlet("/admin/not/insert")
+@WebServlet("/admin/notice/insert")
 public class NoticeInsertController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

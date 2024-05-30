@@ -32,10 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const sideMenuToggle = document.querySelector(".side-menu-faq");
+  const menuLists = document.querySelector(".faq-lists");
+  sideMenuToggle.addEventListener("click", () => {
+    menuLists.classList.toggle("hidden");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const sideMenuToggle = document.querySelector(".side-menu-store");
   const menuLists = document.querySelector(".store-lists");
   sideMenuToggle.addEventListener("click", () => {
     menuLists.classList.toggle("hidden");
   });
 });
-

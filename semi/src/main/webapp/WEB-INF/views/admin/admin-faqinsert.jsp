@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin.css">
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-theaterprice.css">
+    <script src="/app/resources/js/admin/admin-theaterprice.js"></script>
   </head>
 
   <body>
@@ -15,13 +16,12 @@
 		<%@ include file="/WEB-INF/views/layout/admin/sidebar.jsp" %>
 		
 	<div id="main">
-			<%@ include file="/WEB-INF/views/layout/admin/nav.jsp"%>
+		<%@ include file="/WEB-INF/views/layout/admin/nav.jsp"%>
 
-          
 
         <div id="list">
           <div id="name">
-            <span>홈 화면</span>
+            <span>가격 등록</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">

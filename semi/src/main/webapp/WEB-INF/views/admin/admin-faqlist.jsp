@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
   <!DOCTYPE html>
   <html lang="en">
 
@@ -7,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-evtlist.css">
-    <script src="/app/resources/js/admin/admin-evtlist.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-ticketing.css">
+    <script src="/app/resources/js/admin/admin-ticketing.js"></script>
   </head>
 
   <body>
@@ -22,7 +21,7 @@
 
         <div id="list">
           <div id="name">
-            <span>이벤트 목록</span>
+            <span>예매 리스트</span>
             <form action="">
               <input type="text" placeholder="검색">
               <select id="category">
@@ -35,19 +34,27 @@
           <div id="line"></div>
           <div id="list-main">
             <div id="title">
-              <div>번호</div>
-              <div>작성자 이름</div>
-              <div>제목</div>
-              <div>조회수</div>
-              <div>날짜</div>
+              <div class="no">번호</div>
+              <div class="id">작성자</div>
+              <div class="name">제목</div>
+              <div class="name">내용</div>
+              <div class="name">조회수</div>
+              <div class="name">날짜</div>
+              <div>삭제</div>
+              <div>수정</div>
             </div>
             <div id="content">
-              <c:forEach items="${adminEventvoList}" var="vo">
-                <div>${vo.no}</div>
-                <div>${vo.writerNo}</div>
-                <div>${vo.title}</div>
-                <div>${vo.uploadDate}</div>
-                <div>${vo.views}</div>
+              <c:forEach items="${adminFaqvoList}" var="vo">
+                <div id="contentlist">
+	              <div class="no">${vo.no}</div>
+	              <div class="id">${vo.writerNo}</div>
+	              <div class="name">${vo.title}</div>
+	              <div class="name">${vo.content}</div>
+	              <div class="name">${vo.views}</div>
+	              <div class="name">${vo.uploadDate}</div>
+	              <button></button>
+	              <button onclick="">수정하기</button>
+                </div>
               </c:forEach>
             </div>
           </div>

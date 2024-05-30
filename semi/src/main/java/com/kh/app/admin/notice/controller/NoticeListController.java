@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.admin.notice.service.AdminNoticeService;
 import com.kh.app.admin.notice.vo.AdminNoticeVo;
 
-@WebServlet("/admin/notic/list")
+@WebServlet("/admin/notice/list")
 public class NoticeListController extends HttpServlet {
 	
 	@Override
@@ -21,9 +21,9 @@ public class NoticeListController extends HttpServlet {
 		try {
 			
 			AdminNoticeService ans = new AdminNoticeService();
-			List<AdminNoticeVo> voList = ans.list();
+			List<AdminNoticeVo> adminNoticevoList = ans.list();
 			
-			req.setAttribute("voList", voList);
+			req.setAttribute("adminNoticevoList", adminNoticevoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-notlist.jsp").forward(req, resp);
 			
 		} catch (Exception e) {
