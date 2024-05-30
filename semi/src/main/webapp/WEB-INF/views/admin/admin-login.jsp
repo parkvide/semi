@@ -11,7 +11,7 @@
   
   <div id="main">
     <h1>ADMIN LOGIN</h1>
-    <form action="" method="post">
+    <form action="/app/admin/login" method="post">
       <span>아이디</span>
       <input type="text" name="id" placeholder="아이디를 입력하세요" class="login">
       <br>
