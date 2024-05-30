@@ -12,50 +12,13 @@
     <!-- <script defer src="/app/resources/js/home.js"></script> -->
     <!-- <script  src="/app/resources/js/store.js"></script> -->
 
+<%@ include file="/WEB-INF/views/layout/util.jsp" %>
   </head>
 
   <body>
-    <nav>
-      <div class="left">
-        <div class="logo">
-          <a href="#"><img src="/app/resources/img/logo.png" alt=""></a>
-        </div>
-        <div class="mobile-menu">메뉴</div>
-        <ul class="menu-list">
-          <li>
-            <a href="#">영화</a>
-          </li>
-          <li>
-            <a href="#">영화관</a>
-          </li>
-          <li>
-            <a href="#">예매</a>
-          </li>
-          <li>
-            <a href="/app/store">스토어</a>
-          </li>
-          <li>
-            <a href="#">고객센터</a>
-          </li>
-        </ul>
-      </div>
-      <div class="right">
-
-        <div class="icon kids">
-          <a href="http://127.0.0.1:8888/app/member/login">로그인</a>
-        </div>
-        <div class="icon bell">
-          <a href="#">회원 가입</a>
-        </div>
-
-        <div class="icon search">
-          <div class="search-bar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="제목, 사람, 장르" />
-          </div>
-        </div>
-      </div>
-    </nav>
+   
+   <%@ include file="/WEB-INF/views/layout/nav.jsp" %>
+   
     <main>
       <div class="video">
         <iframe class="iframe" width="1650" height="315" src="https://www.youtube.com/embed/pMAPj6WVsT4" frameborder="0"
@@ -79,117 +42,23 @@
       </div>
       <div class="sep2"></div>
       <ul class="list-style">
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">퓨리오사-매드맥스 사가</span>
-            <span class="list-name">예매율 ~ | 99% </span>
-            <span class="list-name">2024.05.22</span>
-          </a>
-        </li>
+	      <c:forEach items="${movieListVo}" var="vo">
+	        <li>
+	          <a href="">
+	            <span><img height="220" width="220" src="${vo.poster}" alt=""></span>
+	            <span class="list-title">${vo.title}</span>
+	            <span class="list-name">${vo.director} 감독</span>
+	            <span class="list-name">${vo.releaseDate} 개봉</span>
+	          </a>
+	        </li>
+	      </c:forEach>
       </ul>
     </div>
     
     <div class="sep2"></div>
 
-
-    <footer>
-      <div class="wrap">
-        <div class="social-icons">
-          <i class="fa-brands fa-facebook-square"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-youtube"></i>
-        </div>
-        <div class="options">
-          <div class="option">자막 및 음성</div>
-          <div class="option">음성 지원</div>
-          <div class="option">고객 센터</div>
-          <div class="option">기프트카드</div>
-          <div class="option">미디어 센터</div>
-          <div class="option">투자 정보(IR)</div>
-          <div class="option">입사 정보</div>
-          <div class="option">이용 약관</div>
-          <div class="option">개인 정보</div>
-          <div class="option">법적 고지</div>
-          <div class="option">쿠키 설정</div>
-          <div class="option">회사 정보</div>
-          <div class="option">문의하기</div>
-        </div>
-      </div>
-    </footer>
+<%@ include file="/WEB-INF/views/layout/footer.jsp" %>
+   
   </body>
 
   </html>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.NoticeVo;
 
-@WebServlet("/service/noticelist")
+@WebServlet("/board/noticelist")
 public class NoticeListController extends HttpServlet{
 
 	@Override

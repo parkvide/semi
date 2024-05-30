@@ -24,7 +24,7 @@ public class FaqDetailController extends HttpServlet{
 			FaqVo faqVo = bs.selectFaqListByNo(no);
 			
 			req.setAttribute("faqVo", faqVo);
-			req.getRequestDispatcher("/WEB-INF/views/board/detail.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/detail/faqDetail.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

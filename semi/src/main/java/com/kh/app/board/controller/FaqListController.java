@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.FaqVo;
 
-@WebServlet("/service/faqlist")
+@WebServlet("/board/faqlist")
 public class FaqListController extends HttpServlet{
 	
 	//게시물 조회

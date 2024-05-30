@@ -25,8 +25,9 @@
         <main>
           <div class="side"></div>
           <div id="main">
+
             <div id="top">
-              <span>이벤트</span>
+              <span>대관문의</span>
               <div id="line"></div>
             </div>
             <div id="side-category">
@@ -40,13 +41,22 @@
             </div>
             <div id="main-list">
               <div id="search">
-                <span id="title">${vo.title}</span><span>${vo.uploadDate}</span><span>${vo.views}</span>
+                <span id="title">대관문의</span>
+                
               </div>
               <div id="list">
-					<img alt="" src="${contentImg}">                
+              <span>${vo.title}</span><span>${vo.uploadDate}</span><span>${vo.views}</span>
+              <div class="sep"></div>
+			  <div class="title">
+			  	<span>${vo.rentalDate}</span>
+			  	<span>${vo.cinemaName}</span>
+			  	<span>${vo.theaterName}</span>
+			  	<span>${vo.content}</span>
+			  </div>			
               </div>
             </div>
             <div class="side"></div>
+            </div>
         </main>
       </div>
 

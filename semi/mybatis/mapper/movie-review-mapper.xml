@@ -9,16 +9,16 @@
 		INSERT INTO REVIEW
 		(
 			NO
-			,TICKETING_NO
+			,MOVIE_NO
 			,CONTENT
-			,STAR_RATING
+			,WRITER_NO
 		)
 		VALUES
 		(
 			SEQ_REVIEW.NEXTVAL
-			,#{ticketingNo}
+			,#{movieNo}
 			,#{content}
-			,#{starRating}
+			,#{writerNo}
 		)
 	</insert>
 	
@@ -29,9 +29,6 @@
 	M.NO,
 	MB.ID,
 	R.CONTENT,
-	R.STAR_RATING,
-	R.ENROLL_DATE,
-	R.MODIFY_DATE,
 	R.DEL_YN
 	FROM REVIEW R
 	JOIN TICKETING T
@@ -42,7 +39,8 @@
 	ON T.BUYER_NO = MB.NO
 	JOIN MOVIE M
 	ON SI.MOVIE_NO = M.NO
-	WHERE M.NO = '1' AND
+	WHERE M.NO = #{movieNo} 
+	AND
 	R.DEL_YN = 'N'
 	ORDER BY R.NO DESC
 	</select>

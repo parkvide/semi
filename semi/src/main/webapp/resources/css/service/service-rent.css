@@ -112,6 +112,13 @@ main{
   margin: 0;
   display: flex;
 }
+/* ------------------------------------------ */
+main .list > tbody > tr:hover{
+	background-color: black;
+	color:white;
+	cursor:pointer
+}
+/* ------------------------------------------ */
 
 #main{
   margin: 0;

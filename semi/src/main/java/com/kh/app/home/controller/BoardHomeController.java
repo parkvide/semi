@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/service/home")
+@WebServlet("/board/home")
 public class BoardHomeController extends HttpServlet{
 	
 	@Override

@@ -34,7 +34,7 @@
 		LEFT JOIN ADMIN A ON R.MANAGER_NO = A.NO
 		LEFT JOIN CINEMA C ON R.CINEMA_NO = C.NO
 		LEFT JOIN THEATER T ON C.NO = T.CINEMA_NO
-		LEFT JOIN "THEATER-TYPE" TT ON T.TYPE = TT.NO
+		LEFT JOIN "THEATER_TYPE" TT ON T.TYPE = TT.NO
 		WHERE R.DEL_YN = 'N'
 	</select>
 	
@@ -42,21 +42,21 @@
 		SELECT E.NO, A.ID, E.TITLE, E.CONTENT_IMG, E.UPLOAD_DATE, E.VIEWS, E.DEL_YN
 		FROM EVENT E
 		JOIN ADMIN A ON E.WRITER_NO = A.NO
-		WHERE DEL_YN = 'N' AND NO = #{no}
+		WHERE DEL_YN = 'N' AND E.NO = #{no}
 	</select>
 	
 	<select id="selectFaqListByNo" resultType="com.kh.app.board.vo.FaqVo">
 		SELECT F.NO, A.ID, F.TITLE, F.CONTENT, F.VIEWS, F.UPLOAD_DATE, F.DEL_YN
 		FROM FAQ F
 		JOIN ADMIN A ON F.WRITER_NO = A.NO
-		WHERE DEL_YN = 'N' AND NO = #{no}
+		WHERE DEL_YN = 'N' AND F.NO = #{no}
 	</select>
 	
 	<select id="selectNoticeListByNo" resultType="com.kh.app.board.vo.NoticeVo">
 		SELECT N.NO, A.ID , N.TITLE, N.CONTENT, N.VIEWS, N.UPLOAD_DATE, N.DEL_YN
 		FROM NOTICE N
 		JOIN ADMIN A ON N.WRITER_NO = A.NO
-		WHERE DEL_YN = 'N' AND NO = #{no}
+		WHERE DEL_YN = 'N' AND N.NO = #{no}
 	</select>
 	
 	<select id="selectRentListByNo" resultType="com.kh.app.board.vo.RentVo">

@@ -2,6 +2,7 @@ package com.kh.app.board.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,18 +26,18 @@ public class ReviewWriteController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			HttpSession session = req.getSession();
+			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
+			String writerNo = loginMemberVo.getNo();
 			String content = req.getParameter("content");
-			String ticketingNo = req.getParameter("ticketingNo");
-			String starRating = req.getParameter("starRating");
+			String movieNo = req.getParameter("movieNo");
+			
 			ReviewVo reviewVo = new ReviewVo();
+			reviewVo.setWriterNo(writerNo);
 			reviewVo.setContent(content);
-			reviewVo.setTicketingNo(ticketingNo);
-			reviewVo.setStarRating(starRating);
+			reviewVo.setMovieNo(movieNo);
 			
 			MovieReviewService mrs = new MovieReviewService();
 			int result = mrs.writeReply(reviewVo);
-			PrintWriter out = resp.getWriter();
-			out.write("result : " + result);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
