@@ -26,6 +26,7 @@ public class AdminLoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
+			HttpSession session = req.getSession();
 			String id = req.getParameter("id");
 			String pwd = req.getParameter("pwd");
 
@@ -36,16 +37,16 @@ public class AdminLoginController extends HttpServlet {
 			AdminService ad = new AdminService();
 			AdminVo loginAdminVo = ad.login(vo);
 
-			HttpSession session = req.getSession();
-			if (loginAdminVo == null) {
+			if (loginAdminVo != null) {
+				session.setAttribute("alertMsg", "로그인 성공");
+				session.setAttribute("loginAdminVo", loginAdminVo);
+				resp.sendRedirect("/app/admin/home");				
+			}else {
 				session.setAttribute("alertMsg", "로그인 실패");
 				resp.sendRedirect("/app/admin/login");
-				return;
 			}
 			// 로그인 성공
-			session.setAttribute("alertMsg", "로그인 성공");
-			session.setAttribute("loginAdminVo", loginAdminVo);
-			resp.sendRedirect("/app/admin/home");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new ServletException("로그인 중 문제가 발생했습니다.", e);

@@ -119,4 +119,20 @@ INSERT INTO CINEMA(
 	WHERE NO = ${NO}
 </update>
 
+<!-- <update id="rentWriter"> -->
+<!-- 	UPDATE RENT -->
+<!-- 	SET  -->
+<!-- 		ANSWER_TITLE = #{answerTitle} -->
+<!-- 		, ANSWER_CONTENT = #{answerContent} -->
+<!-- 	WHERE NO = #{no}; -->
+	
+<!-- </update> -->
+
+<!-- <select id="selectList" resultType="com.kh.app.admin.rent.vo.AdminRentVo"> -->
+<!-- 	SELECT NO, WRITER_NO, CINEMA_NO, TITLE, CONTENT, RENTAL_DATE -->
+<!-- 	FROM RENT -->
+<!-- 	WHERE NO = #{no} -->
+
+<!-- </select> -->
+
 </mapper>
