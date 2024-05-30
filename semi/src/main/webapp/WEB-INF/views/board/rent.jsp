@@ -25,10 +25,10 @@
                     <div id="line"></div>
                 </div>
                 <div id="side-category">
-                        <div><a href="" class="ca">자주찾는질문</a></div>
-                        <div><a href="" class="ca">공지사항</a></div>
-                        <div><a href="" class="ca">대관문의</a></div>
-                        <div><a href="" class="ca">이벤트</a></div>
+                        <div><a href="/app/board/faqlist" class="ca">자주찾는질문</a></div>
+                        <div><a href="/app/board/noticelist" class="ca">공지사항</a></div>
+                        <div><a href="/app/board/rentlist" class="ca">대관문의</a></div>
+                        <div><a href="/app/board/eventlist" class="ca">이벤트</a></div>
                         <a id="ca" href="">
                             <img src="/app/resources/img/광고1.png" alt="">       
                         </a>
@@ -54,12 +54,11 @@
                       </thead>
                       <tbody>
                           <c:forEach items="${rentVoList}" var="vo">
-                          
                               <tr>
-                                  <td>${vo.number}</td> <!-- 여기 자바코드 -->
-                                  <a href=""><td>${vo.title}</td></a> <!-- 여기 자바코드 -->
-                                  <td>${vo.uploadDate}</td> <!-- 여기 자바코드 -->
-                                  <td>${vo.views}</td> <!-- 여기 자바코드 -->
+                                  <td>${vo.no}</td> 
+                                  <td><a href="/app/board/rent/detail?no=${vo.no}">${vo.title}</a></td> 
+                                  <td>${vo.uploadDate}</td> 
+                                  <td>${vo.views}</td> 
                               </tr>
                           </c:forEach>
                       </tbody>

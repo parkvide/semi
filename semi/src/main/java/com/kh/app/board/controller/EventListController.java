@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.EventVo;
 
-@WebServlet("/service/eventlist")
+@WebServlet("/board/eventlist")
 public class EventListController extends HttpServlet{
 
 	@Override

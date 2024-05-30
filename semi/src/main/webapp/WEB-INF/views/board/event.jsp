@@ -32,48 +32,12 @@
                     </div>
                 </div>
                 <div id="menu">
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
+                <c:forEach items="${voList}" var="vo">
+                    <a class="evt-img" href="/app/board/event/detail?no=${vo.no}">
+                        <img src="${vo.contentImg}" alt="">
+                        <span>${vo.title}</span>
                     </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="ad" href="">
-                        <img src="/app/resources/img/광고1.png" alt="">
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="ad" href="">
-                        <img src="/app/resources/img/광고2.png" alt="">
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
-                    <a class="evt-img" href="">
-                        <img src="/app/resources/img/테스트123.PNG" alt="">
-                        <span>글씨</span>
-                    </a>
+                </c:forEach>
                 </div>
             </div>
             <div class="side"></div>

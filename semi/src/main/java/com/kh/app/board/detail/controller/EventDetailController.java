@@ -24,7 +24,7 @@ public class EventDetailController extends HttpServlet{
 			BoardService bs = new BoardService();
 			EventVo eventVo = bs.selectEventListByNo(no);
 			req.setAttribute("eventVo", eventVo);
-			req.getRequestDispatcher("/WEB-INF/views/board/detail.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/detail/eventDetail.jsp").forward(req, resp);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

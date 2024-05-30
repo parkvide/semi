@@ -23,7 +23,7 @@ public class RentDetailController extends HttpServlet{
 			RentVo rentVo = bs.selectRentListByNo(no);
 			
 			req.setAttribute("rentVo", rentVo);
-			req.getRequestDispatcher("/WEB-INF/views/board/detail.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/detail/rentDetail.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

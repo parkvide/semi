@@ -12,9 +12,13 @@ public class MovieVo {
 	private String runningTime;
 	private String delYn;
 	private String poster;
-	
+	private String releaseDate;
+	public MovieVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public MovieVo(String no, String title, String type, String movieAge, String summary, String cast, String director,
-			String runningTime, String delYn, String poster) {
+			String runningTime, String delYn, String poster, String releaseDate) {
 		super();
 		this.no = no;
 		this.title = title;
@@ -26,10 +30,13 @@ public class MovieVo {
 		this.runningTime = runningTime;
 		this.delYn = delYn;
 		this.poster = poster;
+		this.releaseDate = releaseDate;
 	}
-	public MovieVo() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "MovieVo [no=" + no + ", title=" + title + ", type=" + type + ", movieAge=" + movieAge + ", summary="
+				+ summary + ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn="
+				+ delYn + ", poster=" + poster + ", releaseDate=" + releaseDate + "]";
 	}
 	public String getNo() {
 		return no;
@@ -91,13 +98,12 @@ public class MovieVo {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
-	@Override
-	public String toString() {
-		return "MovieVo [no=" + no + ", title=" + title + ", type=" + type + ", movieAge=" + movieAge + ", summary="
-				+ summary + ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn="
-				+ delYn + ", poster=" + poster + "]";
+	public String getReleaseDate() {
+		return releaseDate;
 	}
-	
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
 	
 	
 	

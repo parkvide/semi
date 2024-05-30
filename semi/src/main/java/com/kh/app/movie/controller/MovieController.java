@@ -20,8 +20,8 @@ public class MovieController extends HttpServlet{
 
 		try {
 		MovieTicketingService mts = new MovieTicketingService();
-		List<MovieVo> selectMovieHome = mts.selectMovieHome();
-		req.setAttribute("selectMovieHome", selectMovieHome);
+		List<MovieVo> movieListVo = mts.selectMovieHome();
+		req.setAttribute("movieListVo", movieListVo);
 		req.getRequestDispatcher("/WEB-INF/views/movie/movieList.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
