@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/app/resources/css/movie/seatSelect.css">
 <script defer src="/app/resources/js/movie/seatSelect.js"></script>
@@ -17,38 +17,38 @@
             <div class="logo">
                 <a href="http://127.0.0.1:8888/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
             </div>
-            <div class="mobile-menu">∏ﬁ¥∫</div>
+            <div class="mobile-menu">Î©îÎâ¥</div>
             <ul class="menu-list">
                 <li>
-                    <a href="#">øµ»≠</a>
+                    <a href="#">ÏòÅÌôî</a>
                 </li>
                 <li>
-                    <a href="#">øµ»≠∞¸</a>
+                    <a href="#">ÏòÅÌôîÍ¥Ä</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/movie/ticketing">øπ∏≈</a>
+                    <a href="http://127.0.0.1:8888/app/movie/ticketing">ÏòàÎß§</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/store">Ω∫≈‰æÓ</a>
+                    <a href="http://127.0.0.1:8888/app/store">Ïä§ÌÜ†Ïñ¥</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1/app/service/home">∞Ì∞¥ºæ≈Õ</a>
+                    <a href="http://127.0.0.1/app/service/home">Í≥†Í∞ùÏÑºÌÑ∞</a>
                 </li>
             </ul>
         </div>
         <div class="right">
            
             <div class="icon kids">
-                <a href="http://127.0.0.1:8888/app/member/login">∑Œ±◊¿Œ</a>
+                <a href="http://127.0.0.1:8888/app/member/login">Î°úÍ∑∏Ïù∏</a>
             </div>
             <div class="icon bell">
-                <a href="http://127.0.0.1:8888/app/member/join">»∏ø¯ ∞°¿‘</a>
+                <a href="http://127.0.0.1:8888/app/member/join">ÌöåÏõê Í∞ÄÏûÖ</a>
             </div>
             
              <div class="icon search">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="¡¶∏Ò, ªÁ∂˜, ¿Â∏£"/>
+                    <input type="text" placeholder="Ï†úÎ™©, ÏÇ¨Îûå, Ïû•Î•¥"/>
                 </div>
             </div>
         </div>
@@ -56,11 +56,11 @@
     <main>
     	<div class="container">
     <div class="title">
-        <h2>¿Œø¯ / ¡¬ºÆ</h2>
+        <h2>Ïù∏Ïõê / Ï¢åÏÑù</h2>
     </div>
     <div class="seats-selection">
         <div>
-            <label>¿œπ›</label>
+            <label>ÏùºÎ∞ò</label>
             <select id="general">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -74,7 +74,7 @@
             </select>
         </div>
         <div>
-            <label>√ªº“≥‚</label>
+            <label>Ï≤≠ÏÜåÎÖÑ</label>
             <select id="teen">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -87,57 +87,165 @@
                 <option value="8">8</option>
             </select>
         </div>
-        <div>
-            <label>∞Ê∑Œ</label>
-            <select id="senior">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-            </select>
-        </div>
-        <div>
-            <label>øÏ¥Î</label>
-            <select id="special">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-            </select>
-        </div>
+        
+ 		<div class="price"><h2>Ï¥ù 0 Ïõê</h2></div>
     </div>
-    <div class="details">
-        <p>CGV µø≈∫ | 3∞¸ | ≥≤¿∫¡¬ºÆ 150/150</p>
-        <p>2024.05.29 (ºˆ) 10:05 ~ 12:04</p>
-        <button>ªÛøµΩ√∞£ ∫Ø∞Ê«œ±‚</button>
-    </div>
-    <div class="screen">
-        <p>SCREEN</p>
-    </div>
+ 	<br><br>
+ 	<div class="movietitle"><h1>qewrqwer</h1></div>
+ 	
+ 	<br><br>
+    <div class="screen">SCREEN</div>
     <div class="seating-chart">
-        <table>
-            <!-- Create the rows and columns for seats -->
-            <tbody id="seating">
-                <!-- Example row (A) -->
-                <!-- Add rows and seats here as needed -->
-            </tbody>
-        </table>
-    </div>
-    <div class="legend">
-        <p>º±≈√ <span class="selected"></span> øπ∏≈ øœ∑· <span class="booked"></span> º±≈√ ∫“∞° <span class="not-available"></span> ¿Âæ÷¿ŒºÆ <span class="wheelchair"></span></p>
-    </div>
-</div>
+        <!-- Column Labels -->
+        <div></div>
+        <div class="col-label">1</div>
+        <div class="col-label">2</div>
+        <div class="col-label">3</div>
+        <div class="col-label">4</div>
+        <div class="col-label">5</div>
+        <div class="col-label">6</div>
+        <div class="col-label">7</div>
+        <div class="col-label">8</div>
+        <div class="col-label">9</div>
+        <div class="col-label">10</div>
+        
+
+        <!-- Seating Rows -->
+        <!-- Row A -->
+        <div class="row-label">A</div>
+        <div class="seat a1"></div>
+        <div class="seat a2"></div>
+        <div class="seat a3"></div>
+        <div class="seat a4"></div>
+        <div class="seat a5"></div>
+        <div class="seat a6"></div>
+        <div class="seat a7"></div>
+        <div class="seat a8"></div>
+        <div class="seat a9"></div>
+        <div class="seat a10"></div>
+
+        <!-- Row B -->
+        <div class="row-label">B</div>
+       	<div class="seat b1"></div>
+       	<div class="seat b2"></div>
+		<div class="seat b3"></div>
+		<div class="seat b4"></div>
+		<div class="seat b5"></div>
+		<div class="seat b6"></div>
+        <div class="seat b7"></div>
+        <div class="seat b8"></div>
+        <div class="seat b9"></div>
+        <div class="seat b10"></div>
+       
+       
+
+        <!-- Row C -->
+        <div class="row-label">C</div>
+      	<div class="seat c1"></div>
+        <div class="seat c2"></div>
+        <div class="seat c3"></div>
+        <div class="seat c4"></div>
+        <div class="seat c5"></div>
+        <div class="seat c6"></div>
+        <div class="seat c7"></div>
+        <div class="seat c8"></div>
+        <div class="seat c9"></div>
+        <div class="seat c10"></div>
+
+        <!-- Row D -->
+        <div class="row-label">D</div>
+        <div class="seat d1"></div>
+        <div class="seat d2"></div>
+        <div class="seat d3"></div>
+        <div class="seat d4"></div>
+        <div class="seat d5"></div>
+        <div class="seat d6"></div>
+        <div class="seat d7"></div>
+        <div class="seat d8"></div>
+        <div class="seat d9"></div>
+        <div class="seat d10"></div>
+
+        <!-- Row E -->
+        <div class="row-label">E</div>
+        <div class="seat e1"></div>
+        <div class="seat e2"></div>
+        <div class="seat e3"></div>
+        <div class="seat e4"></div>
+        <div class="seat e5"></div>
+        <div class="seat e6"></div>
+        <div class="seat e7"></div>
+        <div class="seat e8"></div>
+        <div class="seat e9"></div>
+        <div class="seat e10"></div>
+
+        <!-- Row F -->
+        <div class="row-label">F</div>
+        <div class="seat f1"></div>
+        <div class="seat f2"></div>
+        <div class="seat f3"></div>
+        <div class="seat f4"></div>
+        <div class="seat f5"></div>
+        <div class="seat f6"></div>
+        <div class="seat f7"></div>
+        <div class="seat f8"></div>
+        <div class="seat f9"></div>
+        <div class="seat f10"></div>
+
+        <!-- Row G -->
+        <div class="row-label">G</div>
+        <div class="seat g1"></div>
+        <div class="seat g2"></div>
+        <div class="seat g3"></div>
+        <div class="seat g4"></div>
+        <div class="seat g5"></div>
+        <div class="seat g6"></div>
+        <div class="seat g7"></div>
+        <div class="seat g8"></div>
+        <div class="seat g9"></div>
+        <div class="seat g10"></div>
+
+        <!-- Row H -->
+        <div class="row-label">H</div>
+        <div class="seat h1"></div>
+        <div class="seat h2"></div>
+        <div class="seat h3"></div>
+        <div class="seat h4"></div>
+        <div class="seat h5"></div>
+        <div class="seat h6"></div>
+        <div class="seat h7"></div>
+        <div class="seat h8"></div>
+        <div class="seat h9"></div>
+        <div class="seat h10"></div>
+
+        <!-- Row I -->
+        <div class="row-label">I</div>
+        <div class="seat i1"></div>
+        <div class="seat i2"></div>
+        <div class="seat i3"></div>
+        <div class="seat i4"></div>
+        <div class="seat i5"></div>
+        <div class="seat i6"></div>
+        <div class="seat i7"></div>
+        <div class="seat i8"></div>
+        <div class="seat i9"></div>
+        <div class="seat i10"></div>
+
+        <!-- Row J -->
+        <div class="row-label">J</div>
+        <div class="seat j1"></div>
+        <div class="seat j2"></div>
+        <div class="seat j3"></div>
+        <div class="seat j4"></div>
+        <div class="seat j5"></div>
+        <div class="seat j6"></div>
+        <div class="seat j7"></div>
+        <div class="seat j8"></div>
+        <div class="seat j9"></div>
+        <div class="seat j10"></div>
+   </div>
+   </div>
     </main>
+    <div class="line"></div>
     <footer>
         <div class="wrap">
             <div class="social-icons">
@@ -147,19 +255,19 @@
                 <i class="fa-brands fa-youtube"></i>
             </div>
             <div class="options">
-                <div class="option">¿⁄∏∑ π◊ ¿Ωº∫</div>
-                <div class="option">¿Ωº∫ ¡ˆø¯</div>
-                <div class="option">∞Ì∞¥ ºæ≈Õ</div>
-                <div class="option">±‚«¡∆Æƒ´µÂ</div>
-                <div class="option">πÃµæÓ ºæ≈Õ</div>
-                <div class="option">≈ı¿⁄ ¡§∫∏(IR)</div>
-                <div class="option">¿‘ªÁ ¡§∫∏</div>
-                <div class="option">¿ÃøÎ æ‡∞¸</div>
-                <div class="option">∞≥¿Œ ¡§∫∏</div>
-                <div class="option">π˝¿˚ ∞Ì¡ˆ</div>
-                <div class="option">ƒÌ≈∞ º≥¡§</div>
-                <div class="option">»∏ªÁ ¡§∫∏</div>
-                <div class="option">πÆ¿««œ±‚</div>
+                <div class="option">ÏûêÎßâ Î∞è ÏùåÏÑ±</div>
+                <div class="option">ÏùåÏÑ± ÏßÄÏõê</div>
+                <div class="option">Í≥†Í∞ù ÏÑºÌÑ∞</div>
+                <div class="option">Í∏∞ÌîÑÌä∏Ïπ¥Îìú</div>
+                <div class="option">ÎØ∏ÎîîÏñ¥ ÏÑºÌÑ∞</div>
+                <div class="option">Ìà¨Ïûê Ï†ïÎ≥¥(IR)</div>
+                <div class="option">ÏûÖÏÇ¨ Ï†ïÎ≥¥</div>
+                <div class="option">Ïù¥Ïö© ÏïΩÍ¥Ä</div>
+                <div class="option">Í∞úÏù∏ Ï†ïÎ≥¥</div>
+                <div class="option">Î≤ïÏ†Å Í≥†ÏßÄ</div>
+                <div class="option">Ïø†ÌÇ§ ÏÑ§Ï†ï</div>
+                <div class="option">ÌöåÏÇ¨ Ï†ïÎ≥¥</div>
+                <div class="option">Î¨∏ÏùòÌïòÍ∏∞</div>
             </div>
         </div>
     </footer>

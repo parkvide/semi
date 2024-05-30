@@ -135,8 +135,8 @@
 						</table>
 					</div>
 
-					<form action="../member/movieLogin" id="frm" method="post">
-						 <img id="btn" alt="" src="/app/resources/img/seat.png"> 
+					<form action="/movie/seat" id="frm" method="post">
+						<a href="/app/movie/seat"><img id="btn" alt="" src="/app/resources/img/seat.png"></a> 
 					</form>
 
 

@@ -35,8 +35,8 @@
 	<select id="selectDateList" resultType="com.kh.app.screeninfo.vo.ScreenInfoVo">
 		SELECT *
 		FROM SCREEN_INFO
-		WHERE SCREENING_DATE >= SYSDATE
-		AND SCREENING_DATE <![CDATA[ <= ]]> SYSDATE + 1
+<!-- 		WHERE SCREENING_DATE >= SYSDATE -->
+<!-- 		AND SCREENING_DATE <![CDATA[ <= ]]> SYSDATE + 1 -->
 	</select>
 	
 </mapper>
