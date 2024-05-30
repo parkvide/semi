@@ -115,25 +115,33 @@ footer .wrap .options .option {
 }
  main {
         font-family: Arial, sans-serif;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-    }
+   
+.container {
+    width: 90%; /* 컨테이너 너비 조정 */
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    align-items: center;
+    
+}
     .title {
         text-align: center;
         margin-bottom: 20px;
     }
     .seats-selection {
+    	
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
     }
-    .seats-selection div {
-        flex: 1;
-        margin-right: 10px;
-    }
+   .seats-selection div {
+    flex: 0.2; /* 작게 만들기 위해 너비 조정 */
+    margin-right: 20px; /* 여백 조정 */
+}
     .seats-selection div:last-child {
         margin-right: 0;
     }
@@ -144,58 +152,64 @@ footer .wrap .options .option {
     .seats-selection div select {
         width: 100%;
         padding: 5px;
-    }
-    .details {
-        text-align: center;
-        margin-bottom: 20px;
+        margin-right:20px;
     }
     .screen {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .screen p {
-        margin: 10px 0;
-    }
-    .seating-chart {
-        display: flex;
-        justify-content: center;
-    }
-    .seating-chart table {
-        border-collapse: collapse;
-    }
-    .seating-chart td {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid #ccc;
-        cursor: pointer;
-    }
-    .seating-chart td.selected {
-        background-color: red;
-    }
-    .seating-chart td.booked {
-        background-color: #d3d3d3;
-        cursor: not-allowed;
-    }
-    .seating-chart td.not-available {
-        background-color: #eee;
-        cursor: not-allowed;
-    }
-    .seating-chart td.wheelchair {
-        background-color: lightgreen;
-    }
-    .legend {
-        text-align: center;
-        margin-top: 20px;
-    }
-    .legend span {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin: 0 5px;
-    }
-    .legend .selected { background-color: red; }
-    .legend .booked { background-color: #d3d3d3; }
-    .legend .not-available { background-color: #eee; }
-    .legend .wheelchair { background-color: lightgreen; }
+    width: 60%;
+    margin: 0 auto; /* 가로 중앙 정렬 */
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .seating-chart {
+            display: grid;
+            grid-template-columns: repeat(11, 30px);
+            gap: 5px;
+            justify-content: center;
+        }
+        .seat {
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+        }
+        .highlighted {
+            background-color: black;
+        }
+        
+        .row-label, .col-label {
+            font-weight: bold;
+        }
+.line{
+	
+	margin-top : 20px;
+	margin-bottom : 20px;
+	width: 100%;
+	border: 1px solid;
+}
+.movietitle{
+	display: flex;
+            justify-content:center;
+            align-items: center;
+}
+option{
+	color:black;
+}
+select{
+	color: black;
+}
+.price{
+	margin-top:30px;
+	margin-left:30px;
+}
+
+ .disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+

@@ -1,31 +1,58 @@
- document.addEventListener("DOMContentLoaded", () => {
-        const seating = document.getElementById("seating");
-        const rows = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-        const seatsPerRow = 15;
+const seatingChart = document.querySelector(".seating-chart");
+seatingChart.addEventListener("click" , function(evt){
+	
+	if(evt.target.classList.contains("seat")){
+		evt.target.classList.toggle("highlighted");
+	}
+	console.log(evt.target);
+	
+});
 
-        rows.forEach(row => {
-            const tr = document.createElement("tr");
-            for (let i = 1; i <= seatsPerRow; i++) {
-                const td = document.createElement("td");
-                td.textContent = i;
-                td.addEventListener("click", () => {
-                    if (!td.classList.contains("booked") && !td.classList.contains("not-available")) {
-                        td.classList.toggle("selected");
-                    }
-                });
-                tr.appendChild(td);
-            }
-            seating.appendChild(tr);
-        });
 
-        // Example: Mark some seats as booked or not available
-        document.querySelectorAll("#seating tr").forEach((tr, rowIndex) => {
-            tr.children[3].classList.add("booked");
-            tr.children[4].classList.add("booked");
-            tr.children[10].classList.add("not-available");
-            if (rowIndex === 8) {
-                tr.children[8].classList.add("wheelchair");
-                tr.children[9].classList.add("wheelchair");
+const generalSelect = document.getElementById("general");
+const teenSelect = document.getElementById("teen");
+const priceDisplay = document.querySelector(".price h2");
+const seats = document.querySelectorAll(".seat");
+
+ function calculatePrice() {
+        const generalCount = parseInt(generalSelect.value);
+        const teenCount = parseInt(teenSelect.value);
+        const totalPrice = (generalCount * 10000) + (teenCount * 8000);
+        priceDisplay.textContent = `total ${totalPrice.toLocaleString()} won`;
+    }
+    
+ function updateSelectedSeats() {
+        const totalSeatsAllowed = parseInt(generalSelect.value) + parseInt(teenSelect.value);
+        const selectedSeats = seatingChart.querySelectorAll(".seat.selected").length;
+
+        seats.forEach(seat => {
+            if (selectedSeats < totalSeatsAllowed || seat.classList.contains("selected")) {
+                seat.classList.remove("disabled");
+            } else {
+                seat.classList.add("disabled");
             }
         });
+    }
+ generalSelect.addEventListener("change", function() {
+        calculatePrice();
+        updateSelectedSeats();
     });
+
+    teenSelect.addEventListener("change", function() {
+        calculatePrice();
+        updateSelectedSeats();
+    });
+
+    seatingChart.addEventListener("click", function(evt) {
+        if (evt.target.classList.contains("seat") && !evt.target.classList.contains("disabled")) {
+            evt.target.classList.toggle("selected");
+            updateSelectedSeats();
+        }
+    });
+
+    // 초기 가격 및 좌석 상태 설정
+    calculatePrice();
+    updateSelectedSeats();
+
+
+
