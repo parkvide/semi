@@ -177,10 +177,9 @@ footer .wrap .options .option {
             height: 30px;
             background-color: #ddd;
         }
-        .highlighted {
-            background-color: black;
-        }
-        
+    .seat.selected {
+    background-color: #6c7ae0;
+}
         .row-label, .col-label {
             font-weight: bold;
         }
@@ -212,4 +211,11 @@ select{
             cursor: not-allowed;
         }
 
-
+.seat.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.row-label, .col-label {
+    text-align: center;
+    font-weight: bold;
+}
