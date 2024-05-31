@@ -39,4 +39,15 @@
 <!-- 		AND SCREENING_DATE <![CDATA[ <= ]]> SYSDATE + 1 -->
 	</select>
 	
+	<select id="getCinemaName" resultType="com.kh.app.cinema.vo.CinemaVo">
+		SELECT CINEMA_NAME
+		FROM CINEMA
+		WHERE CINEMA_LOCATION = #{cinemaLocation}
+	</select>
+	
+	<select id="getCinemaDetail" resultType="com.kh.app.cinema.vo.CinemaVo">
+		SELECT CINEMA_NAME, CINEMA_ADDRESS, CINEMA_TEL, CINEMA_IMG, CINEMA_CONTENT
+		FROM CINEMA
+		WHERE CINEMA_NAME = #{cinemaName} AND DEL_YN = 'N'
+	</select>
 </mapper>
