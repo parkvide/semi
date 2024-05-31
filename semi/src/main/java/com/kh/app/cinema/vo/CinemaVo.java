@@ -7,25 +7,30 @@ public class CinemaVo {
 	 private String cinemaAddress;
 	 private String cinemaTel;
 	 private String cinemaImg;
+	 private String cinemaLocation;
+	 private String cinemaContent;
 	 private String delYn;
 	public CinemaVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public CinemaVo(String no, String cinemaName, String cinemaAddress, String cinemaTel, String cinemaImg,
-			String delYn) {
+			String cinemaLocation, String cinemaContent, String delYn) {
 		super();
 		this.no = no;
 		this.cinemaName = cinemaName;
 		this.cinemaAddress = cinemaAddress;
 		this.cinemaTel = cinemaTel;
 		this.cinemaImg = cinemaImg;
+		this.cinemaLocation = cinemaLocation;
+		this.cinemaContent = cinemaContent;
 		this.delYn = delYn;
 	}
 	@Override
 	public String toString() {
 		return "CinemaVo [no=" + no + ", cinemaName=" + cinemaName + ", cinemaAddress=" + cinemaAddress + ", cinemaTel="
-				+ cinemaTel + ", cinemaImg=" + cinemaImg + ", delYn=" + delYn + "]";
+				+ cinemaTel + ", cinemaImg=" + cinemaImg + ", cinemaLocation=" + cinemaLocation + ", cinemaContent="
+				+ cinemaContent + ", delYn=" + delYn + "]";
 	}
 	public String getNo() {
 		return no;
@@ -57,12 +62,25 @@ public class CinemaVo {
 	public void setCinemaImg(String cinemaImg) {
 		this.cinemaImg = cinemaImg;
 	}
+	public String getCinemaLocation() {
+		return cinemaLocation;
+	}
+	public void setCinemaLocation(String cinemaLocation) {
+		this.cinemaLocation = cinemaLocation;
+	}
+	public String getCinemaContent() {
+		return cinemaContent;
+	}
+	public void setCinemaContent(String cinemaContent) {
+		this.cinemaContent = cinemaContent;
+	}
 	public String getDelYn() {
 		return delYn;
 	}
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
-	 
+	
+	
 	 
 }

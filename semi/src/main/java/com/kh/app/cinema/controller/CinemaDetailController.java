@@ -1,6 +1,7 @@
 package com.kh.app.cinema.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,18 +19,22 @@ public class CinemaDetailController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
 		try {
-			String no = req.getParameter("no");
-			
-			CinemaService cs = new CinemaService();
-			CinemaVo vo = cs.getCinemaList(no);
-			req.setAttribute("vo", vo);
-			req.getRequestDispatcher("/WEB-INF/views/cinema/cinema.jsp").forward(req, resp);
+			 String cinemaAddress = req.getParameter("cinemaAddress");
+			 CinemaService cs = new CinemaService();
+			 List<CinemaVo> cinemaNameList = cs.getCinemaName(cinemaAddress);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+		
+		try {
+			String cinemaName = req.getParameter("cinemaName");
+			CinemaService cs = new CinemaService();
+			CinemaVo CinemaVo = cs.getCinemaDetail(cinemaName);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

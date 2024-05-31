@@ -17,4 +17,14 @@ public class CinemaDao {
 		return ss.selectOne("CinemaMapper.getCinemaList",no);
 	}
 
+	public List<CinemaVo> getCinemaName(SqlSession ss, String cinemaAddress) {
+		return ss.selectList("CinemaMapper.getCinemaName", cinemaAddress);
+		
+	}
+
+	public CinemaVo getCinemaDetail(SqlSession ss, String cinemaName) {
+		return ss.selectOne("CinemaMapper.getCinemaDetail",cinemaName);
+	}
+
+
 }
