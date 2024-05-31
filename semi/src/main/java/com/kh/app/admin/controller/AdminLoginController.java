@@ -38,11 +38,9 @@ public class AdminLoginController extends HttpServlet {
 			AdminVo loginAdminVo = ad.login(vo);
 
 			if (loginAdminVo != null) {
-				session.setAttribute("alertMsg", "로그인 성공");
 				session.setAttribute("loginAdminVo", loginAdminVo);
 				resp.sendRedirect("/app/admin/home");				
 			}else {
-				session.setAttribute("alertMsg", "로그인 실패");
 				resp.sendRedirect("/app/admin/login");
 			}
 			// 로그인 성공

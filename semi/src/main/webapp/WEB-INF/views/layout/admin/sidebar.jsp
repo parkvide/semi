@@ -7,9 +7,9 @@
 	<ul>
 		<li id="side-menu"><img src="/app/resources/img/logo.png" alt=""></li>
 		<li class="side-menu"><a href="/app/admin/home">관리자 메인</a></li>
-		<li class="side-menu"><a href="/app/admin/member">회원 목록</a></li>
+		<li class="side-menu"><a href="/app/admin/member/list">회원 목록</a></li>
 		<li class="side-menu"><a href="/app/admin/ticketing">예매 리스트</a></li>
-		<li class="side-menu"><a href="/app/admin/rent">대관문의</a></li>
+		<li class="side-menu"><a href="/app/admin/rent/list">대관문의</a></li>
 		
 		
 		<li class="side-menu side-menu-movies">영화</li>

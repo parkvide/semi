@@ -48,7 +48,10 @@
 						<div>${vo.content}</div>
 						<div>${vo.uploadDate}</div>
 						<div>
-							<button onclick="/app/admin/rent/writer" value="수정하기" id="edit"></button>
+							<form action="/app/admin/rent/writer" method="get">
+								<input type="hidden" name="no" value="${vo.no}">
+								<button type="submit">수정하기</button>
+							</form>
 						</div>
 					</c:forEach>
 				</div>

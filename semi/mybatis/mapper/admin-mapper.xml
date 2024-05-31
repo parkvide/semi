@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
+
+	<!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="AdminMapper">
 <!-- 관리자 로그인  -->
 <select id="adminlogin" parameterType="AdminVo" resultType="AdminVo"> 
@@ -33,7 +35,10 @@ INSERT INTO MOVIE (
 		) 
 </insert>
 <!--  상품 등록하기  -->
-<insert id="storeInsert"> INSERT INTO PRODUCT ( NO ,CATERGORY ,NAME ,PRICE ,ORIGIN_COUNTRY ,NUTRIENTE_IMG ,PRODUCT_IMG ) VALUES ( SEQ_PRODUCT.NEXTVAL ,#{category} ,#{name} ,#{price} ,#{originCountry} ,#{nutrienteImg} ,#{productImg} ) </insert>
+<insert id="storeInsert"> 
+	INSERT INTO PRODUCT ( NO ,CATERGORY ,NAME ,PRICE ,ORIGIN_COUNTRY ,NUTRIENTE_IMG ,PRODUCT_IMG ) 
+	VALUES ( SEQ_PRODUCT.NEXTVAL ,#{category} ,#{name} ,#{price} ,#{originCountry} ,#{nutrienteImg} ,#{productImg} ) 
+</insert>
 <!--  영화관 등록하기  -->
 <insert id="cinemaInsert"> 
 INSERT INTO CINEMA( 
@@ -75,6 +80,10 @@ INSERT INTO CINEMA(
 <select id="noticeList" resultType="AdminNoticeVo"> SELECT * FROM NOTICE </select>
 <!--     	관 리스트  -->
 <select id="theaterList" resultType="AdminTheaterVo"> SELECT * FROM "THEATER-TYPE" </select>
+
+<select id="memberList" resultType="com.kh.app.admin.member.vo.AdminMemberVo">
+SELECT * FROM MEMBER
+</select>
 <delete id="cinemaDelete"> DELETE FROM CINEMA WHERE NO = ${no} </delete>
 <delete id="eventDelete"> DELETE FROM EVENT WHERE NO = ${no} </delete>
 <delete id="faqDelete"> DELETE FROM FAQ WHERE NO = ${no} </delete>
@@ -119,20 +128,31 @@ INSERT INTO CINEMA(
 	WHERE NO = ${NO}
 </update>
 
-<!-- <update id="rentWriter"> -->
-<!-- 	UPDATE RENT -->
-<!-- 	SET  -->
-<!-- 		ANSWER_TITLE = #{answerTitle} -->
-<!-- 		, ANSWER_CONTENT = #{answerContent} -->
-<!-- 	WHERE NO = #{no}; -->
+<update id="rentWriter">
+	UPDATE RENT
+	SET 
+		ANSWER_TITLE = #{answerTitle}
+		, ANSWER_CONTENT = #{answerContent}
+	WHERE NO = #{no};
 	
-<!-- </update> -->
+</update>
 
-<!-- <select id="selectList" resultType="com.kh.app.admin.rent.vo.AdminRentVo"> -->
-<!-- 	SELECT NO, WRITER_NO, CINEMA_NO, TITLE, CONTENT, RENTAL_DATE -->
-<!-- 	FROM RENT -->
-<!-- 	WHERE NO = #{no} -->
+<select id="select" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
+	SELECT NO, WRITER_NO, CINEMA_NO, TITLE, CONTENT, RENTAL_DATE
+	FROM RENT
+	WHERE NO = #{no}
 
-<!-- </select> -->
+</select>
+
+<select id="selectList" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
+	SELECT
+	NO
+	,WRITER_NO
+	,TITLE
+	,CONTENT
+	,UPLOAD_DATE
+	
+	FROM RENT
+</select>
 
 </mapper>

@@ -35,16 +35,16 @@
           <div id="list-main">
             <div id="title">
               <div>번호</div>
-              <div class="no">상영관 이름</div>
-              <div class="id">주소</div>
-              <div class="name">전화번호</div>
+              <div>상영관 이름</div>
+              <div>주소</div>
+              <div>전화번호</div>
             </div>
             <div id="content">
               <c:forEach items="${adminCinemavoList}" var="vo">
                 <div>${vo.no}</div>
-                <div class="no">${vo.cinemaName}</div>
-                <div class="id">${vo.cinemaAddress}</div>
-                <div class="name">${vo.cinemaTel}</div>
+                <div>${vo.cinemaName}</div>
+                <div>${vo.cinemaAddress}</div>
+                <div>${vo.cinemaTel}</div>
               </c:forEach>
             </div>
           </div>
