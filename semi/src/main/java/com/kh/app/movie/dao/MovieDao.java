@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.kh.app.cinema.vo.CinemaVo;
+import com.kh.app.movie.ticketing.vo.TicketingVo;
 import com.kh.app.movie.vo.MovieVo;
 import com.kh.app.screeninfo.vo.ScreenInfoVo;
 import com.kh.app.theater.vo.TheaterVo;
@@ -38,6 +39,10 @@ public class MovieDao {
 
 	public List<ScreenInfoVo> selectDateList(SqlSession ss) {
 		return ss.selectList("CinemaMapper.selectDateList");
+	}
+
+	public int insertTicket(SqlSession ss, TicketingVo vo) {
+		return ss.insert("TicketMapper.insertTicket");
 	}
 
 }

@@ -135,9 +135,14 @@
 						</table>
 					</div>
 
-					<form action="/movie/seat" id="frm" method="post">
-						<a href="/app/movie/seat"><img id="btn" alt="" src="/app/resources/img/seat.png"></a> 
-					</form>
+			<form action="/app/movie/seat" id="frm" method="post">
+                <input type="hidden" id="selectedMovieTitle" name="movietitle">
+                <input type="hidden" id="selectedCinemaName" name="cinemaName">
+                <input type="hidden" id="selectedTheaterName" name="theaterName">
+                <input type="hidden" id="selectedScreeningDate" name="screeningDate">
+                <input type="hidden" id="selectedScreeningTime" name="screeningTime">
+                <a href="/app/movie/seat" id="submitbtn"><img id="btn" alt="" src="/app/resources/img/seat.png"></a> 
+            </form>
 
 
 				</div>

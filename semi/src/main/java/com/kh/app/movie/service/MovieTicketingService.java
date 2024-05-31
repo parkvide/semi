@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.dao.MovieDao;
+import com.kh.app.movie.ticketing.vo.TicketingVo;
 import com.kh.app.movie.vo.MovieVo;
 import com.kh.app.screeninfo.vo.ScreenInfoVo;
 import com.kh.app.theater.vo.TheaterVo;
@@ -85,5 +86,20 @@ public class MovieTicketingService {
 		
 		return voList;	
 	}
-
+	
+	
+	public int insertTicket(TicketingVo vo) throws Exception{
+		SqlSession ss = getSqlSession();
+		int result = dao.insertTicket(ss, vo);
+		if(result == 1) {
+			ss.commit();
+		} else {
+			ss.rollback();
+		}
+		ss.close();
+		
+		return result;
+	}
+	
+	
 }

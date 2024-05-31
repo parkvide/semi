@@ -91,7 +91,7 @@
  		<div class="price"><h2>총 0 원</h2></div>
     </div>
  	<br><br>
- 	<div class="movietitle"><h1>qewrqwer</h1></div>
+ 	<div class="movietitle"><h1 id="selectMovie">asdjkfhkjalsdf</h1></div>
  	
  	<br><br>
     <div class="screen">SCREEN</div>
@@ -243,6 +243,9 @@
         <div class="seat j9"></div>
         <div class="seat j10"></div>
    </div>
+   	<div class="checkout">
+    <button id="checkoutBtn">결제하기</button>
+	</div>
    </div>
     </main>
     <div class="line"></div>
@@ -271,5 +274,17 @@
             </div>
         </div>
     </footer>
+    
+    <!-- <script type="text/javascript">
+    
+    	const x = localStorage.getItem("movietitle");
+    	const target = document.querySelector("#selectMovie");
+    	target.innerText = x;
+    
+    </script> -->
+    
 </body>
 </html>
+
+
+

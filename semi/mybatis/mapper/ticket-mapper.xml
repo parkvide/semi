@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TicketMapper">
+	<insert id="insertTicket">
+	INSERT INTO TICKETING(NO, BUYER_NO,THEATER_NO, SCREEN_INFO, SEAT, HEADCOUNT,RESUERVATION_DATE,PRICE) 
+	VALUES(SEQ_TICKETING.NEXTVAL, )
+	
+	</insert>
+</mapper>
