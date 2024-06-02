@@ -40,26 +40,18 @@
         </div>
         <div class="sep2"></div>
         <ul class="list-style">
-            <li>
-                <a href="">
-                    <span><img height="270" width="270" src="vo의 이미지" alt=""></span>
-                    <span class="list-title">vo.이름? 타입</span>
-                    <span class="list-name">vo.디테일</span>
-                    <span class="list-price-wrap">
-                        <span class="detail-price">vo.가격</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span><img height="270" width="270" src="/app/resources/img/콤보/더블콤보.jpg" alt=""></span>
-                    <span class="list-title">더블콤보</span>
-                    <span class="list-name">팝콘(M)2+탄산(M)2</span>
-                    <span class="list-price-wrap">
-                        <span class="detail-price">13,000원</span>
-                    </span>
-                </a>
-            </li>
+       			 <c:forEach items="${voList}" var="vo">
+	            	<li>
+		                <a href="/app/store/detail?no=${vo.no}&categoryNo=${vo.categoryNo}">
+		                    <span><img height="270" width="270" src="${vo.productImg}" alt=""></span>
+		                    <span class="list-title">${vo.name}</span>
+		                    <span class="list-name">${vo.detail}</span>
+		                    <span class="list-price-wrap">
+		                        <span class="detail-price">${vo.price}</span>
+		                    </span>
+		                </a>
+		            </li>
+	       		</c:forEach> 
         </ul>
     </div>
     <div class="sep2"></div>

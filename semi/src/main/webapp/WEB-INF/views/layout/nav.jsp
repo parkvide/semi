@@ -5,7 +5,7 @@
     <nav>
         <div class="left">
             <div class="logo">
-                <a href="#"><img src="/app/resources/img/logo.png" alt=""></a>
+                <a href="/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
             </div>
             <div class="mobile-menu">메뉴</div>
             <ul class="menu-list">
@@ -22,7 +22,7 @@
                     <a href="/app/store">스토어</a>
                 </li>
                 <li>
-                    <a href="/app/service/home">고객센터</a>
+                    <a href="/app/board/home">고객센터</a>
                 </li>
             </ul>
         </div>

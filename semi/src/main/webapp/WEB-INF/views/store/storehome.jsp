@@ -42,39 +42,21 @@
       </div>
       <div class="sep2"></div>
       <ul class="list-style">
+      <c:forEach items="${packList}" var="vo">
         <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/나랑너패키지.jpg" alt=""></span>
-            <span class="list-title">나랑 너 패키지</span>
-            <span class="list-name">일반 영화 관람권 2매+FOURS콤보 1개</span>
+          <a href="/app/store/detail?no=${vo.no}&categoryNo=${vo.categoryNo}">
+            <span><img height="220" width="220" src="${vo.productImg}" alt=""></span>
+            <span class="list-title">${vo.name}</span>
+            <span class="list-name">${vo.detail}</span>
             <span class="list-price-wrap">
-              <span class="detail-price">34,000원</span>
+              <span class="detail-price">${vo.price}원</span>
             </span>
           </a>
         </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/우리패키지.jpg" alt=""></span>
-            <span class="list-title">우리 패키지</span>
-            <span class="list-name">일반 영화관람권 4매+더블콤보 1개</span>
-            <span class="list-price-wrap">
-              <span class="detail-price">61,000원</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/패키지/좋은날패키지.jpg" alt=""></span>
-            <span class="list-title">좋은 날 패키지</span>
-            <span class="list-name">일반 영화 관람권 1매+스몰콤보 1개</span>
-            <span class="list-price-wrap">
-              <span class="detail-price">18,000원</span>
-            </span>
-          </a>
-        </li>
-
+      </c:forEach>
       </ul>
     </div>
+    
     <div class="prd-list">
       <div class="prd-title">
         <span class="popcorn"><a href="/app/store/combo">콤보</a></span>
@@ -82,48 +64,22 @@
       </div>
       <div class="sep2"></div>
       <ul class="list-style">
+      <c:forEach items="${comboList}" var="vo">
         <li>
-          <a href="">
-              <span><img height="220" width="220" src="/app/resources/img/콤보/더블콤보.jpg" alt=""></span>
-              <span class="list-title">더블콤보</span>
-              <span class="list-name">팝콘(M)2+탄산(M)2</span>
+          <a href="/app/store/detail?no=${vo.no}&categoryNo=${vo.categoryNo}">
+              <span><img height="220" width="220" src="${vo.productImg}" alt=""></span>
+              <span class="list-title">${vo.name}</span>
+              <span class="list-name">${vo.detail}</span>
               <span class="list-price-wrap">
-                  <span class="detail-price">13,000원</span>
+                  <span class="detail-price">${vo.price}원</span>
               </span>
           </a>
       </li>
-      <li>
-          <a href="">
-              <span><img height="220" width="220" src="/app/resources/img/콤보/라지콤보.jpg" alt=""></span>
-              <span class="list-title">라지콤보</span>
-              <span class="list-name">팝콘(L)2+탄산음료(L)2</span>
-              <span class="list-price-wrap">
-                  <span class="detail-price">15,000원</span>
-              </span>
-          </a>
-      </li>
-      <li>
-          <a href="">
-              <span><img height="220" width="220" src="/app/resources/img/콤보/스몰콤보.jpg" alt=""></span>
-              <span class="list-title">스몰콤보</span>
-              <span class="list-name">팝콘(M)1+탄산음료(M)1</span>
-              <span class="list-price-wrap">
-                  <span class="detail-price">7,000원</span>
-              </span>
-          </a>
-      </li>
-      <li>
-        <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/콤보/cgv콤보.jpg" alt=""></span>
-            <span class="list-title">FOURS콤보</span>
-            <span class="list-name">팝콘(L)1+탄산음료(M)2</span>
-            <span class="list-price-wrap">
-                <span class="detail-price">10,000원</span>
-            </span>
-        </a>
-    </li>
+      </c:forEach>
+     
       </ul>
     </div>
+    
     <div class="prd-list">
       <div class="prd-title">
         <span class="popcorn"><a href="/app/store/giftticket">영화관람권</a></span>
@@ -131,38 +87,19 @@
       </div>
       <div class="sep2"></div>
       <ul class="list-style">
+      <c:forEach items="${ticketList}" var="vo">
         <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/관람권/4dx관람권.jpg" alt=""></span>
-            <span class="list-title">4DX 영화관람권</span>
+          <a href="/app/store/detail?no=${vo.no}&categoryNo=${vo.categoryNo}">
+            <span><img height="220" width="220" src="${vo.productImg}" alt=""></span>
+            <span class="list-title">${vo.name}</span>
             <span class="list-name"></span>
             <span class="list-price-wrap">
-              <span class="detail-price">19,000원</span>
+              <span class="detail-price">${vo.price}원</span>
             </span>
           </a>
         </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/관람권/imax관람권.jpg" alt=""></span>
-            <span class="list-title">IMAX 영화관람권</span>
-            <span class="list-name"></span>
-            <span class="list-price-wrap">
-              <span class="detail-price">18,000원</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span><img height="220" width="220" src="/app/resources/img/관람권/기본관람권.jpg" alt=""></span>
-            <span class="list-title">FOURS 영화관람권</span>
-            <span class="list-name"></span>
-            <span class="list-price-wrap">
-              <span class="detail-price">13,000원</span>
-            </span>
-          </a>
-        </li>
-
-      </ul>
+     </c:forEach>   
+        </ul>
     </div>
     <div class="sep2"></div>
 

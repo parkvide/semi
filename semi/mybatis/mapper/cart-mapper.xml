@@ -6,8 +6,14 @@
 <mapper namespace="CartMapper">
 
 	<select id="getAllCartItems" resultType="com.kh.app.cart.vo.CartVo">
-		SELECT *
-		FROM CART
+		SELECT P.NAME , P.PRICE, P.PRODUCT_IMG, C.QUANTITY 
+		, C.MEM_NO, C.PRODUCT_NO, P.DETAIL
+		FROM CART C
+		JOIN MEMBER M
+		ON C.MEM_NO = M.NO
+		JOIN PRODUCT P 
+		ON C.PRODUCT_NO = P.NO
+		WHERE M.NO = #{no}
 	</select>
 
 	<insert id="addCartItem">

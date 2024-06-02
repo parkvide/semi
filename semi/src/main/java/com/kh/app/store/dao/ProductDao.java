@@ -35,8 +35,8 @@ public class ProductDao {
 				
 	}
 	//카트 담긴 리스트 뽑기
-	public List<CartVo> getAllCartItems(SqlSession ss) {
-		return ss.selectList("CartMapper.getAllCartItems");
+	public List<CartVo> getAllCartItems(SqlSession ss, String no) {
+		return ss.selectList("CartMapper.getAllCartItems" , no);
 	}
 	//카트에 아이템 insert
 	public int addCartItem(SqlSession ss, CartVo vo) {

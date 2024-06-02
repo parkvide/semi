@@ -30,10 +30,10 @@ public class CinemaService {
 		ss.close();
 		return vo;
 	}
-	public List<CinemaVo> getCinemaName(String cinemaAddress) throws Exception {
+	public List<CinemaVo> getCinemaName(String cinemaLocation) throws Exception {
 		
 		SqlSession ss = getSqlSession();
-		List<CinemaVo> cinemaNameList = dao.getCinemaName(ss, cinemaAddress);
+		List<CinemaVo> cinemaNameList = dao.getCinemaName(ss, cinemaLocation);
 		ss.close();
 		return cinemaNameList;
 	}

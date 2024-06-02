@@ -17,8 +17,8 @@ public class CinemaDao {
 		return ss.selectOne("CinemaMapper.getCinemaList",no);
 	}
 
-	public List<CinemaVo> getCinemaName(SqlSession ss, String cinemaAddress) {
-		return ss.selectList("CinemaMapper.getCinemaName", cinemaAddress);
+	public List<CinemaVo> getCinemaName(SqlSession ss, String cinemaLocation) {
+		return ss.selectList("CinemaMapper.getCinemaName", cinemaLocation);
 		
 	}
 

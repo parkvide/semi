@@ -35,12 +35,16 @@
                 </div>
                 <div id="main-list">
                   <div id="search">
-                    <span id="title">단체/대관문의</span>
+                    <span id="title">단체/대관문의</span> 
                     <span id="content">
                       개인이나 단체를 위한 대관서비스로 Four's의 넓고 쾌적한 극장에서 즐거운 추억을 만드실 수 있습니다
-                      <br>단체/대관 문의 외 문의나 불편한 사항은 게시글 문의로 작성 부탁드립니다
+                      <br>단체/대관 문의 외 문의나 불편한 사항은 게시글 문의로 작성 부탁드립니다 <br> 
+                      <br>
+                      <button style="width: 120px;color: black;" onclick="location.href='/app/board/rent/insert'">문의하기</button>
                     </span>
                   </div>
+                  <br>
+                  <br>
                   <div id="list">
                     <table class="list">
                       <thead>

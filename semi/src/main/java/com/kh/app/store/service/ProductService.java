@@ -75,12 +75,13 @@ public class ProductService {
 		return vo;
 	}
 	//카트에 아이템 리스트 뽑기
-	public List<CartVo> getAllCartItems() throws Exception {
+	public List<CartVo> getAllCartItems(String no) throws Exception {
 		SqlSession ss = getSqlSession();
-		List<CartVo> cartItem =dao.getAllCartItems(ss);
+		List<CartVo> cartItem =dao.getAllCartItems(ss, no);
 		ss.close();
 		return cartItem;
 	}
+	
 	//카트에 아이템 추가
 	public void addCartItem(CartVo vo) throws Exception {
 		SqlSession ss = getSqlSession();

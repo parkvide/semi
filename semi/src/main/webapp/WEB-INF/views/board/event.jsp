@@ -27,8 +27,7 @@
                     <div id="line"></div>
                     <div id="category">
                         <div><a href="" id="ca-1">SPECIAL</a></div>
-                        <div><a href="" class="ca-2">영화/예매</a></div>
-                        <div><a href="" class="ca-2">제휴할인</a></div>
+                        <div><a href="/app/movie/ticketing" class="ca-2">영화/예매</a></div>
                     </div>
                 </div>
                 <div id="menu">

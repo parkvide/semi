@@ -70,56 +70,34 @@
                 </tr>
             </thead>
             <tbody>
+            <c:forEach items="${cartItem}" var="vo">
                 <tr>
                     <td><input type="checkbox" checked></td>
                     <td>
                         <img src="product1.jpg" alt="Product 1" class="product-image">
                         <div class="product-details">
-                            <h2>좋은 날 패키지</h2>
-                            <p>일반 영화 관람권 1매 + 스몰세트 1개</p>
+                            <h2>${vo.productNo}</h2>
+                            <p>${vo.detail}</p>
                         </div>
                     </td>
                     <td>
-                        <p class="current-price">18,000원</p>
-                        <p class="original-price">20,000원</p>
+                        <p class="current-price">${vo.price}원</p>
+                        <p class="original-price">${vo.price}원</p>
                     </td>
                     <td>
                         <input type="number" value="1" class="product-quantity">
                         <button class="update-button">변경</button>
                     </td>
                     <td>
-                        <p class="total-price">18,000원</p>
+                        <p class="total-price">${vo.price}원</p>
                     </td>
                     <td>
                         <button class="purchase-button">바로구매</button>
                         <button class="delete-button">삭제</button>
                     </td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td>
-                        <img src="product2.jpg" alt="Product 2" class="product-image">
-                        <div class="product-details">
-                            <h2>나랑 너 패키지</h2>
-                            <p>일반 영화 관람권 2매+CGV콤보 1개</p>
-                        </div>
-                    </td>
-                    <td>
-                        <p class="current-price">34,000원</p>
-                        <p class="original-price">36,000원</p>
-                    </td>
-                    <td>
-                        <input type="number" value="1" class="product-quantity">
-                        <button class="update-button">변경</button>
-                    </td>
-                    <td>
-                        <p class="total-price">34,000원</p>
-                    </td>
-                    <td>
-                        <button class="purchase-button">바로구매</button>
-                        <button class="delete-button">삭제</button>
-                    </td>
-                </tr>
+             </c:forEach>
+                
             </tbody>
         </table>
         <button class="delete-selected-button">선택상품 삭제</button>
