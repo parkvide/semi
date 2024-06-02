@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,57 +13,47 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav>
+<nav>
         <div class="left">
             <div class="logo">
-                <a href="/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
+                <a href="http://127.0.0.1:8888/app/home"><img src="/app/resources/img/logo.png" alt=""></a>
             </div>
-            <div class="mobile-menu">К╘■К┴╢</div>
+            <div class="mobile-menu">╦ч╢╨</div>
             <ul class="menu-list">
                 <li>
-                    <a href="/app/movie/list">Л≤│М≥■</a>
+                    <a href="#">©╣х╜</a>
                 </li>
                 <li>
-                    <a href="/app/cinema">Л≤│М≥■Й╢─</a>
+                    <a href="#">©╣х╜╟Э</a>
                 </li>
                 <li>
-                    <a href="/app/movie/ticketing">Л≤┬К╖╓</a>
+                    <a href="http://127.0.0.1:8888/app/movie/ticketing">©╧╦е</a>
                 </li>
                 <li>
-                    <a href="/app/store">Л┼╓М├═Л√╢</a>
+                    <a href="http://127.0.0.1:8888/app/store">╫╨еД╬Н</a>
                 </li>
                 <li>
-                    <a href="/app/board/home">ЙЁ═Й╟²Л└╪М└╟</a>
+                    <a href="http://127.0.0.1/app/service/home">╟М╟╢╪╬ем</a>
                 </li>
             </ul>
         </div>
         <div class="right">
-        <c:choose>
-           <c:when test="${sessionScope.loginMemberVo != null}">
-	            <div class="icon kids">
-	                <a href="/app/member/editHome">К╖┬Л²╢М▌≤Л²╢Л╖─</a>
-	            </div>
-	            <div class="icon bell">
-	                <a href="/app/member/logout">К║°Й╥╦Л∙└Л⌡┐</a>
-	            </div>
-           </c:when>
-            <c:otherwise>
-	              <div class="icon kids">
-	                <a href="/app/member/login">К║°Й╥╦Л²╦</a>
-	            </div>
-	            <div class="icon bell">
-	                <a href="/app/member/join">М ▄Л⌡░Й╟─Л·┘</a>
-	            </div>
-            </c:otherwise>
-        </c:choose>
+           
+            <div class="icon kids">
+                <a href="http://127.0.0.1:8888/app/member/login">╥н╠вюн</a>
+            </div>
+            <div class="icon bell">
+                <a href="http://127.0.0.1:8888/app/member/join">х╦©Ь ╟║ют</a>
+            </div>
+            
              <div class="icon search">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Л═°К╙╘, Л┌╛К·▄, Л·╔К╔╢"/>
+                    <input type="text" placeholder="а╕╦Я, ╩Г╤В, юЕ╦ё"/>
                 </div>
             </div>
         </div>
-</nav>
+    </nav>
 	<section>
 		<div id="sec">
 
@@ -76,7 +66,7 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<!-- date О©╫О©╫ -->
+				<!-- date Ё║ -->
 
 
 				<div id="secMidTitle">
@@ -97,9 +87,9 @@
 
 				<div id="secMain">
 
-					<!-- О©╫ч╬ф©О©╫ О©╫О©╫х╜О©╫О©╫О©╫О©╫ -->
+					<!-- ╧ч╬ф©б ©╣х╜а╕╦Я -->
 					
-					<!-- О©╫О©╫х╜О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ -->
+					<!-- ©╣х╜а╕╦Я ╪╠ец -->
 					<div class="sname s">
 						<table class="sul">
 						<c:forEach items="${requestScope.voList}" var="vo">
@@ -111,7 +101,7 @@
 					</div>
 
 
-					<!-- О©╫О©╫х╜ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ -->
+					<!-- ©╣х╜ аЖ©╙╪╠ец -->
 					<div class="s s1">
 						<table class="sul" id="cinemaNameSelect">
 						
@@ -120,7 +110,7 @@
 
 
 
-					<!-- О©╫О©╫х╜ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫х╜О©╫О©╫ О©╫О©╫О©╫О©╫ -->
+					<!-- ©╣х╜ аЖ©╙©║ ╣Ш╦╔ ©╣х╜╟Э ╪╠ец -->
 					<div class="s3 s2">
 						<table class="sul" id="theaterNameSelect">
 						
@@ -128,7 +118,7 @@
 					</div>
 
 
-					<!-- О©╫О©╫б╔О©╫О©╫О©╫О©╫  -->
+					<!-- Ё╞б╔╪╠ец  -->
 					<div class="s s4">
 					<img class="corn3" alt="" src="/app/resources/img/pop_cornT.png">
 						<table class="sul" id="movieDateSelect">
@@ -137,7 +127,7 @@
 					</div>
 
 
-					<!-- О©╫ц╟О©╫О©╫О©╫О©╫О©╫  -->
+					<!-- ╫ц╟ё╪╠ец  -->
 					<div class="s s5">
 					<img class="corn4" alt="" src="/app/resources/img/pop_corn_D.png">
 						<table class="sul" id="movieTimeSelect">
@@ -158,32 +148,31 @@
 				</div>
 			</div>
 		</section>
-        <footer>
-            <div class="wrap">
-                <div class="social-icons">
-                    <i class="fa-brands fa-facebook-square"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <div class="options">
-                    <div class="option">Л·░К╖┴ К╟▐ Л²▄Л└╠</div>
-                    <div class="option">Л²▄Л└╠ Л╖─Л⌡░</div>
-                    <div class="option">ЙЁ═Й╟² Л└╪М└╟</div>
-                    <div class="option">Й╦╟М■└М┼╦Л╧╢К⌠°</div>
-                    <div class="option">К╞╦К■■Л√╢ Л└╪М└╟</div>
-                    <div class="option">М┬╛Л·░ Л═∙КЁ╢(IR)</div>
-                    <div class="option">Л·┘Л┌╛ Л═∙КЁ╢</div>
-                    <div class="option">Л²╢Л ╘ Л∙╫Й╢─</div>
-                    <div class="option">Й╟°Л²╦ Л═∙КЁ╢</div>
-                    <div class="option">К╡∙Л═│ ЙЁ═Л╖─</div>
-                    <div class="option">Л©═М┌╓ Л└╓Л═∙</div>
-                    <div class="option">М ▄Л┌╛ Л═∙КЁ╢</div>
-                    <div class="option">К╛╦Л²≤М∙≤Й╦╟</div>
-                    <div class="option"><a href="/app/admin/login">Й╢─К╕╛Л·░</a></div>
-                </div>
+		<footer>
+        <div class="wrap">
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook-square"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
             </div>
-        </footer>
+            <div class="options">
+                <div class="option">юз╦╥ ╧в ю╫╪╨</div>
+                <div class="option">ю╫╪╨ аЖ©Ь</div>
+                <div class="option">╟М╟╢ ╪╬ем</div>
+                <div class="option">╠Бгаф╝д╚╣Е</div>
+                <div class="option">╧л╣П╬Н ╪╬ем</div>
+                <div class="option">еУюз а╓╨╦(IR)</div>
+                <div class="option">ют╩Г а╓╨╦</div>
+                <div class="option">юл©К ╬Ю╟Э</div>
+                <div class="option">╟Ёюн а╓╨╦</div>
+                <div class="option">╧ЩюШ ╟МаЖ</div>
+                <div class="option">дМе╟ ╪Ёа╓</div>
+                <div class="option">х╦╩Г а╓╨╦</div>
+                <div class="option">╧╝югго╠Б</div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>

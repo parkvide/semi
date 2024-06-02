@@ -255,18 +255,13 @@ main .list > tbody > tr:hover{
 }
 
 /* 짝수 행 배경색 */
-.list tbody tr:hover{
-  background-color: #ffffff;
-  color: black;
-}
-
-.list tbody tr td a{
-  color: black;
+.list tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 
 /* 행에 마우스를 올렸을 때 배경색 */
-.list tbody  tr td {
-  background-color: #ffffff;
+.list tbody tr:hover {
+  background-color: #f1f1f1;
 }
 
 /* 테이블 행 경계선 */
