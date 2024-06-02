@@ -23,14 +23,6 @@
         <div id="list">
           <div id="name">
             <span>공지사항 목록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
           </div>
           <div id="line"></div>
           <div id="list-main">
@@ -42,6 +34,8 @@
 	              <div>내용</div>
 	              <div>조회수</div>
 	              <div>날짜</div>
+                <div>수정하기</div>
+                <div>삭제하기</div>
 	            </div>
 	            <div id="content">
 	              <c:forEach items="${adminNoticevoList}" var="vo">
@@ -51,6 +45,18 @@
 	                <div>${vo.content}</div>
 	                <div>${vo.views}</div>
 	                <div>${vo.uploadDate}</div>
+                  <div>
+                    <form action="/app/admin/notice/edit" method="get">
+                      <input type="hidden" name="no" value="${vo.no}">
+                      <button type="submit">수정하기</button>
+                    </form>
+                  </div>
+                  <div>
+                    <form action="/app/admin/notice/delete" method="get">
+                      <input type="hidden" name="no" value="${vo.no}">
+                      <button type="submit">삭제하기</button>
+                    </form>
+                  </div>
 	              </c:forEach>
 		         </div>
           </div>

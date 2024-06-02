@@ -11,16 +11,15 @@ public class AdminMovieVo {
 	private String runningTime;
 	private String delYn;
 	private String poster;
-	
+	public AdminMovieVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString() {
 		return "AdminMovieVo [no=" + no + ", type=" + type + ", movieAge=" + movieAge + ", summary=" + summary
 				+ ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn=" + delYn
 				+ ", poster=" + poster + "]";
-	}
-	public AdminMovieVo() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 	public AdminMovieVo(String no, String type, String movieAge, String summary, String cast, String director,
 			String runningTime, String delYn, String poster) {
@@ -89,5 +88,4 @@ public class AdminMovieVo {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
-
 }

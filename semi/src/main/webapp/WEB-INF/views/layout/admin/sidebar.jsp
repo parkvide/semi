@@ -8,7 +8,6 @@
 		<li id="side-menu"><img src="/app/resources/img/logo.png" alt=""></li>
 		<li class="side-menu"><a href="/app/admin/home">관리자 메인</a></li>
 		<li class="side-menu"><a href="/app/admin/member/list">회원 목록</a></li>
-		<li class="side-menu"><a href="/app/admin/ticketing">예매 리스트</a></li>
 		<li class="side-menu"><a href="/app/admin/rent/list">대관문의</a></li>
 		
 		
@@ -19,10 +18,10 @@
 					목록</a></li>
 			<li class="side-menu menu-list"><a
 				href="/app/admin/movie/insert">영화 등록</a></li>
-			<li class="side-menu menu-list"><a href="/app/admin/movie/timeinsert">상영시간
+			<li class="side-menu menu-list"><a href="/app/admin/movie/time/insert">상영시간
 					등록</a></li>
 			<li class="side-menu menu-list"><a
-				href="/app/admin/movie/timelist">상영시간 목록</a></li>
+				href="/app/admin/movie/time/list">상영시간 목록</a></li>
 		</div>
 
 		<li class="side-menu side-menu-theater">극장</li>

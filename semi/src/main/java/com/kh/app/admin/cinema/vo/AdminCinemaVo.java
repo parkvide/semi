@@ -8,6 +8,30 @@ public class AdminCinemaVo {
 	private String cinemaTel;
 	private String delYn;
 	private String cinemaImg;
+	private String cinemaLocation;
+	private String cinemaContent;
+	public AdminCinemaVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "AdminCinemaVo [no=" + no + ", cinemaName=" + cinemaName + ", cinemaAddress=" + cinemaAddress
+				+ ", cinemaTel=" + cinemaTel + ", delYn=" + delYn + ", cinemaImg=" + cinemaImg + ", cinemaLocation="
+				+ cinemaLocation + ", cinemaContent=" + cinemaContent + "]";
+	}
+	public AdminCinemaVo(String no, String cinemaName, String cinemaAddress, String cinemaTel, String delYn,
+			String cinemaImg, String cinemaLocation, String cinemaContent) {
+		super();
+		this.no = no;
+		this.cinemaName = cinemaName;
+		this.cinemaAddress = cinemaAddress;
+		this.cinemaTel = cinemaTel;
+		this.delYn = delYn;
+		this.cinemaImg = cinemaImg;
+		this.cinemaLocation = cinemaLocation;
+		this.cinemaContent = cinemaContent;
+	}
 	public String getNo() {
 		return no;
 	}
@@ -44,26 +68,16 @@ public class AdminCinemaVo {
 	public void setCinemaImg(String cinemaImg) {
 		this.cinemaImg = cinemaImg;
 	}
-	public AdminCinemaVo(String no, String cinemaName, String cinemaAddress, String cinemaTel, String delYn,
-			String cinemaImg) {
-		super();
-		this.no = no;
-		this.cinemaName = cinemaName;
-		this.cinemaAddress = cinemaAddress;
-		this.cinemaTel = cinemaTel;
-		this.delYn = delYn;
-		this.cinemaImg = cinemaImg;
+	public String getCinemaLocation() {
+		return cinemaLocation;
 	}
-	@Override
-	public String toString() {
-		return "AdminCinemaVo [no=" + no + ", cinemaName=" + cinemaName + ", cinemaAddress=" + cinemaAddress
-				+ ", cinemaTel=" + cinemaTel + ", delYn=" + delYn + ", cinemaImg=" + cinemaImg + "]";
+	public void setCinemaLocation(String cinemaLocation) {
+		this.cinemaLocation = cinemaLocation;
 	}
-	public AdminCinemaVo() {
-		super();
-		// TODO Auto-generated constructor stub
+	public String getCinemaContent() {
+		return cinemaContent;
 	}
-	
-
-
-}
+	public void setCinemaContent(String cinemaContent) {
+		this.cinemaContent = cinemaContent;
+	}
+	}

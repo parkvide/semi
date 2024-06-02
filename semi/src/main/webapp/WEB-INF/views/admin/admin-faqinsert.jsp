@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-theaterprice.css">
-    <script src="/app/resources/js/admin/admin-theaterprice.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-faqInsert.css">
   </head>
 
   <body>
@@ -21,44 +20,16 @@
 
         <div id="list">
           <div id="name">
-            <span>가격 등록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
+            <span>자주묻는질문 등록</span>
           </div>
           <div id="line"></div>
           <div id="list-main">
-            <div id="title">
-              <div class="no">번호</div>
-              <div class="id">아이디</div>
-              <div class="name">이름</div>
-              <div class="num">연락처</div>
-              <div class="email">이메일</div>
-              <div class="birth">생년월일</div>
-              <div class="date">가입날짜</div>
-              <div class="ny">상태</div>
-              <div class="modify">탈퇴날짜</div>
-            </div>
-            <div id="content">
-              <c:forEach items="${voList}" var="vo">
-                <div id="contentlist">
-                  <div class="no">번호 자바코드임</div>
-                  <div class="id">아이디 자바코드임</div>
-                  <div class="name">이름 자바코드임</div>
-                  <div class="num">연락처 자바코드임</div>
-                  <div class="email">이메일 자바코드임</div>
-                  <div class="birth">생년월일 자바코드임</div>
-                  <div class="date">가입날짜 자바코드임</div>
-                  <div class="ny">상태 자바코드임</div>
-                  <div class="modify">탈퇴날짜 자바코드임</div>
-                </div>
-              </c:forEach>
-            </div>
+            <form action="/app/admin/faq/insert"  method="post">
+              <input type="text" name="witerNo" placeholder="작성자">
+              <input type="text" name="title" placeholder="제목">
+              <input type="text"  name="conetnt" placeholder="내용">
+              <input type="submit" value="작성하기">
+            </form>
           </div>
         </div>
       </div>

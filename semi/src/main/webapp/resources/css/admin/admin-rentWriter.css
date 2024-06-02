@@ -159,8 +159,18 @@
   .side-menu:hover {
     background-color: #fff;
     color: black;
+    font-size: small;
   }
   
   .side-menu:hover a {
     color: black;
   }
+
+.side-menu .menu-list,
+.side-menu .theater-list,
+.side-menu .evt-list,
+.side-menu .not-list,
+.side-menu .faq-list,
+.side-menu .store-list {
+  font-size: smaller; /* 또는 원하는 크기로 설정 */
+}

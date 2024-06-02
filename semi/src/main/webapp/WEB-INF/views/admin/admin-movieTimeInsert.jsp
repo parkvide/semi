@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-notinsert.css">
-    <script src="/app/resources/js/admin/admin-notinsert.js"></script>
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-movietime.css">
+    <script src="/app/resources/js/admin/admin-movietime.js"></script>
   </head>
 
   <body>
@@ -21,16 +21,16 @@
 
         <div id="list">
           <div id="name">
-            <span>공지사항 등록</span>
+            <span>상영시간 등록</span>
           </div>
           <div id="line"></div>
           <div id="list-main">
-            <div id="theater">
-              <form action="/app/admin/not/insert" method="post" enctype="multipart/form-data">
-                <input type="text" name="writerNo" placeholder="작성자">
-                <input type="text" name="title" placeholder="제목">
-                <input type="text" name="content" placeholder="내용">
-              </form>
+            <form action="/app/admin/movie/time/insert" method="post">
+              <input type="text" value="영화이름"> 
+              <input type="text" value="관 이름">
+              <input type="datetime" value="상영시간">
+              <input type="submit" value="등록하기">
+            </form>
           </div>
         </div>
       </div>
