@@ -20,29 +20,29 @@
             <div class="mobile-menu">메뉴</div>
             <ul class="menu-list">
                 <li>
-                    <a href="#">영화</a>
+                    <a href="/app/movie/list">영화</a>
                 </li>
                 <li>
-                    <a href="#">영화관</a>
+                    <a href="/app/cinema">영화관</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/movie/ticketing">예매</a>
+                    <a href="/app/movie/ticketing">예매</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1:8888/app/store">스토어</a>
+                    <a href="/app/store">스토어</a>
                 </li>
                 <li>
-                    <a href="http://127.0.0.1/app/service/home">고객센터</a>
+                    <a href="/app/board/home">고객센터</a>
                 </li>
             </ul>
         </div>
         <div class="right">
            
             <div class="icon kids">
-                <a href="http://127.0.0.1:8888/app/member/login">로그인</a>
+                <a href="/app/member/login">로그인</a>
             </div>
             <div class="icon bell">
-                <a href="http://127.0.0.1:8888/app/member/join">회원 가입</a>
+                <a href="/app/member/join">회원 가입</a>
             </div>
             
              <div class="icon search">

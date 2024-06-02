@@ -13,7 +13,7 @@
 	<%@ include file="/WEB-INF/views/layout/nav.jsp"%>
 	<main>
 		<div class="video">
-			<iframe class="iframe" width="1650" height="315"
+			<iframe class="iframe" width="100%" height="315"
 				src="https://www.youtube.com/embed/pMAPj6WVsT4" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
@@ -23,10 +23,10 @@
 			<h3>메인 예고</h3>
 			<p>4월 국경도 영역도 제한 없다. 싹 쓸어버린다</p>
 			<div class="buttons">
-				<button class="play">
+				<button class="play" onclick="location.href='/app/movie/ticketing'">
 					<i class="fa-regular fa-credit-card"></i><span>예매</span>
 				</button>
-				<button class="detail">
+				<button class="detail" onclick="location.href='/app/movie/list'">
 					<i class="fa-solid fa-circle-info"></i>상세 정보
 				</button>
 			</div>

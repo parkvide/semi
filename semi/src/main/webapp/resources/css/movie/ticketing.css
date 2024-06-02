@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 button {
@@ -30,7 +31,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-top: 0.3em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  background: black;
 }
 nav .left {
   display: flex;
@@ -129,7 +130,7 @@ footer .wrap .options .option {
 
 
 body{
-	background-color: #fcfcf0;
+	background-color: #ffffff;
 }
 
 /* #total{
@@ -420,6 +421,14 @@ font-weight: bold;
     border: 1px solid gray;
     font-weight: bolder;
     height: 27px;
+}
+
+footer{
+	background-color: rgb(255, 255, 255);
+}
+
+footer .wrap .options .option{
+	color: rgb(0, 0, 0);
 }
 
 .footer{
