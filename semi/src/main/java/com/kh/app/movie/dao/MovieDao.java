@@ -45,4 +45,8 @@ public class MovieDao {
 		return ss.insert("TicketMapper.insertTicket");
 	}
 
+	public List<TicketingVo> selectTicketInfoList(SqlSession ss) {
+		return ss.selectList("TicketMapper.selectTicket");
+	}
+
 }

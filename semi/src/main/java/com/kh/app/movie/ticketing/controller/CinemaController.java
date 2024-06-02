@@ -17,6 +17,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.kh.app.cinema.vo.CinemaVo;
 import com.kh.app.movie.service.MovieTicketingService;
+import com.kh.app.movie.vo.MovieVo;
 import com.kh.app.screeninfo.vo.ScreenInfoVo;
 import com.kh.app.theater.vo.TheaterVo;
 
@@ -27,6 +28,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	// service에서 lsit
 	MovieTicketingService mts = new MovieTicketingService();
 	try {
+		
 		List<CinemaVo> screenList = mts.selectCinemaList();
 		List<TheaterVo> theaterList = mts.selectTheaterList();
 		List<ScreenInfoVo> dateList = mts.selectDateList();
@@ -35,6 +37,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
         responseMap.put("cinemas", screenList);
         responseMap.put("theaters", theaterList);
         responseMap.put("times", dateList);
+        
 		
 		Gson gson = new Gson();
 		String jsonResponse = gson.toJson(responseMap);

@@ -244,7 +244,7 @@
         <div class="seat j10"></div>
    </div>
    	<div class="checkout">
-    <button id="checkoutBtn">결제하기</button>
+    	<button id="checkoutBtn" onclick="window.location.href='/app/movie/ticketInfo'">결제하기</button>
 	</div>
    </div>
     </main>
