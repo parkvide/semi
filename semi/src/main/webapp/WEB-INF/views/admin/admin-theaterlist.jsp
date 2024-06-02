@@ -22,15 +22,7 @@
 
         <div id="list">
           <div id="name">
-            <span>극장 목록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
+            <span>상영관 목록</span>
           </div>
           <div id="line"></div>
           <div id="list-main">
@@ -38,12 +30,19 @@
           	<div>번호</div>
           	<div>관 이름</div>
           	<div>가격</div>
+            <div>수정하기</div>
        	 </div>
           <div id="content">
           	<c:forEach items="${admintheaterVoList}" var="vo">
             	<div>${vo.no}</div>
             	<div>${vo.type}</div>
             	<div>${vo.price}</div>
+              <div>
+                <form action="/app/admin/theater/edit" method="get">
+                  <input type="hidden" name="no" value="${vo.no}">
+                  <button type="submit">수정하기</button>
+                </form>
+              </div>
 		     </c:forEach>
 		  </div>
           </div>

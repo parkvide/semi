@@ -22,22 +22,16 @@
         <div id="list">
           <div id="name">
             <span>영화관 등록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
           </div>
           <div id="line"></div>
           <div id="list-main">
             <div>
               <form action="/app/admin/cinema/insert" method="post" enctype="multipart/form-data">
                 <input type="text" name="name" placeholder="영화지점 이름">
+                <input type="text" name="location" placeholder="지역"> 
                 <input type="text" name="address" placeholder="주소">
                 <input type="text" name="tel" placeholder="전화번호">
+                <input type="text" name="content"  placeholder="상세글">
                 <input type="file" name="img" >
                 <input type="submit" value="등록하기">
               </form>

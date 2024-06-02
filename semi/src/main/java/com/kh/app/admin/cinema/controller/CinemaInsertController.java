@@ -42,6 +42,8 @@ public class CinemaInsertController extends HttpServlet{
 			String address = req.getParameter("address");
 			String tel = req.getParameter("tel");
 			Part img = req.getPart("img");
+			String location = req.getParameter("location");
+			String content = req.getParameter("content");
 			
 			String img2 = "";
 			if(img.getSize() > 0) {
@@ -70,6 +72,8 @@ public class CinemaInsertController extends HttpServlet{
 			vo.setCinemaAddress(address);
 			vo.setCinemaTel(tel);
 			vo.setCinemaImg(img2);
+			vo.setCinemaLocation(location);
+			vo.setCinemaContent(content);
 			
 			AdminCinemaService acs = new AdminCinemaService();
 			int result = acs.insert(vo);

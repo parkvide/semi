@@ -18,16 +18,16 @@ public class RentWriteController  extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		try {
-//			String no = req.getParameter("no");
-//			
-//			AdminRentService ars = new AdminRentService();
-//			List<AdminRentVo> adminVoList = ars.selectLis
-//			req.setAttribute("adminVoList", adminVoList);
+		try {
+			String no = req.getParameter("no");
+			
+			AdminRentService ars = new AdminRentService();
+			List<AdminRentVo> adminVoList = ars.selectList(no);
+			req.setAttribute("adminVoList", adminVoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-rentWriter.jsp").forward(req, resp); // 주소 넣기
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	

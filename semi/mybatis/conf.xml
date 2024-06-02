@@ -17,8 +17,6 @@
 			alias="AdminEventVo" />
 		<typeAlias type="com.kh.app.admin.faq.vo.AdminFaqVo"
 			alias="AdminFaqVo" />
-		<typeAlias type="com.kh.app.admin.movie.vo.AdminMovieVo"
-			alias="AdminMovieVo" />
 		<typeAlias type="com.kh.app.admin.notice.vo.AdminNoticeVo"
 			alias="AdminNoticeVo" />
 		<typeAlias type="com.kh.app.admin.theater.vo.AdminTheaterVo"

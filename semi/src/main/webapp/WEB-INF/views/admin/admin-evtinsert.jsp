@@ -22,14 +22,6 @@
         <div id="list">
           <div id="name">
             <span>이벤트 등록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
           </div>
           <div id="line"></div>
           <div id="list-main">

@@ -23,13 +23,6 @@
 			<div id="list">
 				<div id="name">
 					<span>대관문의</span>
-					<form action="">
-						<input type="text" placeholder="검색"> <select id="category">
-							<option>닉네임</option>
-							<option>아이디</option>
-						</select>
-						<button type="submit">🔍</button>
-					</form>
 				</div>
 				<div id="line"></div>
 				<div id="title">
@@ -38,7 +31,7 @@
 					<div>제목</div>
 					<div>내용</div>
 					<div>날짜</div>
-					<div>수정하기</div>
+					<div>답변하기</div>
 				</div>
 				<div id="content">
 					<c:forEach items="${AdminRentVoList}" var="vo">
@@ -50,7 +43,7 @@
 						<div>
 							<form action="/app/admin/rent/writer" method="get">
 								<input type="hidden" name="no" value="${vo.no}">
-								<button type="submit">수정하기</button>
+								<button type="submit">답변</button>
 							</form>
 						</div>
 					</c:forEach>

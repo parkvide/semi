@@ -48,6 +48,8 @@ INSERT INTO CINEMA(
 		,CINEMA_TEL 
 		,DEL_YN 
 		,CINEMA_IMG 
+		,CINEMA_LOCATION
+		,CINEMA_CONTENT
 		)VALUES 
 		( 
 		SEQ_CINEMA.NEXTVAL 
@@ -56,16 +58,36 @@ INSERT INTO CINEMA(
 		, #{cinemaTel} 
 		,'N' 
 		, #{cinemaImg} 
+		,#{cinemaLocation}
+		,#{cinemaContent}
 		) 
 </insert>
 <!-- 이벤트 등록  -->
 <insert id="eventInsert"> INSERT INTO EVENT( NO ,WRITER_NO ,TITLE ,CONTENT_IMG ,UPLOAD_DATE ,VIEWS ,DEL_YN )VALUES ( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} ,CURRENT_TIMESTAMP ,#{views} ,'N' ) </insert>
 <!--  자주묻는 질문 등록  -->
-<insert id="faqInsert"> INSERT INTO FAQ( NO ,WRITER_NO ,TITLE ,CONTENT ,VIEWS ,UPLOAD_DATE ,DEL_YN )VALUES ( SEQ_FAQ.NEXTVAL ,#{writerNo} ,#{title} ,#{content} ,#{views} ,CURRENT_TIMESTAMP ,'N' ) </insert>
+<insert id="faqInsert"> 
+INSERT INTO FAQ
+( NO 
+,WRITER_NO 
+,TITLE 
+,CONTENT 
+,VIEWS 
+,UPLOAD_DATE 
+,DEL_YN 
+)VALUES 
+( SEQ_FAQ.NEXTVAL 
+,#{writerNo} 
+,#{title} 
+,#{content} 
+,#{views} 
+,CURRENT_TIMESTAMP 
+,'N' 
+) 
+</insert>
 <!--  공지사항 등록  -->
 <insert id="noticeInsert"> INSERT INTO NOTICE( NO ,WRITER_NO ,TITLE ,CONTENT ,UPLOAD_DATE ,VIEWS ,DEL_YN )VALUES ( SEQ_NOTICE.NEXTVAL ,#{writerNo} ,#{title} ,#{content} ,CURRENT_TIMESTAMP ,#{views} ,'N' ) </insert>
 <!--  관 등록  -->
-<insert id="theaterInsert"> INSERT INTO "THEATER-TYPE" ( NO ,TYPE ,THEATER_IMG ,PRICE ) VALUES ( SEQ_THEATER_TYPE.NEXTVAL ,#{type} ,#{theaterImg} ,#{price} ) </insert>
+<insert id="theaterInsert"> INSERT INTO THEATER_TYPE ( NO ,TYPE ,THEATER_IMG ,PRICE ) VALUES ( SEQ_THEATER_TYPE.NEXTVAL ,#{type} ,#{theaterImg} ,#{price} ) </insert>
 <!--     	영화관 리스트  -->
 <select id="cinemaList" resultType="AdminCinemaVo"> SELECT * FROM CINEMA </select>
 <!--  	스토어리스트  -->
@@ -75,22 +97,31 @@ INSERT INTO CINEMA(
 <!--     	자주묻는질문 리스트  -->
 <select id="faqList" resultType="AdminFaqVo"> SELECT * FROM FAQ </select>
 <!--     	영화 리스트  -->
-<select id="movieList" resultType="AdminMovieVo"> SELECT * FROM MOVIE </select>
+<select id="movieList" resultType="com.kh.app.admin.movie.vo.AdminMovieVo"> 
+SELECT NO
+,TYPE
+,MOVIE_AGE
+,SUMMARY
+,CAST
+,DIRECTOR
+,RUNNING_TIME
+FROM MOVIE 
+</select>
 <!--     	공지사항 리스트  -->
 <select id="noticeList" resultType="AdminNoticeVo"> SELECT * FROM NOTICE </select>
 <!--     	관 리스트  -->
-<select id="theaterList" resultType="AdminTheaterVo"> SELECT * FROM "THEATER-TYPE" </select>
+<select id="theaterList" resultType="AdminTheaterVo"> SELECT * FROM THEATER_TYPE </select>
 
 <select id="memberList" resultType="com.kh.app.admin.member.vo.AdminMemberVo">
 SELECT * FROM MEMBER
 </select>
-<delete id="cinemaDelete"> DELETE FROM CINEMA WHERE NO = ${no} </delete>
-<delete id="eventDelete"> DELETE FROM EVENT WHERE NO = ${no} </delete>
-<delete id="faqDelete"> DELETE FROM FAQ WHERE NO = ${no} </delete>
-<delete id="movieDelete"> DELETE FROM MOVIE WHERE NO = ${no} </delete>
-<delete id="noticeDelete"> DELETE FROM NOTICE WHERE NO = ${no} </delete>
-<delete id="storeDelete"> DELETE FROM PRODUCT WHERE NO = ${no} </delete>
-<delete id="theaterDelete"> DELETE FROM "THEATER-TYPE" WHERE NO = ${no} </delete>
+<delete id="cinemaDelete"> DELETE FROM CINEMA WHERE NO = #{no} </delete>
+<delete id="eventDelete"> DELETE FROM EVENT WHERE NO = #{no} </delete>
+<delete id="faqDelete"> DELETE FROM FAQ WHERE NO = #{no} </delete>
+<delete id="movieDelete"> DELETE FROM MOVIE WHERE NO = #{no} </delete>
+<delete id="noticeDelete"> DELETE FROM NOTICE WHERE NO = #{no} </delete>
+<delete id="storeDelete"> DELETE FROM PRODUCT WHERE NO = #{no} </delete>
+<delete id="theaterDelete"> DELETE FROM "THEATER_TYPE" WHERE NO = #{no} </delete>
 
 <update id="cinemaEdit">
 	UPDATE CINEMA
@@ -138,10 +169,9 @@ SELECT * FROM MEMBER
 </update>
 
 <select id="select" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
-	SELECT NO, WRITER_NO, CINEMA_NO, TITLE, CONTENT, RENTAL_DATE
+	SELECT *
 	FROM RENT
 	WHERE NO = #{no}
-
 </select>
 
 <select id="selectList" resultType="com.kh.app.admin.rent.vo.AdminRentVo">

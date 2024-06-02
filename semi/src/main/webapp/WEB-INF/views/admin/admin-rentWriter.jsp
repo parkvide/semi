@@ -19,24 +19,17 @@
 			<div id="list">
 				<div id="name">
 					<span>대관문의 작성</span>
-					<form action="">
-						<input type="text" placeholder="검색"> <select id="category">
-							<option>닉네임</option>
-							<option>아이디</option>
-						</select>
-						<button type="submit">🔍</button>
-					</form>
 				</div>
 				<div id="line"></div>
 				<div id="title">
-					<c:forEach items="${adminFaqvoList}" var="vo">
+					
 						<div>제목 : <input type="text"></div>
 						<div>대관 문의 날자 <input type="text"></div>
 						<span>내용 : </span> <input type="text">
-					</c:forEach>
+				
 				</div>
 				<div id="content">
-					<form action="/app/admin/admin-rentWriter" method="post">
+					<form action="/app/admin/rent/writer" method="post">
 						<div>작성자 : <input type="text" name="no"></div>
 						<div>제목 : <input type="text"  name="answerTitle"></div>
 						<div>내용 : <input type="text"  name="answerContent"></div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-  <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>      
+<!DOCTYPE html>
   <html lang="en">
 
   <head>
@@ -21,40 +22,27 @@
         <div id="list">
           <div id="name">
             <span>상영시간 목록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
           </div>
           <div id="line"></div>
           <div id="list-main">
             <div id="title">
-              <div class="no">번호</div>
-              <div class="id">아이디</div>
-              <div class="name">이름</div>
-              <div class="num">연락처</div>
-              <div class="email">이메일</div>
-              <div class="birth">생년월일</div>
-              <div class="date">가입날짜</div>
-              <div class="ny">상태</div>
-              <div class="modify">탈퇴날짜</div>
+              <div>번호</div>
+              <div>영화</div>
+              <div>관</div>
+              <div>상영시간</div>
+              <div>수정하기</div>
             </div>
             <div id="content">
-              <c:forEach items="${voList}" var="vo">
-                <div id="contentlist">
-                  <div class="no">번호 자바코드임</div>
-                  <div class="id">아이디 자바코드임</div>
-                  <div class="name">이름 자바코드임</div>
-                  <div class="num">연락처 자바코드임</div>
-                  <div class="email">이메일 자바코드임</div>
-                  <div class="birth">생년월일 자바코드임</div>
-                  <div class="date">가입날짜 자바코드임</div>
-                  <div class="ny">상태 자바코드임</div>
-                  <div class="modify">탈퇴날짜 자바코드임</div>
+              <c:forEach items="${AdminMovieTimevoList}" var="vo">
+               <div>${vo.no}</div>
+               <div>${vo.name}</div>
+               <div>${vo.theaterName}</div>
+               <div>${vo.screeningDate}</div>
+               <div>
+                <form action="/app/admin/movie/time/edit" method="get">
+                  <input type="hidden" name="no" value="${vo.no}">
+                  <button type="submit">수정하기</button>
+                </form>
                 </div>
               </c:forEach>
             </div>

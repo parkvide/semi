@@ -21,15 +21,7 @@
 
         <div id="list">
           <div id="name">
-            <span>가격 목록</span>
-            <form action="">
-              <input type="text" placeholder="검색">
-              <select id="category">
-                <option>닉네임</option>
-                <option>아이디</option>
-              </select>
-              <button type="submit">🔍</button>
-            </form>
+            <span>영화관 목록</span>
           </div>
           <div id="line"></div>
           <div id="list-main">
@@ -38,6 +30,8 @@
               <div>상영관 이름</div>
               <div>주소</div>
               <div>전화번호</div>
+              <div>지역</div>
+              <div>수정하기</div>
             </div>
             <div id="content">
               <c:forEach items="${adminCinemavoList}" var="vo">
@@ -45,6 +39,13 @@
                 <div>${vo.cinemaName}</div>
                 <div>${vo.cinemaAddress}</div>
                 <div>${vo.cinemaTel}</div>
+                <div>${vo.cinemaLocation}</div>
+                <div>
+                  <form action="/app/admin/cinema/edit" method="get">
+                    <input type="hidden" name="no" value="${vo.no}">
+                    <button type="submit">수정하기</button>
+                  </form>
+                </div>
               </c:forEach>
             </div>
           </div>
