@@ -8,7 +8,7 @@
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY = C.NO
-		WHERE C.NO = "팝콘" 
+		WHERE C.NO = 5
 		AND
 		P.DEL_YN = 'N'
 	</select>
@@ -18,7 +18,7 @@
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY = C.NO
-		WHERE C.NO = "패키지 번호" 
+		WHERE C.NO = 4 
 		AND
 		P.DEL_YN = 'N'
 	
@@ -29,7 +29,7 @@
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY = C.NO
-		WHERE C.NO = "관람권 번호" 
+		WHERE C.NO = 3 
 		AND
 		P.DEL_YN = 'N'
 	</select>
@@ -39,7 +39,7 @@
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY = C.NO
-		WHERE C.NO = "음료 번호" 
+		WHERE C.NO = 2 
 		AND
 		P.DEL_YN = 'N'
     </select>
@@ -49,16 +49,16 @@
 		FROM PRODUCT P
 		JOIN  CATEGORY C
 		ON P.CATEGORY = C.NO
-		WHERE C.NO = "콤보 번호" 
+		WHERE C.NO = 1
 		AND
 		P.DEL_YN = 'N'
     </select>
 
-	<select id="getPrdByNo">
+	<select id="getPrdByNo" resultType="com.kh.app.store.vo.ProductVo">
 		SELECT P.NO , P.NAME , P.PRICE , P.ORIGIN_COUNTRY, P.NUTRIENTE_IMG, P.PRODUCT_IMG, C.TYPE  
 		FROM PRODUCT P 
 		JOIN CATEGORY C 
 		ON P.CATEGORY = C.NO 
-		WHERE B.NO = #{no} AND B.DEL_YN = 'N'
+		WHERE P.NO = #{no} AND P.DEL_YN = 'N'
 	</select>
 </mapper>

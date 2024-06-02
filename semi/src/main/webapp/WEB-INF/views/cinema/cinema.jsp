@@ -25,21 +25,22 @@
 		<div class="left"></div>
 		<div class="cinema">
 			<div class="cinema_loc">
-				<ul>
-					<button onclick="loadCinemaList("서울");">서울</button>
-					<button onclick="loadCinemaList("경기");">경기</button>
-					<button onclick="loadCinemaList("인천");">인천</button>
-					<button onclick="loadCinemaList("강원");">강원</button>
-					<button onclick="loadCinemaList("대전");">대전</button>
-					<button onclick="loadCinemaList("충청");">충청</button>
-					<button onclick="loadCinemaList("대구");">대구</button>
-					<button onclick="loadCinemaList("부산");">부산</button>
-					<button onclick="loadCinemaList("울산");">울산</button>
-					<button onclick="loadCinemaList("경상");">경상</button>
-					<button onclick="loadCinemaList("광주");">광주</button>
-					<button onclick="loadCinemaList("전라");">전라</button>
-					<button onclick="loadCinemaList("제주");">제주</button>
-				</ul>
+				
+					<button onclick="loadCinemaList('서울');">서울</button>
+					<button onclick="loadCinemaList('경기');">경기</button>
+					<button onclick="loadCinemaList('인천');">인천</button>
+					<button onclick="loadCinemaList('강원');">강원</button>
+					<button onclick="loadCinemaList('대전');">대전</button>
+					<button onclick="loadCinemaList('충청');">충청</button>
+					<button onclick="loadCinemaList('대구');">대구</button>
+					<button onclick="loadCinemaList('부산');">부산</button>
+					<button onclick="loadCinemaList('울산');">울산</button>
+					<button onclick="loadCinemaList('경상');">경상</button>
+					<button onclick="loadCinemaList('광주');">광주</button>
+					<button onclick="loadCinemaList('전라');">전라</button>
+					<button onclick="loadCinemaList('제주');">제주</button>
+
+				
 			</div>
 			<div class="cinema_name">
 				<ul>

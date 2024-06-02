@@ -27,8 +27,9 @@ public class CartController extends HttpServlet {
 				req.setAttribute("alertMsg", "로그인후 이용가능합니다.");
 				resp.sendRedirect("/app/member/login");
 			}
+			String no = loginMemberVo.getNo();
 			ProductService ps = new ProductService();
-			List<CartVo> cartItem = ps.getAllCartItems();
+			List<CartVo> cartItem = ps.getAllCartItems(no);
 			req.setAttribute("cartItem", cartItem);
 			req.getRequestDispatcher("/WEB-INF/views/store/cart.jsp").forward(req, resp);
 		} catch (Exception e) {
@@ -48,7 +49,7 @@ public class CartController extends HttpServlet {
 			if("add".equals(action)) {
 				String memNo = loginMemberVo.getNo();
 				String prdNo = req.getParameter("productNo");
-				int quantity = Integer.parseInt(req.getParameter("quantity"));
+				String quantity = req.getParameter("quantity");
 				
 				CartVo vo = new CartVo();
 				vo.setProductNo(prdNo);

@@ -16,7 +16,7 @@
      </ul>
      <ul class="c2">
        <li><a class="c-n" href="">내관람권</a></li>
-       <li><a class="c-n" href="">장바구니</a></li>
+       <li><a class="c-n" href="/app/store/cart">장바구니</a></li>
      </ul>
    </div>
    <div class="sep1"></div>
