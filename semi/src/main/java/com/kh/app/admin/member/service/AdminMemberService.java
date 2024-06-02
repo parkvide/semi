@@ -21,7 +21,7 @@ public class AdminMemberService {
 		
 		 SqlSession ss = getSqlSession();
 		 List<AdminMemberVo> voList = dao.list(ss);
-		return null;
+		return voList;
 	}
 
 }

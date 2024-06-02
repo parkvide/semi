@@ -19,7 +19,7 @@ public class AdminRentDao {
 	}
 
 	//값 뽑아가기
-	public List<AdminRentVo> selectList(SqlSession ss, String no) {
+	public List<AdminRentVo> select(SqlSession ss, String no) {
 		return ss.selectOne("AdminMapper.select",no);
 
 	}

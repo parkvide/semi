@@ -71,5 +71,13 @@ public class AdminMovieService {
 		
 	}
 
+	public AdminMovieVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminMovieVo voList = (AdminMovieVo)dao.selectOne(ss ,no);
+		
+		ss.close();
+		return voList;
+	}
+
 
 }

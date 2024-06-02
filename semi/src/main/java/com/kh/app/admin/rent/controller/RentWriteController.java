@@ -22,7 +22,7 @@ public class RentWriteController  extends HttpServlet{
 			String no = req.getParameter("no");
 			
 			AdminRentService ars = new AdminRentService();
-			List<AdminRentVo> adminVoList = ars.selectList(no);
+			List<AdminRentVo> adminVoList = ars.select(no);
 			req.setAttribute("adminVoList", adminVoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-rentWriter.jsp").forward(req, resp); // 주소 넣기
 		}catch(Exception e) {

@@ -3,24 +3,51 @@ package com.kh.app.admin.store.vo;
 public class AdminStoreVo {
 	
 	private String no;
-	private String category;
+	private String categoryNo;
 	private String name;
 	private String price;
 	private String originCountry;
 	private String nutrienteImg;
 	private String productImg;
 	private String delYn;
+	private String detail;
+	private String type;
+	
+	public AdminStoreVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "AdminStoreVo [no=" + no + ", categoryNo=" + categoryNo + ", name=" + name + ", price=" + price
+				+ ", originCountry=" + originCountry + ", nutrienteImg=" + nutrienteImg + ", productImg=" + productImg
+				+ ", delYn=" + delYn + ", detail=" + detail + ", type=" + type + "]";
+	}
+	public AdminStoreVo(String no, String categoryNo, String name, String price, String originCountry,
+			String nutrienteImg, String productImg, String delYn, String detail, String type) {
+		super();
+		this.no = no;
+		this.categoryNo = categoryNo;
+		this.name = name;
+		this.price = price;
+		this.originCountry = originCountry;
+		this.nutrienteImg = nutrienteImg;
+		this.productImg = productImg;
+		this.delYn = delYn;
+		this.detail = detail;
+		this.type = type;
+	}
 	public String getNo() {
 		return no;
 	}
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getCategory() {
-		return category;
+	public String getCategoryNo() {
+		return categoryNo;
 	}
-	public void setCategory(String category) {
-		this.category = category;
+	public void setCategoryNo(String categoryNo) {
+		this.categoryNo = categoryNo;
 	}
 	public String getName() {
 		return name;
@@ -58,28 +85,19 @@ public class AdminStoreVo {
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
-	public AdminStoreVo(String no, String category, String name, String price, String originCountry,
-			String nutrienteImg, String productImg, String delYn) {
-		super();
-		this.no = no;
-		this.category = category;
-		this.name = name;
-		this.price = price;
-		this.originCountry = originCountry;
-		this.nutrienteImg = nutrienteImg;
-		this.productImg = productImg;
-		this.delYn = delYn;
+	public String getDetail() {
+		return detail;
 	}
-	@Override
-	public String toString() {
-		return "AdminStoreVo [no=" + no + ", category=" + category + ", name=" + name + ", price=" + price
-				+ ", originCountry=" + originCountry + ", nutrienteImg=" + nutrienteImg + ", productImg=" + productImg
-				+ ", delYn=" + delYn + "]";
+	public void setDetail(String detail) {
+		this.detail = detail;
 	}
-	public AdminStoreVo() {
-		super();
-		// TODO Auto-generated constructor stub
+	public String getType() {
+		return type;
 	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	
 }
 	
 	

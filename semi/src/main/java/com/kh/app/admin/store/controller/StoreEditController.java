@@ -3,8 +3,6 @@ package com.kh.app.admin.store.controller;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
@@ -17,7 +15,6 @@ import javax.servlet.http.Part;
 
 import com.kh.app.admin.store.service.AdminStoreService;
 import com.kh.app.admin.store.vo.AdminStoreVo;
-import com.kh.app.admin.store.vo.StoreCategoryVo;
 
 @MultipartConfig(
 		maxFileSize = 1024*1024*10 ,
@@ -88,7 +85,7 @@ public class StoreEditController extends HttpServlet {
 			}
 			
 			AdminStoreVo vo = new AdminStoreVo();
-			vo.setCategory(category);
+			vo.setCategoryNo(category);
 			vo.setName(name);
 			vo.setPrice(price);
 			vo.setOriginCountry(origin);

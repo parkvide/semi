@@ -4,35 +4,39 @@ public class AdminMovieVo {
 	
 	private String no;
 	private String type;
-	private String movieAge;
+	private String age;
+	private String name;
 	private String summary;
 	private String cast;
 	private String director;
 	private String runningTime;
 	private String delYn;
 	private String poster;
+	private String releaseDate;
 	public AdminMovieVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "AdminMovieVo [no=" + no + ", type=" + type + ", movieAge=" + movieAge + ", summary=" + summary
+		return "AdminMovieVo [no=" + no + ", type=" + type + ", age=" + age + ", name=" + name + ", summary=" + summary
 				+ ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn=" + delYn
-				+ ", poster=" + poster + "]";
+				+ ", poster=" + poster + ", releaseDate=" + releaseDate + "]";
 	}
-	public AdminMovieVo(String no, String type, String movieAge, String summary, String cast, String director,
-			String runningTime, String delYn, String poster) {
+	public AdminMovieVo(String no, String type, String age, String name, String summary, String cast, String director,
+			String runningTime, String delYn, String poster, String releaseDate) {
 		super();
 		this.no = no;
 		this.type = type;
-		this.movieAge = movieAge;
+		this.age = age;
+		this.name = name;
 		this.summary = summary;
 		this.cast = cast;
 		this.director = director;
 		this.runningTime = runningTime;
 		this.delYn = delYn;
 		this.poster = poster;
+		this.releaseDate = releaseDate;
 	}
 	public String getNo() {
 		return no;
@@ -46,11 +50,17 @@ public class AdminMovieVo {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String getMovieAge() {
-		return movieAge;
+	public String getAge() {
+		return age;
 	}
-	public void setMovieAge(String movieAge) {
-		this.movieAge = movieAge;
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getSummary() {
 		return summary;
@@ -87,5 +97,11 @@ public class AdminMovieVo {
 	}
 	public void setPoster(String poster) {
 		this.poster = poster;
+	}
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
 	}
 }
