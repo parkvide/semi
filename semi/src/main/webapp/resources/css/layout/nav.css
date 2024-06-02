@@ -1,0 +1,83 @@
+body {
+    background-color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  button {
+    border: none;
+    padding: 0.9em 2em;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.3em;
+    background: #171716;
+  }
+  nav .left {
+    display: flex;
+    margin-left: 2em;
+  }
+  nav .left .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    padding: 0.5em;
+    width: 8rem;
+  }
+  nav .left .logo a {
+    width: 100%;
+  }
+  nav .left .logo a img {
+    max-width: 100%;
+  }
+  nav .left .mobile-menu {
+    display: none;
+  }
+  nav .left .menu-list {
+    display: flex;
+  }
+  nav .left .menu-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0.2em 1em 0.5em 1em;
+  }
+  nav .left .menu-list li a {
+    font-size: 0.8rem;
+  }
+  nav .right {
+    display: flex;
+    margin-right: 2em;
+  }
+  nav .right .icon {
+    padding: 0.5em 1em 0.5em 1em;
+  }
+  
+  nav .right .search {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+  }
+  nav .right .search .search-bar {
+    display: flex;
+  }
+  nav .right .search .search-bar i {
+    margin-right: 0.5em;
+  }
+  nav .right .search .search-bar input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+  }
