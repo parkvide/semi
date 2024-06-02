@@ -24,4 +24,8 @@ public class AdminMovieDao {
 		return ss.update("AdminMapper.movieEdit" , vo);
 	}
 
+	public AdminMovieVo selectOne(SqlSession ss,String no) {
+		return ss.selectOne("AdminMapper.movieSelectOne");
+	}
+
 }

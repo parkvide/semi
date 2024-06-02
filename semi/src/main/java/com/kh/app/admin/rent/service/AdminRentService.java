@@ -46,9 +46,9 @@ public class AdminRentService {
 	}
 
 	//화면에 특정값 가져가기
-	public List<AdminRentVo> selectList(String no) throws Exception {
+	public List<AdminRentVo> select(String no) throws Exception {
 		SqlSession ss = getSqlSession();
-		List<AdminRentVo> adminVoList = dao.selectList(ss, no);
+		List<AdminRentVo> adminVoList = dao.select(ss, no);
 		
 		ss.close();
 		return adminVoList;

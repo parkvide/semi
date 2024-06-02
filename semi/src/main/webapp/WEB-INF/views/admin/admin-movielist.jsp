@@ -27,10 +27,12 @@
 		              <div>번호</div>
 		              <div>장르</div>
 		              <div>관람연령</div>
+		              <div>제목</div>
 		              <div>내용</div>
 		              <div>출연배우</div>
 		              <div>감독</div>
 		              <div>상영시간</div>
+		              <div>개봉날짜</div>
 					  <div>수정하기</div>
 					  <div>삭제하기</div>
 		            </div>
@@ -38,11 +40,13 @@
 		              <c:forEach items="${adminMovieVoList}" var="vo">
 		                <div>${vo.no}</div>
 		                <div>${vo.type}</div>
-		                <div>${vo.movieAge}</div>
+		                <div>${vo.age}</div>
+		                <div>${vo.name}</div>
 		                <div>${vo.summary}</div>
 		                <div>${vo.cast}</div>
 		                <div>${vo.director}</div>
 		                <div>${vo.runningTime}</div>
+		                <div>${vo.releaseDate}</div>
 						<div>
 							<form action="/app/admin/movie/edit" method="get">
 								<input type="hidden" name="no" value="${vo.no}">

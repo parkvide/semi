@@ -36,7 +36,7 @@
             <div id="content">
               <c:forEach items="${AdminstoreList}" var="vo">
                 <div>${vo.no}</div>
-                <div>${vo.category}</div>
+                <div>${vo.type}</div>
                 <div>${vo.name}</div>
                 <div>${vo.price}</div>
                 <div>

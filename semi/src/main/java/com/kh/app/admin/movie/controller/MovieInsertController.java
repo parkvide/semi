@@ -69,7 +69,7 @@ public class MovieInsertController extends HttpServlet {
 			
 			AdminMovieVo vo = new AdminMovieVo();
 			vo.setType(type);
-			vo.setMovieAge(age);
+			vo.setAge(age);
 			vo.setSummary(summary);
 			vo.setCast(cast);
 			vo.setDirector(director);

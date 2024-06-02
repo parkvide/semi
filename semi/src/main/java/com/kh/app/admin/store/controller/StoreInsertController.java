@@ -3,7 +3,6 @@ package com.kh.app.admin.store.controller;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
@@ -91,7 +90,7 @@ public class StoreInsertController extends HttpServlet {
 			
 			AdminStoreVo vo = new AdminStoreVo();
 			vo.setName(name);
-			vo.setCategory(category);
+			vo.setCategoryNo(category);
 			vo.setPrice(price);
 			vo.setOriginCountry(origin);
 			vo.setNutrienteImg(nutrientne2);

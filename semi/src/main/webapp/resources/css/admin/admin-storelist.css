@@ -169,7 +169,7 @@ ul{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#content{
+#content div{
   color: black;
   display: flex;
   justify-content: center;

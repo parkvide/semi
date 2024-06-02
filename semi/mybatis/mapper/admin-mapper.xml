@@ -13,25 +13,29 @@ WHERE ID = #{id} AND PWD = #{pwd}
 <!-- 영화 등록하기   -->
 <insert id="movieInsert"> 
 INSERT INTO MOVIE ( 
-		NO ,
-		TYPE 
-		,MOVIE_AGE 
+		NO 
+		,TYPE 
+		,AGE
+		,NAME 
 		,SUMMARY 
 		,CAST 
 		,DIRECTOR 
 		,RUNNING_TIME 
 		,DEL_YN 
-		,POSTER 
+		,POSTER
+		,RELEASE_DATE
 		) VALUES ( 
 		SEQ_MOVIE.NEXTVAL 
-		,${type} 
-		,${movieAge} 
+		,#{type} 
+		,#{age} 
+		,#{name}
 		,#{summary} 
 		,#{cast} 
 		,#{director} 
 		,#{runningTime} 
 		,'N' 
-		,#{poster} 
+		,#{poster}
+		,#{releaseDate} 
 		) 
 </insert>
 <!--  상품 등록하기  -->
@@ -63,7 +67,12 @@ INSERT INTO CINEMA(
 		) 
 </insert>
 <!-- 이벤트 등록  -->
-<insert id="eventInsert"> INSERT INTO EVENT( NO ,WRITER_NO ,TITLE ,CONTENT_IMG ,UPLOAD_DATE ,VIEWS ,DEL_YN )VALUES ( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} ,CURRENT_TIMESTAMP ,#{views} ,'N' ) </insert>
+<insert id="eventInsert"> 
+INSERT INTO EVENT
+( NO ,WRITER_NO ,TITLE ,CONTENT_IMG ,UPLOAD_DATE ,VIEWS ,DEL_YN )
+VALUES 
+( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} ,CURRENT_TIMESTAMP ,#{views} ,'N' )
+ </insert>
 <!--  자주묻는 질문 등록  -->
 <insert id="faqInsert"> 
 INSERT INTO FAQ
@@ -91,20 +100,31 @@ INSERT INTO FAQ
 <!--     	영화관 리스트  -->
 <select id="cinemaList" resultType="AdminCinemaVo"> SELECT * FROM CINEMA </select>
 <!--  	스토어리스트  -->
-<select id="storeList" resultType="AdminStoreVo"> SELECT * FROM PRODUCT </select>
+<select id="storeList" resultType="AdminStoreVo">
+SELECT P.NO
+    ,P.NAME
+    ,P.PRICE
+    ,C.TYPE
+FROM PRODUCT P
+JOIN CATEGORY C
+ON P.CATEGORY_NO = C.NO
+</select>
 <!--     	이벤트 리스트  -->
 <select id="eventList" resultType="AdminEventVo"> SELECT * FROM EVENT </select>
 <!--     	자주묻는질문 리스트  -->
 <select id="faqList" resultType="AdminFaqVo"> SELECT * FROM FAQ </select>
 <!--     	영화 리스트  -->
 <select id="movieList" resultType="com.kh.app.admin.movie.vo.AdminMovieVo"> 
-SELECT NO
+SELECT 
+NO
 ,TYPE
-,MOVIE_AGE
+,AGE
+,NAME
 ,SUMMARY
 ,CAST
 ,DIRECTOR
 ,RUNNING_TIME
+,RELEASE_DATE
 FROM MOVIE 
 </select>
 <!--     	공지사항 리스트  -->
@@ -126,37 +146,37 @@ SELECT * FROM MEMBER
 <update id="cinemaEdit">
 	UPDATE CINEMA
 	SET CINEMA_NAME = #{cinemaName}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="eventUpdate">
 	UPDATE EVENT
 	SET TITLE = #{title}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="faqEdit">
 	UPDATE FAQ
 	SET TITLE = #{title}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="movieEdit">
 	UPDATE MOVIE
 	SET SUMMARY = #{summary}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="noticeEdit">
 	UPDATE NOTICE
 	SET CONTENT = #{content}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="storeEdit">
 	UPDATE PRODUCT
 	SET PRICE = #{price}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 <update id="theaterEdit">
 	UPDATE THEATER
 	SET TYPE = #{type}
-	WHERE NO = ${NO}
+	WHERE NO = #{no}
 </update>
 
 <update id="rentWriter">
@@ -183,6 +203,12 @@ SELECT * FROM MEMBER
 	,UPLOAD_DATE
 	
 	FROM RENT
+</select>
+
+<select id="movieSelectOne" resultType="com.kh.app.admin.movie.vo.AdminMovieVo">
+	SELECT
+	*
+	FROM MOVIE
 </select>
 
 </mapper>

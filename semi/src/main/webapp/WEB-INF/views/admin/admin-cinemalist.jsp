@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/app/resources/css/admin/admin-cinemalist.css">
-    <script src="/app/resources/js/admin/admin-cinamelist.js"></script>
   </head>
 
   <body>
