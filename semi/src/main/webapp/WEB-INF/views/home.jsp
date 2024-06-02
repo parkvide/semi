@@ -54,7 +54,7 @@
 		<div class="content-list">
 			<h1>이벤트</h1>
 			<div class="slider">
-				<c:forEach items="eventImgList" var="vo">
+				<c:forEach items="${eventImgList}" var="vo">
 					<a href="/app/board/eventlist"><img width="300" height="400"
 						src="${vo.contentImg}"> </a>
 				</c:forEach>

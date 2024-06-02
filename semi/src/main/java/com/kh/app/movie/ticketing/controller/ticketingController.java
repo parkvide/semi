@@ -19,11 +19,11 @@ public class ticketingController extends HttpServlet{
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
 	
-	MovieTicketingService mts = new MovieTicketingService();
 	
 	try {
+		MovieTicketingService mts = new MovieTicketingService();
 		List<MovieVo> voList = mts.selectMovieList();
-
+		System.out.println(voList);
 		req.setAttribute("voList", voList);
 		req.getRequestDispatcher("/WEB-INF/views/movie/ticketing.jsp").forward(req, resp);
 	} catch (Exception e) {

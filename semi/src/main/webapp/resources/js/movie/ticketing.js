@@ -61,7 +61,7 @@ function dateList() {
             date.setDate(today.getDate() + i);
             var day = date.getDate();
             var dateStr = day +' day';
-            tableHtml += "<tr><td><button onclick='timeList();' class='datebtn' date-screeningDate='${vo.screeninDate}'>" + dateStr + "</button></td></tr>";
+            tableHtml += "<tr><td><button onclick='timeList();' class='datebtn' date-secreeningDat='${vo.screeninDate}'>" + dateStr + "</button></td></tr>";
         }
      
 
@@ -182,7 +182,7 @@ function timeList() {
                 
                 var tableHtml = "";
                 times.forEach(function(time) {
-                    tableHtml += "<tr class='loc'><td class='mtd'><button class='timebtn' data-screeningtime='" + time.screeningTime + "'>" + time.screeningTime + "</button></td></tr>";
+                    tableHtml += "<tr class='loc'><td class='mtd'><button class='timebtn' data-screeningDate='" + time.screeningDate + "'>" + time.screeningDate + "</button></td></tr>";
                 });
                 $("#movieTimeSelect").html(tableHtml);
             },
@@ -196,7 +196,7 @@ function timeList() {
 $(document).on('click', '.timebtn', function() {
     var screeningTime = $(this).text();
     console.log(screeningTime);
-    localStorage.setItem('screeningTime', screeningTime); // 시간 저장
+    localStorage.setItem('screeningDate', screeningDate); // 시간 저장
 });
 
 $("#submitbtn").click(function(e) {

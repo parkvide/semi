@@ -100,6 +100,18 @@ public class MovieTicketingService {
 		
 		return result;
 	}
+
+
+
+	public List<TicketingVo> selecTicketInfoList() throws Exception {
+		SqlSession ss = getSqlSession();
+		
+		List<TicketingVo> voList = dao.selectTicketInfoList(ss);
+		ss.close();
+		
+		return voList;
+		
+	}
 	
 	
 }

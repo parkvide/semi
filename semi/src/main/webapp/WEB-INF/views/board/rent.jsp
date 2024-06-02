@@ -53,7 +53,7 @@
                               <th>번호</th>
                               <th>제목</th>
                               <th>날짜</th>
-                              <th>조회수</th>
+                              
                           </tr>
                       </thead>
                       <tbody>
@@ -62,7 +62,7 @@
                                   <td>${vo.no}</td> 
                                   <td><a href="/app/board/rent/detail?no=${vo.no}">${vo.title}</a></td> 
                                   <td>${vo.uploadDate}</td> 
-                                  <td>${vo.views}</td> 
+                                  <td></td> 
                               </tr>
                           </c:forEach>
                       </tbody>

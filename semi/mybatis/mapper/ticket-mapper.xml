@@ -8,4 +8,9 @@
 	VALUES(SEQ_TICKETING.NEXTVAL, )
 	
 	</insert>
+	
+	<select id="selectTicket" resultType="com.kh.app.movie.ticketing.vo.TicketingVo">
+		SELECT * 
+		FROM TICKETING  
+	</select>
 </mapper>
