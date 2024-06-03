@@ -77,24 +77,7 @@
         <p>
             ${vo.summary}
         </p>
-        <div class="reviews">
-          <h3>영화 리뷰</h3>
-          <ul>
-           <c:forEach items="reviewVoList" var="vo">
-              <li>${vo.id} : ${vo.content}</li>
-           </c:forEach>   
-          </ul>
-          <div class="review-input">
-	          <c:if test="${sessionScope.loginMemberVo != null}">
-	            <h4>리뷰 등록하기</h4>
-	                <input type="text" name="reply-content" placeholder="리뷰를 작성하세요..." id="new-review">
-	                <button onclick="writeReview(${vo.no});">리뷰 등록</button>
-	          </c:if>
-	          <c:if test="${sessionScope.loginMemberVo == null}">
-	          <span> 로그인 후 리뷰작성이 가능합니다.</span>
-	          </c:if>
-        </div>
-      </div>
+        
     </div>
 
     </main>

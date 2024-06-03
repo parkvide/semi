@@ -30,20 +30,20 @@
               <div id="line"></div>
             </div>
             <div id="side-category">
-              <div><a href="" class="ca">자주찾는질문</a></div>
-              <div><a href="" class="ca">공지사항</a></div>
-              <div><a href="" class="ca">대관문의</a></div>
-              <div><a href="" class="ca">이벤트</a></div>
+              <div><a href="/app/board/faqlist" class="ca">자주찾는질문</a></div>
+              <div><a href="/app/board/noticelist" class="ca">공지사항</a></div>
+              <div><a href="/app/board/rentlist" class="ca">대관문의</a></div>
+              <div><a href="/app/board/eventlist" class="ca">이벤트</a></div>
               <a id="ca" href="">
                 <img src="/app/resources/img/광고1.png" alt="">
               </a>
             </div>
             <div id="main-list">
               <div id="search">
-                <span id="title">${vo.title}</span><span>${vo.uploadDate}</span><span>${vo.views}</span>
+                <span id="title">${eventVo.title}</span><span>${eventVo.uploadDate}</span><span>${eventVo.views}</span>
               </div>
               <div id="list">
-					<img alt="" src="${contentImg}">                
+					<img style="height: 300px" width="300px" src="${eventVo.contentImg}">                
               </div>
             </div>
             <div class="side"></div>

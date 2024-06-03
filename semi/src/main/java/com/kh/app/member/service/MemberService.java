@@ -4,7 +4,7 @@ import java.sql.Connection;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.kh.app.db.SqlSessionTemplate;
+import static com.kh.app.db.SqlSessionTemplate.*;
 import com.kh.app.member.dao.MemberDao;
 import com.kh.app.member.vo.MemberVo;
 public class MemberService {
@@ -28,7 +28,7 @@ public class MemberService {
 			throw new Exception("비밀번호가 일치하지 않습니다.");
 		}
 		//DAO호출
-		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		SqlSession ss = getSqlSession();
 		int result = dao.join(ss, vo);
 		
 		if(result == 1) {
@@ -45,7 +45,7 @@ public class MemberService {
 	//로그인
 	public MemberVo login(MemberVo vo) throws Exception {
 		
-		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		SqlSession ss = getSqlSession();
 		MemberVo loginMemberVo = dao.login(ss, vo);
 		ss.close();
 		return loginMemberVo;
@@ -54,7 +54,7 @@ public class MemberService {
 	//회원탈퇴
 	public int quit(String no) throws Exception {
 		
-		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		SqlSession ss = getSqlSession();
 		int result = dao.quit(ss, no);
 		ss.close();
 		return result;
@@ -68,7 +68,7 @@ public class MemberService {
 			throw new Exception("비밀번호가 일치하지 않음..");
 		}
 		
-		SqlSession ss = SqlSessionTemplate.getSqlSession();
+		SqlSession ss = getSqlSession();
 		int result = dao.pwdEdit(ss, vo);
 		
 		if(result == 1) {
@@ -81,4 +81,5 @@ public class MemberService {
 		return result;
 	}
 
+	
 }

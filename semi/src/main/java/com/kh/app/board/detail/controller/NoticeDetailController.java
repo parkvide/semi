@@ -23,7 +23,7 @@ public class NoticeDetailController extends HttpServlet{
 			BoardService bs = new BoardService();
 			NoticeVo noticeVo = bs.selectNoticeListByNo(no);
 			req.setAttribute("noticeVo", noticeVo);
-			req.getRequestDispatcher("/WEB-INF/views/board/detail/faqDetail.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/board/detail/noticeDetail.jsp").forward(req, resp);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

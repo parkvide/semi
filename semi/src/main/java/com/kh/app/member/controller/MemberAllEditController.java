@@ -19,55 +19,48 @@ public class MemberAllEditController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-//		try {
-//
-//			HttpSession session = req.getSession();
-//			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
-//			
-//			if(loginMemberVo == null) {
-//				session.setAttribute("alertMsg", "로그인 후 이용 가능합니다.");
-//				resp.sendRedirect("/app/member/login");
-//			}
-			req.getRequestDispatcher("/WEB-INF/views/edit/editHome.jsp").forward(req, resp);
+		HttpSession session = req.getSession();
+		MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
+		String id = loginMemberVo.getId();
+		String email = loginMemberVo.getEmail();
+		String phone = loginMemberVo.getPhone();
+		
+		session.setAttribute("id", id);
+		session.setAttribute("email", email);
+		session.setAttribute("phone", phone);
+		req.getRequestDispatcher("/WEB-INF/views/edit/editHome.jsp").forward(req, resp);
 			
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//			req.setAttribute("errMsg", e.getMessage());
-//			req.getRequestDispatcher("/WEB_INF/views/common/error.jsp").forward(req, resp);
-//		}
-//	}
-//	@Override
-//	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		try {
-//			HttpSession session = req.getSession();
-//			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
-//			String no = loginMemberVo.getNo();
-//			String id = req.getParameter("id");
-//			String pwd = req.getParameter("pwd");
-//			String pwd2 = req.getParameter("pwd2");
-//
-//			
-//			MemberVo vo = new MemberVo();
-//			vo.setNo(no);
-//			vo.setId(id);
-//			vo.setPwd(pwd);
-//			vo.setPwd2(pwd2);
-//
-//			
-//			MemberService ms = new MemberService();
-//			int result = ms.pwdEdit(vo);
-//			
-//			if(result != 1) {
-//				throw new Exception("회원정보 수정 실패..");
-//			}
-//			session.setAttribute("alertMsg", "회원정보 수정 성공");
-//			session.removeAttribute("loginMemberVo");
-//			resp.sendRedirect("/app/home");
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//			req.setAttribute("errMsg", e.getMessage());
-//			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
-//		}
+	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			HttpSession session = req.getSession();
+			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
+			String no = loginMemberVo.getNo();
+			String pwd = req.getParameter("pwd");
+			String pwd2 = req.getParameter("pwd2");
+
+			
+			MemberVo vo = new MemberVo();
+			vo.setNo(no);
+			vo.setPwd(pwd);
+			vo.setPwd2(pwd2);
+
+			
+			MemberService ms = new MemberService();
+			int result = ms.pwdEdit(vo);
+			 
+			if(result != 1) {
+				throw new Exception("회원정보 수정 실패..");
+			}
+			session.setAttribute("alertMsg", "회원정보 수정 성공");
+			session.removeAttribute("loginMemberVo");
+			resp.sendRedirect("/app/home");
+		}catch(Exception e) {
+			e.printStackTrace();
+			req.setAttribute("errMsg", e.getMessage());
+			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
+		}
 	}
 
 }

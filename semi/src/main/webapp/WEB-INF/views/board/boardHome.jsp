@@ -67,7 +67,7 @@
                         <div id="btom-2">
                             <span>공지</span>
                             <ul>
-                            <c:forEach items="${noticeList}" var="var">
+                            <c:forEach items="${noticeList}" var="vo" begin="0" end="3">
                                 <li>
                                     <a href="">${vo.title}</a>
                                     <span>${vo.uploadDate}</span>

@@ -49,14 +49,14 @@ public class RentInsertController extends HttpServlet{
 			rentVo.setTitle(title);
 			rentVo.setContent(content);
 			rentVo.setRentalDate(rentalDate);
-			
+			System.out.println(rentVo);
 			BoardService bs = new BoardService();
 			int result = bs.insertRent(rentVo);
-			
+			System.out.println(result);
 			if(result != 1) {
 				throw new Exception("게시글 작성 실패....");
 			}
-			resp.sendRedirect("/app/board/rentList");
+			resp.sendRedirect("/app/board/rentlist");
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

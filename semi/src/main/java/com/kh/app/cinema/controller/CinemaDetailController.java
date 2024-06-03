@@ -43,6 +43,7 @@ public class CinemaDetailController extends HttpServlet{
 		
 		try {
 			String cinemaName = req.getParameter("cinemaName");
+			System.out.println(cinemaName);
 			CinemaService cs = new CinemaService();
 			CinemaVo CinemaVo = cs.getCinemaDetail(cinemaName);
 			

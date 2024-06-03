@@ -48,12 +48,12 @@ public class MovieTicketingService {
 
 
 
-	public List<MovieVo> selectMovieDetail(String no) throws Exception {
+	public MovieVo selectMovieDetail(String no) throws Exception {
 		SqlSession ss = getSqlSession();
-		List<MovieVo> voList = dao.selectMovieDetail(ss, no);
+		MovieVo vo = dao.selectMovieDetail(ss, no);
 		ss.close();
 		
-		return voList;
+		return vo;
 		
 	}
 
