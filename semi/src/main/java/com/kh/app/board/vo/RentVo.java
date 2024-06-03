@@ -15,13 +15,15 @@ public class RentVo {
     private String rentalDate;
     private String uploadDate;
     private String delYn;  // 추가된 필드
+    private String answerTitle;
+    private String answerContent;
 	public RentVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public RentVo(String no, String writerNo, String writerId, String cinemaName, String cinemaNo, String type,
 			String theaterName, String adminId, String title, String content, String rentalDate, String uploadDate,
-			String delYn) {
+			String delYn, String answerTitle, String answerContent) {
 		super();
 		this.no = no;
 		this.writerNo = writerNo;
@@ -36,13 +38,16 @@ public class RentVo {
 		this.rentalDate = rentalDate;
 		this.uploadDate = uploadDate;
 		this.delYn = delYn;
+		this.answerTitle = answerTitle;
+		this.answerContent = answerContent;
 	}
 	@Override
 	public String toString() {
 		return "RentVo [no=" + no + ", writerNo=" + writerNo + ", writerId=" + writerId + ", cinemaName=" + cinemaName
 				+ ", cinemaNo=" + cinemaNo + ", type=" + type + ", theaterName=" + theaterName + ", adminId=" + adminId
 				+ ", title=" + title + ", content=" + content + ", rentalDate=" + rentalDate + ", uploadDate="
-				+ uploadDate + ", delYn=" + delYn + "]";
+				+ uploadDate + ", delYn=" + delYn + ", answerTitle=" + answerTitle + ", answerContent=" + answerContent
+				+ "]";
 	}
 	public String getNo() {
 		return no;
@@ -121,6 +126,18 @@ public class RentVo {
 	}
 	public void setDelYn(String delYn) {
 		this.delYn = delYn;
+	}
+	public String getAnswerTitle() {
+		return answerTitle;
+	}
+	public void setAnswerTitle(String answerTitle) {
+		this.answerTitle = answerTitle;
+	}
+	public String getAnswerContent() {
+		return answerContent;
+	}
+	public void setAnswerContent(String answerContent) {
+		this.answerContent = answerContent;
 	}
 	
     

@@ -21,7 +21,7 @@ public class RentListController extends HttpServlet{
 		try {
 			BoardService bs = new BoardService();
 			List<RentVo> rentVoList = bs.selectRentList();
-			System.out.println(rentVoList);
+			
 			req.setAttribute("rentVoList", rentVoList);
 			req.getRequestDispatcher("/WEB-INF/views/board/rent.jsp").forward(req, resp);
 			

@@ -135,7 +135,7 @@ public class BoardService {
 		
 		SqlSession ss = getSqlSession();
 		RentVo rentVo = dao.selectRentListByNo(ss, no);
-		
+		System.out.println("서비스 렌트 " + rentVo);
 		ss.close();
 		
 		return rentVo;
