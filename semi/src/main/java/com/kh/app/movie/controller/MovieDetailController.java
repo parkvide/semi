@@ -30,7 +30,7 @@ public class MovieDetailController extends HttpServlet{
 			req.setAttribute("errMsg", e.getMessage());
 			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
 		}
-		req.getRequestDispatcher("/WEB-INF/views/movie/movieDetail.jsp").forward(req, resp);
+		
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

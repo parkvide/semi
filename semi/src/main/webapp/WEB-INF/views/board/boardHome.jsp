@@ -31,7 +31,7 @@
                         <div class="tag"><a href="/app/board/noticelist">공지사항</a></div>
                         <div class="tag"><a href="/app/board/rentlist">대관문의</a></div>
                         <div class="tag"><a href="/app/board/eventlist">이벤트</a></div>
-                        <div id="tag2"><a href=""><img id="src" src="/app/resources/img/범죄의도시4 포스터.jpg" alt=""></a></div>
+                        <div id="tag2"><a href="/app/board/eventlist"><img id="src" src="/app/resources/img/광고1.png" alt=""></a></div>
                     </div>
                 </div>
                 <div id="search-main">
@@ -67,7 +67,7 @@
                         <div id="btom-2">
                             <span>공지</span>
                             <ul>
-                            <c:forEach items="${noticeList}" var="vo" begin="0" end="3">
+                            <c:forEach items="${noticeList}" var="vo" begin="0" end="5">
                                 <li>
                                     <a href="">${vo.title}</a>
                                     <span>${vo.uploadDate}</span>

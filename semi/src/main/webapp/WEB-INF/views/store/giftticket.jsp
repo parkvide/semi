@@ -14,17 +14,7 @@
 <body>
 	<%@ include file="/WEB-INF/views/layout/nav.jsp" %>
     <main>
-        <div class="video">
-           	<iframe class="iframe" width="1650" height="315" src="https://www.youtube.com/embed/pMAPj6WVsT4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="description">
-            <h1>범죄도시 4</h1>
-            
-            <div class="buttons">
-                <button class="play"><i class="fa-regular fa-credit-card"></i><span>예매</span></button>
-                <button class="detail"><i class="fa-solid fa-circle-info"></i>상세 정보</button>
-            </div>
-        </div>
+        <%@ include file="/WEB-INF/views/layout/video.jsp" %>
        
     </main>
    
