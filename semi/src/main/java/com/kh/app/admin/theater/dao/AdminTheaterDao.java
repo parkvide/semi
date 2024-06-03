@@ -25,7 +25,7 @@ public class AdminTheaterDao {
 	}
 
 	public AdminTheaterVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.theaterSelectOne");
+		return ss.selectOne("AdminMapper.theaterSelectOne" , no);
 	}
 
 

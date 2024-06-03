@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/app/resources/css/admin/admin-evtlist.css">
-    <script src="/app/resources/js/admin/admin-evtlist.js"></script>
   </head>
 
   <body>

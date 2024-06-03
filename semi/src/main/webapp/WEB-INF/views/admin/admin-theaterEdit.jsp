@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-faqInsert.css">
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-theaterEdit.css">
   </head>
 
   <body>
@@ -20,17 +20,17 @@
 
         <div id="list">
           <div id="name">
-            <span>자주묻는질문 등록</span>
+            <span>상영관 수정</span>
           </div>
           <div id="line"></div>
-          <div id="list-main">
-            <form action="/app/admin/faq/insert"  method="post">
-              <input type="text" name="writerNo" placeholder="작성자">
-              <input type="text" name="title" placeholder="제목">
-              <input type="text"  name="content" placeholder="내용">
-              <input type="submit" value="작성하기">
+          <div id="title">
+            <form action="/app/admin/theater/edit" method="post">
+              <input type="hidden"  name="no" value="${adminTheaterList.no}">
+              <input type="text" name="type" placeholder="${adminTheaterList.type}">
+              <input type="submit" value="수정하기">
             </form>
           </div>
+          
         </div>
       </div>
 

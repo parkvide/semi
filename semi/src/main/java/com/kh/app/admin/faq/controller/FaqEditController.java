@@ -34,14 +34,12 @@ public class FaqEditController extends HttpServlet {
 	
 		try {
 			
-			String writerNo = req.getParameter("writerNo");
+			String no =req.getParameter("no");
 			String title = req.getParameter("title");
-			String content = req.getParameter("content");
 			
 			 AdminFaqVo vo = new AdminFaqVo();
-			 vo.setWriterNo(writerNo);
 			 vo.setTitle(title);
-			 vo.setContent(content);
+			 vo.setNo(no);
 			 
 			 AdminFaqService afs = new AdminFaqService();
 			 int result = afs.edit(vo);

@@ -71,7 +71,7 @@ public class EventInsertController extends HttpServlet {
 			int result = aes.insert(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/evt/list");
 			}else {
 				System.out.println("등록실패");
 			}

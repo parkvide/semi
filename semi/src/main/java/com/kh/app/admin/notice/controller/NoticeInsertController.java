@@ -35,7 +35,7 @@ public class NoticeInsertController extends HttpServlet{
 			int result = ans.insert(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/notice/list");
 			}else {
 				System.out.println("등록실패");
 			}

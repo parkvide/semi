@@ -21,7 +21,7 @@ public class TheaterDeleteController extends HttpServlet {
 			AdminTheaterService ss = new AdminTheaterService();
 			int result = ss.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/theater/list");
+				resp.sendRedirect("/app/admin/theater/list");
 			} else {
 			}
 		} catch (Exception e) {

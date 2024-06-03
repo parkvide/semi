@@ -25,7 +25,7 @@ public class AdminEventDao {
 	}
 
 	public AdminEventVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.evtSelectOne");
+		return ss.selectOne("AdminMapper.evtSelectOne" ,no );
 	}
 
 }

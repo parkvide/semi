@@ -27,8 +27,8 @@ public class MovieEditController extends HttpServlet {
 			String no = req.getParameter("no");
 			
 			AdminMovieService ams = new AdminMovieService();
-			AdminMovieVo adminMovieList = (AdminMovieVo)ams.selectOne(no);
-			req.setAttribute("adminMovieList", adminMovieList);
+			AdminMovieVo adminMovieVo = (AdminMovieVo)ams.selectOne(no);
+			req.setAttribute("adminMovieList", adminMovieVo);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-movieEdit.jsp").forward(req, resp);
 			
 		} catch (Exception e) {
@@ -53,7 +53,8 @@ public class MovieEditController extends HttpServlet {
 			
 			AdminMovieService as = new AdminMovieService();
 			int result = as.edit(vo);
-			System.out.println("result : " + result);
+
+			
 			if(result == 1) {
 				resp.sendRedirect("/app/admin/movie/list");
 				System.out.println("등록성공");

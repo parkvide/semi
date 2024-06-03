@@ -25,7 +25,7 @@ public class AdminFaqDao {
 	}
 
 	public AdminFaqVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.faqSelectOne");
+		return ss.selectOne("AdminMapper.faqSelectOne" , no);
 	}
 
 }

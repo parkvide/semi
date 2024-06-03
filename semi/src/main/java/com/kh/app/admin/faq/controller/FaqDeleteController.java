@@ -21,7 +21,7 @@ public class FaqDeleteController extends HttpServlet {
 			AdminFaqService ss = new AdminFaqService();
 			int result = ss.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/faq/list");
+				resp.sendRedirect("/app/admin/faq/list");
 			} else {
 			}
 		} catch (Exception e) {

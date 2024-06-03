@@ -32,7 +32,7 @@ public class CinemaDeleteController extends HttpServlet{
 			int result = ss.delete(no);
 			
 			if(result == 1) {
-				resp.sendRedirect("/admin/cinema/list");
+				resp.sendRedirect("/app/admin/cinema/list");
 			} else {
 			}
 		} catch (Exception e) {

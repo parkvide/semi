@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,8 +42,8 @@
 		                <div>${vo.no}</div>
 		                <div>${vo.type}</div>
 		                <div>${vo.age}</div>
-		                <div>${vo.name}</div>
-		                <div>${vo.summary}</div>
+		                <div>${vo.title}</div>
+		                <div>${fn:substring(vo.summary, 0, 15)}</div>
 		                <div>${vo.cast}</div>
 		                <div>${vo.director}</div>
 		                <div>${vo.runningTime}</div>

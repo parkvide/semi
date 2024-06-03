@@ -36,6 +36,7 @@ public class RentWriteController  extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
+			
 			String no = req.getParameter("no");
 			String answerTitle = req.getParameter("answerTitle");
 			String answerContent = req.getParameter("answerContent");
@@ -44,6 +45,7 @@ public class RentWriteController  extends HttpServlet{
 			adminRentVo.setNo(no);
 			adminRentVo.setAnswerTitle(answerTitle);
 			adminRentVo.setAnswerContent(answerContent);
+			
 			
 			AdminRentService ars = new AdminRentService();
 			int result = ars.writer(adminRentVo);

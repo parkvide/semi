@@ -20,7 +20,7 @@ public class NoticeDeleteController extends HttpServlet {
 			AdminNoticeService ss = new AdminNoticeService();
 			int result = ss.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/notice/list");
+				resp.sendRedirect("/app/admin/notice/list");
 			} else {
 			}
 		} catch (Exception e) {

@@ -40,7 +40,6 @@ public class TheaterInsertController extends HttpServlet {
 		try {
 			
 			String type = req.getParameter("type");
-			String price = req.getParameter("price");
 			Part img = req.getPart("img");
 			
 			String img2 = ""; 
@@ -68,13 +67,12 @@ public class TheaterInsertController extends HttpServlet {
 			AdminTheaterVo vo = new AdminTheaterVo();
 			vo.setType(type);
 			vo.setTheaterImg(img2);
-			vo.setPrice(price);
 
 			AdminTheaterService ats = new AdminTheaterService();
 			int result = ats.insert(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/theater/list");
 			}else {
 				System.out.println("등록실패");
 			}

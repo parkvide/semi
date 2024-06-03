@@ -27,9 +27,9 @@ public class CinemaEditController extends HttpServlet{
 			
 			AdminCinemaService acs = new AdminCinemaService();
 			AdminCinemaVo adminCinemaVo = (AdminCinemaVo)acs.selectOne(no);
+			System.out.println(adminCinemaVo);
 			req.setAttribute("adminCinemaVo", adminCinemaVo);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-cinemaEdit.jsp").forward(req, resp);
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -39,46 +39,20 @@ public class CinemaEditController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-try {
-			
+		try {
+			String no = req.getParameter("no");
 			String name = req.getParameter("name");
-			String address = req.getParameter("address");
-			String tel = req.getParameter("tel");
-			Part img = req.getPart("img");
 			
-			String img2 = "";
-			if(img.getSize() > 0) {
-				// 파일을 서버에 저장하기
-				String originFileName = img.getSubmittedFileName();
-				InputStream is = img.getInputStream();
-				
-				String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
-				String random = UUID.randomUUID().toString();
-				String ext = originFileName.substring(originFileName.lastIndexOf("."));
-				img2 = System.currentTimeMillis() + "_" + random + ext;
-				FileOutputStream fos = new FileOutputStream(path + img2);
-				
-				byte[] buf = new byte[1024];
-				int size = 0;
-				while( (size=is.read(buf)) != -1 ) {
-					fos.write(buf , 0, size);
-				}
-				
-				is.close();
-				fos.close();
-			}
 			
 			AdminCinemaVo vo = new AdminCinemaVo();
 			vo.setCinemaName(name);
-			vo.setCinemaAddress(address);
-			vo.setCinemaTel(tel);
-			vo.setCinemaImg(img2);
+			vo.setNo(no);
 			
 			AdminCinemaService acs = new AdminCinemaService();
 			int result = acs.edit(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/cinema/list");
 			}else {
 				System.out.println("등록실패");
 			}

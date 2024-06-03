@@ -27,6 +27,7 @@
             <form action="/app/admin/movie/edit" method="post">
               <input type="hidden" name="no" value="${adminMovieList.no}">
               <input type="text" name="summary" placeholder="${adminMovieList.summary}">
+              <input type="text" value="${adminMovieList.title}">
               <input type="text" value="${adminMovieList.age}">
               <input type="text" value="${adminMovieList.type}">
               <input type="text" value="${adminMovieList.cast}">

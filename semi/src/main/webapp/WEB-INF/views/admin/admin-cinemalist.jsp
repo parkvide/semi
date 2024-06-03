@@ -31,6 +31,7 @@
               <div>전화번호</div>
               <div>지역</div>
               <div>수정하기</div>
+              <div>삭제하기</div>
             </div>
             <div id="content">
               <c:forEach items="${adminCinemavoList}" var="vo">
@@ -43,6 +44,12 @@
                   <form action="/app/admin/cinema/edit" method="get">
                     <input type="hidden" name="no" value="${vo.no}">
                     <button type="submit">수정하기</button>
+                  </form>
+                </div>
+                <div>
+                  <form action="/app/admin/cinema/delete" method="get">
+                    <input type="hidden" name="no" value="${vo.no}">
+                    <button type="submit">삭제하기</button>
                   </form>
                 </div>
               </c:forEach>

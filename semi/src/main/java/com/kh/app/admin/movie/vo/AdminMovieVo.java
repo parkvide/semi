@@ -5,7 +5,7 @@ public class AdminMovieVo {
 	private String no;
 	private String type;
 	private String age;
-	private String name;
+	private String title;
 	private String summary;
 	private String cast;
 	private String director;
@@ -19,17 +19,17 @@ public class AdminMovieVo {
 	}
 	@Override
 	public String toString() {
-		return "AdminMovieVo [no=" + no + ", type=" + type + ", age=" + age + ", name=" + name + ", summary=" + summary
-				+ ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn=" + delYn
-				+ ", poster=" + poster + ", releaseDate=" + releaseDate + "]";
+		return "AdminMovieVo [no=" + no + ", type=" + type + ", age=" + age + ", title=" + title + ", summary="
+				+ summary + ", cast=" + cast + ", director=" + director + ", runningTime=" + runningTime + ", delYn="
+				+ delYn + ", poster=" + poster + ", releaseDate=" + releaseDate + "]";
 	}
-	public AdminMovieVo(String no, String type, String age, String name, String summary, String cast, String director,
+	public AdminMovieVo(String no, String type, String age, String title, String summary, String cast, String director,
 			String runningTime, String delYn, String poster, String releaseDate) {
 		super();
 		this.no = no;
 		this.type = type;
 		this.age = age;
-		this.name = name;
+		this.title = title;
 		this.summary = summary;
 		this.cast = cast;
 		this.director = director;
@@ -56,11 +56,11 @@ public class AdminMovieVo {
 	public void setAge(String age) {
 		this.age = age;
 	}
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getSummary() {
 		return summary;
@@ -104,4 +104,5 @@ public class AdminMovieVo {
 	public void setReleaseDate(String releaseDate) {
 		this.releaseDate = releaseDate;
 	}
+
 }

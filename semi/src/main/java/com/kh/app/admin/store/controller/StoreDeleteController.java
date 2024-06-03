@@ -21,7 +21,7 @@ public class StoreDeleteController extends HttpServlet{
 			AdminStoreService ss = new AdminStoreService();
 			int result = ss.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/store/list");
+				resp.sendRedirect("/app/admin/store/list");
 			} else {
 			}
 		} catch (Exception e) {

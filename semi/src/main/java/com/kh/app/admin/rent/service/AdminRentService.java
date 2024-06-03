@@ -49,7 +49,6 @@ public class AdminRentService {
 	public AdminRentVo selectOne(String no) throws Exception {
 		SqlSession ss = getSqlSession();
 		AdminRentVo voList = (AdminRentVo)dao.selectOne(ss,no);
-		
 		ss.close();
 		return voList;
 	}

@@ -16,7 +16,7 @@ INSERT INTO MOVIE (
 		NO 
 		,TYPE 
 		,AGE
-		,NAME 
+		,TITLE
 		,SUMMARY 
 		,CAST 
 		,DIRECTOR 
@@ -28,7 +28,7 @@ INSERT INTO MOVIE (
 		SEQ_MOVIE.NEXTVAL 
 		,#{type} 
 		,#{age} 
-		,#{name}
+		,#{title}
 		,#{summary} 
 		,#{cast} 
 		,#{director} 
@@ -37,12 +37,58 @@ INSERT INTO MOVIE (
 		,#{poster}
 		,#{releaseDate} 
 		) 
-</insert>
-<!--  상품 등록하기  -->
-<insert id="storeInsert"> 
-	INSERT INTO PRODUCT ( NO ,CATERGORY ,NAME ,PRICE ,ORIGIN_COUNTRY ,NUTRIENTE_IMG ,PRODUCT_IMG ) 
-	VALUES ( SEQ_PRODUCT.NEXTVAL ,#{category} ,#{name} ,#{price} ,#{originCountry} ,#{nutrienteImg} ,#{productImg} ) 
-</insert>
+</insert> 
+
+<!--영화 리스트 출력해내기 -->
+<select id="movieList" resultType="com.kh.app.admin.movie.vo.AdminMovieVo"> 
+	SELECT *
+	FROM MOVIE
+</select>
+
+<!-- 영화 지우기  -->
+<delete id="movieDelete"> 
+	DELETE FROM MOVIE WHERE NO = #{no} 
+</delete>
+
+<!-- 영화 수정하는 번호 불러오기 -->
+<select id="movieSelectOne" resultType="com.kh.app.admin.movie.vo.AdminMovieVo">
+	SELECT
+	*
+	FROM MOVIE
+	WHERE NO =#{no}
+</select>
+
+<!-- 영화 수정하기 -->
+<update id="movieEdit">
+	UPDATE MOVIE
+	SET SUMMARY = #{summary}
+	WHERE NO = #{no}
+</update>
+
+<!-- 렌트 리스트 뽑기 -->
+<select id="rentList" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
+	SELECT
+	*
+	FROM RENT
+</select>
+
+<!-- 대관문의 답변하는 번호 불러오기 -->
+<select id="rentSelectOne" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
+	SELECT *
+	FROM RENT
+	WHERE NO = #{no}
+</select>
+
+<!-- 대관 답변하기 -->
+<update id="rentWriter">
+	UPDATE RENT
+	SET 
+	 ANSWER_TITLE = #{answerTitle}
+	,ANSWER_CONTENT = #{answerContent}
+	WHERE NO = #{no}
+	
+</update>
+
 <!--  영화관 등록하기  -->
 <insert id="cinemaInsert"> 
 INSERT INTO CINEMA( 
@@ -66,39 +112,169 @@ INSERT INTO CINEMA(
 		,#{cinemaContent}
 		) 
 </insert>
+
+<!--     	영화관 리스트  -->
+<select id="cinemaList" resultType="AdminCinemaVo">
+ SELECT * FROM CINEMA 
+ </select>
+ 
+ <!-- 영화관 답변하는 번호 불러오기 -->
+<select id="cinemaSelectOne" resultType="com.kh.app.admin.cinema.vo.AdminCinemaVo">
+	SELECT *
+	FROM CINEMA
+	WHERE NO = #{no}
+</select>
+
+<!-- 영화관 업데이트하기 -->
+<update id="cinemaEdit">
+	UPDATE CINEMA
+	SET CINEMA_NAME = #{cinemaName}
+	WHERE NO = #{no}
+</update>
+
+<delete id="cinemaDelete"> DELETE FROM CINEMA WHERE NO = #{no} </delete>
+
+<!--  관 등록  -->
+<insert id="theaterInsert"> 
+INSERT INTO THEATER_TYPE 
+( NO ,TYPE ,THEATER_IMG) 
+VALUES 
+( SEQ_THEATER_TYPE.NEXTVAL ,#{type} ,#{theaterImg}) 
+</insert>
+
+<select id="theaterSelectOne" resultType="com.kh.app.admin.theater.vo.AdminTheaterVo">
+	SELECT *
+	FROM THEATER_TYPE
+	WHERE NO = #{no}
+</select>
+
+<!--     	관 리스트  -->
+<select id="theaterList" resultType="AdminTheaterVo"> 
+	SELECT * FROM THEATER_TYPE 
+</select>
+
+<update id="theaterEdit">
+	UPDATE THEATER_TYPE
+	SET TYPE= #{type}
+	WHERE NO = #{no}
+</update>
+
+<delete id="theaterDelete"> 
+DELETE FROM "THEATER_TYPE" WHERE NO = #{no} 
+</delete>
+
 <!-- 이벤트 등록  -->
 <insert id="eventInsert"> 
-INSERT INTO EVENT
-( NO ,WRITER_NO ,TITLE ,CONTENT_IMG ,UPLOAD_DATE ,VIEWS ,DEL_YN )
-VALUES 
-( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} ,CURRENT_TIMESTAMP ,#{views} ,'N' )
- </insert>
+	INSERT INTO EVENT
+	( NO ,WRITER_NO ,TITLE ,CONTENT_IMG)
+	VALUES 
+	( SEQ_EVENT.NEXTVAL ,#{writerNo} ,#{title} ,#{contentImg} )
+</insert>
+ 
+<!--     	이벤트 리스트  -->
+<select id="eventList" resultType="AdminEventVo">
+ 	SELECT * FROM EVENT 
+</select>
+
+ <!-- 영화관 답변하는 번호 불러오기 -->
+<select id="evtSelectOne" resultType="AdminEventVo">
+	SELECT *
+	FROM EVENT
+	WHERE NO = #{no}
+</select>
+
+
+<delete id="eventDelete"> 
+	DELETE FROM EVENT 
+	WHERE NO = #{no} 
+</delete>
+
+
+<update id="eventUpdate">
+	UPDATE EVENT
+	SET TITLE = #{title}
+	WHERE NO = #{no}
+</update>
+
+<!--  공지사항 등록  -->
+<insert id="noticeInsert">
+INSERT INTO NOTICE
+( NO ,WRITER_NO ,TITLE ,CONTENT )
+VALUES ( SEQ_NOTICE.NEXTVAL ,#{writerNo} ,#{title} ,#{content}) 
+</insert>
+
+<!--     	공지사항 리스트  -->
+<select id="noticeList" resultType="AdminNoticeVo"> 
+	SELECT * FROM NOTICE 
+</select>
+
+<delete id="noticeDelete">
+ DELETE FROM 
+ NOTICE WHERE NO = #{no} 
+ </delete>
+ 
+ <select id="noticeSelectOne" resultType="AdminNoticeVo">
+	SELECT *
+	FROM NOTICE
+	WHERE NO = #{no} 
+</select>
+ 
+ <update id="noticeEdit">
+	UPDATE NOTICE
+	SET CONTENT = #{content}
+	WHERE NO = #{no}
+</update>
+
 <!--  자주묻는 질문 등록  -->
 <insert id="faqInsert"> 
-INSERT INTO FAQ
-( NO 
-,WRITER_NO 
-,TITLE 
-,CONTENT 
-,VIEWS 
-,UPLOAD_DATE 
-,DEL_YN 
-)VALUES 
-( SEQ_FAQ.NEXTVAL 
-,#{writerNo} 
-,#{title} 
-,#{content} 
-,#{views} 
-,CURRENT_TIMESTAMP 
-,'N' 
-) 
+	INSERT INTO FAQ
+	( NO 
+	,WRITER_NO 
+	,TITLE 
+	,CONTENT 
+	)VALUES 
+	( SEQ_FAQ.NEXTVAL 
+	,#{writerNo} 
+	,#{title} 
+	,#{content} 
+	) 
 </insert>
-<!--  공지사항 등록  -->
-<insert id="noticeInsert"> INSERT INTO NOTICE( NO ,WRITER_NO ,TITLE ,CONTENT ,UPLOAD_DATE ,VIEWS ,DEL_YN )VALUES ( SEQ_NOTICE.NEXTVAL ,#{writerNo} ,#{title} ,#{content} ,CURRENT_TIMESTAMP ,#{views} ,'N' ) </insert>
-<!--  관 등록  -->
-<insert id="theaterInsert"> INSERT INTO THEATER_TYPE ( NO ,TYPE ,THEATER_IMG ,PRICE ) VALUES ( SEQ_THEATER_TYPE.NEXTVAL ,#{type} ,#{theaterImg} ,#{price} ) </insert>
-<!--     	영화관 리스트  -->
-<select id="cinemaList" resultType="AdminCinemaVo"> SELECT * FROM CINEMA </select>
+
+<select id="faqSelectOne" resultType="AdminFaqVo">
+	SELECT *
+	FROM FAQ
+	WHERE NO = #{no}
+</select>
+
+<!--     	자주묻는질문 리스트  -->
+<select id="faqList" resultType="AdminFaqVo"> 
+	SELECT * FROM FAQ 
+</select>
+
+<update id="faqEdit">
+	UPDATE FAQ
+	SET TITLE = #{title}
+	WHERE NO = #{no}
+</update>
+
+<delete id="faqDelete"> DELETE FROM FAQ WHERE NO = #{no} </delete>
+
+
+<!--  상품 등록하기  -->
+<insert id="storeInsert"> 
+	INSERT INTO PRODUCT 
+	( NO ,CATEGORY_NO ,NAME ,PRICE ,ORIGIN_COUNTRY ,NUTRIENTE_IMG ,PRODUCT_IMG ,DETAIL ) 
+	VALUES 
+	( SEQ_PRODUCT.NEXTVAL ,#{categoryNo} ,#{name} ,#{price} ,#{originCountry} ,#{nutrienteImg} ,#{productImg} ,#{detail} ) 
+</insert>
+
+<update id="storeDelete">
+ UPDATE PRODUCT
+ SET DEL_YN = 'Y' 
+ WHERE NO =#{no}
+ </update>
+
+
 <!--  	스토어리스트  -->
 <select id="storeList" resultType="AdminStoreVo">
 SELECT P.NO
@@ -108,107 +284,41 @@ SELECT P.NO
 FROM PRODUCT P
 JOIN CATEGORY C
 ON P.CATEGORY_NO = C.NO
+WHERE  DEL_YN = 'N'
 </select>
-<!--     	이벤트 리스트  -->
-<select id="eventList" resultType="AdminEventVo"> SELECT * FROM EVENT </select>
-<!--     	자주묻는질문 리스트  -->
-<select id="faqList" resultType="AdminFaqVo"> SELECT * FROM FAQ </select>
-<!--     	영화 리스트  -->
-<select id="movieList" resultType="com.kh.app.admin.movie.vo.AdminMovieVo"> 
-SELECT 
-NO
-,TYPE
-,AGE
-,NAME
-,SUMMARY
-,CAST
-,DIRECTOR
-,RUNNING_TIME
-,RELEASE_DATE
-FROM MOVIE 
-</select>
-<!--     	공지사항 리스트  -->
-<select id="noticeList" resultType="AdminNoticeVo"> SELECT * FROM NOTICE </select>
-<!--     	관 리스트  -->
-<select id="theaterList" resultType="AdminTheaterVo"> SELECT * FROM THEATER_TYPE </select>
 
-<select id="memberList" resultType="com.kh.app.admin.member.vo.AdminMemberVo">
-SELECT * FROM MEMBER
-</select>
-<delete id="cinemaDelete"> DELETE FROM CINEMA WHERE NO = #{no} </delete>
-<delete id="eventDelete"> DELETE FROM EVENT WHERE NO = #{no} </delete>
-<delete id="faqDelete"> DELETE FROM FAQ WHERE NO = #{no} </delete>
-<delete id="movieDelete"> DELETE FROM MOVIE WHERE NO = #{no} </delete>
-<delete id="noticeDelete"> DELETE FROM NOTICE WHERE NO = #{no} </delete>
-<delete id="storeDelete"> DELETE FROM PRODUCT WHERE NO = #{no} </delete>
-<delete id="theaterDelete"> DELETE FROM "THEATER_TYPE" WHERE NO = #{no} </delete>
-
-<update id="cinemaEdit">
-	UPDATE CINEMA
-	SET CINEMA_NAME = #{cinemaName}
-	WHERE NO = #{no}
-</update>
-<update id="eventUpdate">
-	UPDATE EVENT
-	SET TITLE = #{title}
-	WHERE NO = #{no}
-</update>
-<update id="faqEdit">
-	UPDATE FAQ
-	SET TITLE = #{title}
-	WHERE NO = #{no}
-</update>
-<update id="movieEdit">
-	UPDATE MOVIE
-	SET SUMMARY = #{summary}
-	WHERE NO = #{no}
-</update>
-<update id="noticeEdit">
-	UPDATE NOTICE
-	SET CONTENT = #{content}
-	WHERE NO = #{no}
-</update>
 <update id="storeEdit">
 	UPDATE PRODUCT
 	SET PRICE = #{price}
 	WHERE NO = #{no}
 </update>
-<update id="theaterEdit">
-	UPDATE THEATER
-	SET TYPE = #{type}
-	WHERE NO = #{no}
-</update>
 
-<update id="rentWriter">
-	UPDATE RENT
-	SET 
-		ANSWER_TITLE = #{answerTitle}
-		, ANSWER_CONTENT = #{answerContent}
-	WHERE NO = #{no};
-	
-</update>
-
-<select id="select" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
+<select id="storeSelectOne" resultType="AdminStoreVo">
 	SELECT *
-	FROM RENT
+	FROM PRODUCT
 	WHERE NO = #{no}
 </select>
 
-<select id="selectList" resultType="com.kh.app.admin.rent.vo.AdminRentVo">
-	SELECT
-	NO
-	,WRITER_NO
-	,TITLE
-	,CONTENT
-	,UPLOAD_DATE
-	
-	FROM RENT
+
+
+
+
+<select id="memberList" resultType="com.kh.app.admin.member.vo.AdminMemberVo">
+	SELECT * FROM MEMBER
 </select>
 
-<select id="movieSelectOne" resultType="com.kh.app.admin.movie.vo.AdminMovieVo">
-	SELECT
-	*
-	FROM MOVIE
-</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </mapper>
