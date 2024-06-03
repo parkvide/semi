@@ -56,7 +56,7 @@
 		</div>
 		<div class="detail">
 			<p class="prd-price">
-				<span>${vo.price} 원</span>
+				<span id="prod-price">${vo.price}</span><span>원</span>
 			</p>
 			<div class="sep1"></div>
 			<dl>
@@ -76,15 +76,17 @@
 				<div class="cnt">
 					<dl>
 						<dt>개수</dt>
-						<dd id="quantity">1 * ${vo.price} 원</dd>
+						<dd id="quantity">1</dd>
+						<dt id="price">${vo.price}</dt>
+						<dd></dd>
 					</dl>
 					<div class="button-container">
-						<button id="increment">+</button>
+						<button id="increment" onclick="increaseAndMultiply(${vo.price})">+</button>
 					</div>
 				</div>
 				<div class="sep3"></div>
 				<div class="total-price">
-					<span id="total-price">총 구매금액 1 * ${vo.price} 원</span>
+					<span id="total-price">${vo.price}</span>
 				</div>
 
 			</div>
@@ -105,21 +107,21 @@
 			<div class="splide__track">
 				<ul class="splide__list">
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지1.jpg"></li>
+						src="/app/resources/img/pop/팝콘사진.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지2.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지2.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지3.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지3.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지4.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지4.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지5.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지5.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지6.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지6.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지7.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지7.jpg"></li>
 					<li class="splide__slide"><img
-						src="/app/resources/img/팝콘/팝콘이미지8.jpg"></li>
+						src="/app/resources/img/pop/팝콘이미지8.jpg"></li>
 				</ul>
 			</div>
 		</section>

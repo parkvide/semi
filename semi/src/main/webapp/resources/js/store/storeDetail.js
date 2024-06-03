@@ -1,23 +1,16 @@
-    // Assume vo.price is a JavaScript variable with the price value
-        var vo = { price: 1000 }; // Replace with actual value
 
-        var quantity = 1;
-        var price = vo.price;
         
-        var quantityElement = document.getElementById('quantity');
-        var totalPriceElement = document.getElementById('total-price');
-        var incrementButton = document.getElementById('increment');
-
-        function updatePrice() {
-            var total = quantity * price;
-            quantityElement.textContent = quantity + ' * ' + price + ' 원';
-            totalPriceElement.textContent = '총 구매금액 ' + quantity + ' * ' + price + ' 원';
-        }
-
-        incrementButton.addEventListener('click', function() {
-            quantity++;
-            updatePrice();
-        });
-
-        // Initialize the price on page load
-        updatePrice();
+        var value = 1;
+        var baseValue = document.getElementById("#prod-price").innerText;
+        
+        function increaseAndMultiply(price) {
+  		 value += 1; // 값 증가
+    var totalPrice = value * price; // 총 가격 계산
+    // 결과를 화면에 표시
+    document.getElementById("quantity").innerText = value;
+    document.getElementById("price").innerText = price * value + "원";
+    document.getElementById("total-price").innerText = totalPrice + "원";
+  }
+ 	
+    
+    
