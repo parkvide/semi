@@ -56,7 +56,42 @@
 	<main>
 		<div class="ticketinfo">
 			<table>
-				
+				<tr>
+				<th>영화 제목</th>
+				<td id="title"></td>
+			</tr>
+			<tr>
+				<th>영화관</th>
+				<td id="cinema"></td>
+			</tr>
+			<tr>
+				<th>상영관</th>
+				<td id="theater"></td>
+			</tr>
+			<tr>
+				<th>좌석</th>
+				<td id="seat"></td>
+			</tr>
+			<tr>
+				<th>청소년 인원</th>
+				<td id="teen"></td>
+			</tr>
+			<tr>
+				<th>성인 인원</th>
+				<td id="general"></td>
+			</tr>
+			<tr>
+				<th>상영 날짜</th>
+				<td id="date"></td>
+			</tr>
+			<tr>
+				<th>상영 시간</th>
+				<td id="time"></td>
+			</tr>
+			<tr>
+				<th>총 가격</th>
+				<td id="price"></td>
+			</tr>
 			</table>
 		</div>
 	</main>

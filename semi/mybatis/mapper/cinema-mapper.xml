@@ -19,14 +19,14 @@
 	</select>
 	
 	<select id="selectCinemaList" resultType="com.kh.app.cinema.vo.CinemaVo">
-		SELECT *
+		SELECT DISTINCT C.NO, C.CINEMA_NAME
 		FROM CINEMA C JOIN THEATER T ON
 		C.NO = T.CINEMA_NO JOIN SCREEN_INFO S ON
 		T.NO = S.THEATER_NO
 		WHERE C.DEL_YN = 'N'
 	</select>
 	<select id="selectTheaterList" resultType="com.kh.app.theater.vo.TheaterVo">
-		SELECT *
+		SELECT DISTINCT T.NO, T.THEATER_NAME
 		FROM CINEMA C JOIN THEATER T ON
 		C.NO = T.CINEMA_NO JOIN SCREEN_INFO S ON
 		T.NO = S.THEATER_NO
@@ -35,6 +35,7 @@
 	<select id="selectDateList" resultType="com.kh.app.screeninfo.vo.ScreenInfoVo">
 		SELECT *
 		FROM SCREEN_INFO
+		
 <!-- 		WHERE SCREENING_DATE >= SYSDATE -->
 <!-- 		AND SCREENING_DATE <![CDATA[ <= ]]> SYSDATE + 1 -->
 	</select>

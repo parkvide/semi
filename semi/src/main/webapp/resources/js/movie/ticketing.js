@@ -196,7 +196,7 @@ function timeList() {
 $(document).on('click', '.timebtn', function() {
     var screeningTime = $(this).text();
     console.log(screeningTime);
-    localStorage.setItem('screeningDate', screeningDate); // 시간 저장
+    localStorage.setItem('screeningTime', screeningTime); // 시간 저장
 });
 
 $("#submitbtn").click(function(e) {
