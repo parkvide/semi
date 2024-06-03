@@ -16,8 +16,22 @@ public class NoticeEditController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
+			try {
+				
+				String no = req.getParameter("no");
+				
+				AdminNoticeService ans = new AdminNoticeService();
+				AdminNoticeVo adminNoticeList = (AdminNoticeVo)ans.selectOne(no);
+				
+				req.setAttribute("adminNoticeList", adminNoticeList);
+				req.getRequestDispatcher("/WEB-INF/views/admin/admin-noticeEdit.jsp").forward(req, resp);
+				
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		
 	}
 	
 	@Override

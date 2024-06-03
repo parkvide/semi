@@ -27,4 +27,8 @@ public class AdminNoticeDao {
 	
 	}
 
+	public AdminNoticeVo selectOne(SqlSession ss, String no) {
+		return ss.selectOne("AdminMapper.noticeSelectOne");
+	}
+
 }

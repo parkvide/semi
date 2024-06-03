@@ -26,4 +26,8 @@ public class AdminStoreDao {
 		return ss.update("AdminMapper.storeEdit" , vo);
 	}
 
+	public AdminStoreVo selectOne(SqlSession ss, String no) {
+		return ss.selectOne("AdminMapper.storeSelectOne");
+	}
+
 }

@@ -13,15 +13,14 @@ public class AdminRentDao {
 		return ss.selectList("AdminMapper.selectList");
 	}
 
-	//렌트에 업데이트로 답변달기
-	public int answerUpdate(SqlSession ss, AdminRentVo adminRentVo) {
-		return ss.update("AdminMapper.rentWriter" );
+
+
+	public AdminRentVo selectOne(SqlSession ss, String no) {
+		return ss.selectOne("AdminMapper.rentSelectOne");
 	}
 
-	//값 뽑아가기
-	public List<AdminRentVo> select(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.select",no);
-
+	public int writer(SqlSession ss, AdminRentVo adminRentVo) {
+		return ss.update("AdminMapper.rentWriter" , adminRentVo);
 	}
 
 }

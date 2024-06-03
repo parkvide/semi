@@ -72,6 +72,14 @@ public class AdminFaqService {
 		return result;
 	}
 
+	public AdminFaqVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminFaqVo voList = (AdminFaqVo)dao.selectOne(ss,no);
+		
+		ss.close();
+		return voList;
+	}
+
 	
 
 }

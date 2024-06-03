@@ -20,6 +20,20 @@ public class EventEditController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			
+			String no = req.getParameter("no");
+			
+			AdminEventService aes = new AdminEventService();
+			AdminEventVo adminEvtList = (AdminEventVo)aes.selectOne(no);
+			req.setAttribute("adminEvtList", adminEvtList);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-evtEdit.jsp").forward(req, resp);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	
 	}
 	
 	@Override

@@ -77,6 +77,14 @@ public class AdminStoreService {
 	
 	}
 
+	public AdminStoreVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminStoreVo voList = (AdminStoreVo)dao.selectOne(ss,no);
+		
+		ss.close();
+		return voList;
+	}
+
 
 
 

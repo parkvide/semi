@@ -22,9 +22,10 @@ public class AdminTheaterDao {
 
 	public int edit(SqlSession ss, AdminTheaterVo vo) {
 		return ss.update("AdminMapper.theaterEdit", vo);
-		//이거 맵퍼 설정할떄
-		// parameterType="com.kh.app.admin.theater.vo.AdminTheaterVo"
-		//파라미터 타입 까먹지마
+	}
+
+	public AdminTheaterVo selectOne(SqlSession ss, String no) {
+		return ss.selectOne("AdminMapper.theaterSelectOne");
 	}
 
 

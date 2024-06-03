@@ -50,7 +50,6 @@ public class MovieEditController extends HttpServlet {
 			AdminMovieVo vo = new AdminMovieVo();
 			vo.setNo(no);
 			vo.setSummary(summary);
-			System.out.println(vo);
 			
 			AdminMovieService as = new AdminMovieService();
 			int result = as.edit(vo);

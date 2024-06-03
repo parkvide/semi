@@ -66,4 +66,13 @@ public class AdminTheaterService {
 		return result;
 	}
 
+	public AdminTheaterVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminTheaterVo voList = (AdminTheaterVo)dao.selectOne(ss,no);
+		
+		ss.close();
+		return voList;
+	}
+
+
 }

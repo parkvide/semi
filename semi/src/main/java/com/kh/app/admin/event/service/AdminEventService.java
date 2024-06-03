@@ -74,4 +74,11 @@ public class AdminEventService {
 	
 	}
 
+	public AdminEventVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminEventVo voList =(AdminEventVo)dao.selectOne(ss,no);
+		ss.close();
+		return voList;
+	}
+
 }

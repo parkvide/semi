@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -42,7 +43,7 @@
 	                <div>${vo.no}</div>
 	                <div>${vo.writerNo}</div>
 	                <div>${vo.title}</div>
-	                <div>${vo.content}</div>
+	                <div>${fn:substring(vo.content, 0, 15)}</div>
 	                <div>${vo.views}</div>
 	                <div>${vo.uploadDate}</div>
                   <div>
