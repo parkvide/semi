@@ -53,10 +53,14 @@
             </div>
         </div>
     </nav>
-	<main>
-		<div class="ticketinfo">
+	<main>	
+		  <div class="container">
+		    <div class="edit">
+		      <img style="height:100px " class="search-logo" src="/app/resources/img/ticket.png" alt="">
+		      <h1>예매가 되었습니다</h1>
+		      <hr><hr>
 			<table>
-				<tr>
+			<tr>
 				<th>영화 제목</th>
 				<td id="title"></td>
 			</tr>
@@ -93,7 +97,11 @@
 				<td id="price"></td>
 			</tr>
 			</table>
-		</div>
+		     
+		    </div>
+		  </div>
+		
+
 	</main>
 <footer>
         <div class="wrap">
