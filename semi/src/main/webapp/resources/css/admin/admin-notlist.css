@@ -169,6 +169,10 @@ ul{
   grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
 }
 
+#content form button{
+  color: black;
+}
+
 #content div{
   display: flex;
   justify-content: center;

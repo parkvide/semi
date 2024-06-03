@@ -44,7 +44,7 @@
 		                <div>${vo.age}</div>
 		                <div>${vo.title}</div>
 		                <div>${fn:substring(vo.summary, 0, 15)}</div>
-		                <div>${vo.cast}</div>
+		                <div>${fn:substring(vo.cast, 0, 10)}</div>
 		                <div>${vo.director}</div>
 		                <div>${vo.runningTime}</div>
 		                <div>${vo.releaseDate}</div>

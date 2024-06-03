@@ -26,10 +26,10 @@
           <div id="line"></div>
           <div id="list-main">
             <div id="title">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div><a href="/app/admin/member/list"><img src="/app/resources/img/adminHome.png" alt=""></a></div>
+              <div><a href="/app/admin/movie/list"><img src="/app/resources/img/adminHome2.png" alt=""></a></div>
+              <div><a href="/app/admin/notice/list"><img src="/app/resources/img/adminHome3.png" alt=""></a></div>
+              <div><a href="/app/admin/store/list"><img src="/app/resources/img/adminHome4.png" alt=""></a></div>
             </div>
           </div>
         </div>
