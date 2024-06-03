@@ -21,7 +21,7 @@ public class RentDetailController extends HttpServlet{
 			String no = req.getParameter("no");
 			BoardService bs = new BoardService();
 			RentVo rentVo = bs.selectRentListByNo(no);
-			
+			System.out.println(rentVo);
 			req.setAttribute("rentVo", rentVo);
 			req.getRequestDispatcher("/WEB-INF/views/board/detail/rentDetail.jsp").forward(req, resp);
 		}catch(Exception e) {

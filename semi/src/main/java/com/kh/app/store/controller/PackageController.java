@@ -21,6 +21,7 @@ public class PackageController extends HttpServlet{
 		try {
 			ProductService ps = new ProductService();
 			List<ProductVo> voList = ps.selectPackList();
+			req.setAttribute("voList", voList);
 			req.getRequestDispatcher("/WEB-INF/views/store/package.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();

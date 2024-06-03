@@ -51,6 +51,7 @@
                       
                           <tr>
                               <th>번호</th>
+                              <th>작성자</th>
                               <th>제목</th>
                               <th>날짜</th>
                               
@@ -60,6 +61,7 @@
                           <c:forEach items="${rentVoList}" var="vo">
                               <tr>
                                   <td>${vo.no}</td> 
+                                  <td>${vo.writerId}</td> 
                                   <td><a href="/app/board/rent/detail?no=${vo.no}">${vo.title}</a></td> 
                                   <td>${vo.uploadDate}</td> 
                                   <td></td> 
