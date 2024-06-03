@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Example: You may send this data to a server using fetch or XMLHttpRequest
 
             // Clear localStorage after checkout
-            localStorage.removeItem("selectedSeats");
-            localStorage.removeItem("totalPrice");
+           /* localStorage.removeItem("selectedSeats");
+            localStorage.removeItem("totalPrice");*/
 
             // Redirect or show success message
             alert("결제가 완료되었습니다!");

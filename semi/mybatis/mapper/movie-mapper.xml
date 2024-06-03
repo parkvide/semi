@@ -18,7 +18,7 @@
 	</select>
 	
 	<select id="selectMovieList" resultType="com.kh.app.movie.vo.MovieVo">
-		SELECT *
+		SELECT DISTINCT M.NO, M.TITLE
 		FROM MOVIE M JOIN SCREEN_INFO S ON
 		M.NO=S.MOVIE_NO JOIN THEATER T ON
 		S.THEATER_NO = T.NO JOIN CINEMA C ON
