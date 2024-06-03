@@ -26,7 +26,7 @@ public class TheaterEditController extends HttpServlet {
 			AdminTheaterService ats = new AdminTheaterService();
 			AdminTheaterVo adminTheaterList =(AdminTheaterVo)ats.selectOne(no);
 			req.setAttribute("adminTheaterList", adminTheaterList);
-			req.getRequestDispatcher("/WEB-INF/views/admin/admin-theaterList.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-theaterEdit.jsp").forward(req, resp);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}	
@@ -37,41 +37,18 @@ public class TheaterEditController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
-		String type = req.getParameter("type");
-		String price = req.getParameter("price");
-		Part img = req.getPart("img");
+			String no = req.getParameter("no");
+			String type = req.getParameter("type");
 		
-		String img2 = ""; 
-		if(img.getSize() > 0) {
-			// 파일을 서버에 저장하기
-			String originFileName = img.getSubmittedFileName();
-			InputStream is = img.getInputStream();
-			
-			String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
-			String random = UUID.randomUUID().toString();
-			String ext = originFileName.substring(originFileName.lastIndexOf("."));
-			img2 = System.currentTimeMillis() + "_" + random + ext;
-			FileOutputStream fos = new FileOutputStream(path + img2);
-			
-			byte[] buf = new byte[1024];
-			int size = 0;
-			while( (size=is.read(buf)) != -1 ) {
-				fos.write(buf , 0, size);
-			}
-			
-			is.close();
-			fos.close();
-		}
-
-		AdminTheaterVo vo = new AdminTheaterVo();
-		vo.setType(type);
-		vo.setPrice(price);
-		vo.setTheaterImg(img2);
-
+			AdminTheaterVo vo = new AdminTheaterVo();
+			vo.setNo(no);
+			vo.setType(type);
+	
 			AdminTheaterService ats = new AdminTheaterService(); 
 			int result = ats.edit(vo);
+			
 			if(result == 1) {
-				resp.sendRedirect("/admin/theater/list");
+				resp.sendRedirect("/app/admin/theater/list");
 			} else {
 				resp.sendRedirect("/admin/theater/edit?error=fail");
 			}

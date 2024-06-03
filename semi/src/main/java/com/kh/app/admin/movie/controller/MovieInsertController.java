@@ -39,11 +39,13 @@ public class MovieInsertController extends HttpServlet {
 			
 			String type = req.getParameter("type");
 			String age = req.getParameter("age");
+			String title = req.getParameter("title");
 			String summary =req.getParameter("summary");
 			String cast = req.getParameter("cast");
 			String director = req.getParameter("director");
 			String time = req.getParameter("time");
 			Part poster = req.getPart("poster");
+			String date = req.getParameter("date");
 			
 			String poster2 = "";
 			if(poster.getSize() > 0) {
@@ -70,16 +72,19 @@ public class MovieInsertController extends HttpServlet {
 			AdminMovieVo vo = new AdminMovieVo();
 			vo.setType(type);
 			vo.setAge(age);
+			vo.setTitle(title);
 			vo.setSummary(summary);
 			vo.setCast(cast);
 			vo.setDirector(director);
 			vo.setRunningTime(time);
 			vo.setPoster(poster2);
+			vo.setReleaseDate(date);
 			
 			AdminMovieService as = new AdminMovieService();
 			int result = as.insert(vo);
 			
 			if(result == 1) {
+				resp.sendRedirect("/app/admin/movie/list");
 				System.out.println("등록성공");
 			}else {
 				System.out.println("등록실팬");

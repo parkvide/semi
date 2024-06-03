@@ -43,6 +43,7 @@ public class StoreInsertController extends HttpServlet {
 			String origin = req.getParameter("origin");
 			Part nutrientne = req.getPart("nutrientne");
 			Part product = req.getPart("product");
+			String detail = req.getParameter("detail");
 			
 			String product2 = "";
 			if(product.getSize() > 0) {
@@ -95,6 +96,7 @@ public class StoreInsertController extends HttpServlet {
 			vo.setOriginCountry(origin);
 			vo.setNutrienteImg(nutrientne2);
 			vo.setProductImg(product2);
+			vo.setDetail(detail);
 			
 			AdminStoreService ass = new AdminStoreService();
 			int result = ass.insert(vo);

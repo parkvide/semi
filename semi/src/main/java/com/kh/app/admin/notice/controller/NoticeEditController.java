@@ -38,13 +38,11 @@ public class NoticeEditController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			
 		try {
-			String writerNo = req.getParameter("writerNo");
-			String title = req.getParameter("title");
+			String no = req.getParameter("no");
 			String content = req.getParameter("content");
 			
 			AdminNoticeVo vo = new AdminNoticeVo();
-			vo.setWriterNo(writerNo);
-			vo.setTitle(title);
+			vo.setNo(no);
 			vo.setContent(content);
 			
 			AdminNoticeService ans = new AdminNoticeService();

@@ -48,64 +48,14 @@ public class StoreEditController extends HttpServlet {
 	
 		try {
 			
-			String category = req.getParameter("category");
-			String name = req.getParameter("name");
+			String no =req.getParameter("no");
 			String price = req.getParameter("price");
-			String origin = req.getParameter("origin");
-			Part nutrientne = req.getPart("nutrientne");
-			Part product = req.getPart("product");
 			
-			String product2 = "";
-			if(product.getSize() > 0) {
-				// 파일을 서버에 저장하기
-				String originFileName = product.getSubmittedFileName();
-				InputStream is = product.getInputStream();
-				
-				String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
-				String random = UUID.randomUUID().toString();
-				String ext = originFileName.substring(originFileName.lastIndexOf("."));
-				product2 = System.currentTimeMillis() + "_" + random + ext;
-				FileOutputStream fos = new FileOutputStream(path + product2);
-				
-				byte[] buf = new byte[1024];
-				int size = 0;
-				while( (size=is.read(buf)) != -1 ) {
-					fos.write(buf , 0, size);
-				}
-				
-				is.close();
-				fos.close();
-			}
 			
-			String nutrientne2 = ""; 
-			if(nutrientne.getSize() > 0) {
-				// 파일을 서버에 저장하기
-				String originFileName = nutrientne.getSubmittedFileName();
-				InputStream is = nutrientne.getInputStream();
-				
-				String path = "D:\\dev\\four's\\semi\\src\\main\\webapp\\resources\\img\\admin";
-				String random = UUID.randomUUID().toString();
-				String ext = originFileName.substring(originFileName.lastIndexOf("."));
-				nutrientne2 = System.currentTimeMillis() + "_" + random + ext;
-				FileOutputStream fos = new FileOutputStream(path + nutrientne2);
-				
-				byte[] buf = new byte[1024];
-				int size = 0;
-				while( (size=is.read(buf)) != -1 ) {
-					fos.write(buf , 0, size);
-				}
-				
-				is.close();
-				fos.close();
-			}
 			
 			AdminStoreVo vo = new AdminStoreVo();
-			vo.setCategoryNo(category);
-			vo.setName(name);
+			vo.setNo(no);
 			vo.setPrice(price);
-			vo.setOriginCountry(origin);
-			vo.setNutrienteImg(nutrientne2);
-			vo.setProductImg(product2);
 			
 			AdminStoreService ass = new AdminStoreService();
 			int result = ass.edit(vo);

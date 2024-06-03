@@ -22,7 +22,7 @@ public class EventDeleteController extends HttpServlet {
 			AdminEventService ss = new AdminEventService();
 			int result = ss.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/evt/list");
+				resp.sendRedirect("/app/admin/evt/list");
 			} else {
 			}
 		} catch (Exception e) {

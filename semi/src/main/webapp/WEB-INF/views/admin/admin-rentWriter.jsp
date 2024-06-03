@@ -23,14 +23,14 @@
 				<div id="line"></div>
 				<div id="title">
 					
-						<div>제목 : <input type="text"></div>
-						<div>대관 문의 날자 <input type="text"></div>
-						<span>내용 : </span> <input type="text">
+						<div>제목 : <input type="text" value="${adminVoList.title}"></div>
+						<div>대관 문의 날자 <input type="text" value="${adminVoList.rentalDate}"></div>
+						<div>내 용 <input type="text" value="${adminVoList.content}"></div>
 				
 				</div>
 				<div id="content">
 					<form action="/app/admin/rent/writer" method="post">
-						<div>작성자 : <input type="text" name="no"></div>
+						<input type="hidden" name="no" value="${adminVoList.no}">
 						<div>제목 : <input type="text"  name="answerTitle"></div>
 						<div>내용 : <input type="text"  name="answerContent"></div>
 						<input type="submit" value="작성하기">

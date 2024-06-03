@@ -37,7 +37,6 @@ public class AdminMovieService {
 	public List<AdminMovieVo> list() throws Exception {
 		SqlSession ss = getSqlSession();
 		List<AdminMovieVo> voList =dao.list(ss);
-		System.err.println("여기는 서비스 :" + voList);
 		ss.close();
 		return voList;
 	}

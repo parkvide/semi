@@ -22,7 +22,7 @@ public class MovieDelectController extends HttpServlet{
 			AdminMovieService ams = new AdminMovieService();
 			int result = ams.delete(no);
 			if(result == 1) {
-				resp.sendRedirect("/admin/movie/list");
+				resp.sendRedirect("/app/admin/movie/list");
 			} else {
 			}
 		} catch (Exception e) {

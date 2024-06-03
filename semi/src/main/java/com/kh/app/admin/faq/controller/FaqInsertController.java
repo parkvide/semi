@@ -38,7 +38,7 @@ public class FaqInsertController extends HttpServlet {
 			int result = afs.insert(vo);
 			
 			if(result == 1) {
-				System.out.println("등록성공");
+				resp.sendRedirect("/app/admin/faq/list");
 			}else {
 				System.out.println("등록실패");
 			}

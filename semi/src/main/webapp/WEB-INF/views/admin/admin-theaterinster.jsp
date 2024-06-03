@@ -29,10 +29,9 @@
 					<div id="theater">
 						<form action="/app/admin/theater/insert" method="post"
 							enctype="multipart/form-data">
-							<input type="text" name="type" placeholder="이름"> <input
-								type="text" name="price" placeholder="가격"> <input
-								type="file" name="img" placeholder="관사진"> <input
-								type="submit" value="등록하기">
+							<input type="text" name="type" placeholder="이름"> 
+							 <input type="file" name="img" placeholder="관사진"> 
+							 <input type="submit" value="등록하기">
 						</form>
 					</div>
 				</div>

@@ -5,21 +5,20 @@ public class AdminTheaterVo {
 	private String no;
 	private String type;
 	private String theaterImg;
-	private String price;
+	
 	@Override
 	public String toString() {
-		return "AdminTheaterVo [no=" + no + ", type=" + type + ", theaterImg=" + theaterImg + ", price=" + price + "]";
+		return "AdminTheaterVo [no=" + no + ", type=" + type + ", theaterImg=" + theaterImg + "]";
 	}
 	public AdminTheaterVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public AdminTheaterVo(String no, String type, String theaterImg, String price) {
+	public AdminTheaterVo(String no, String type, String theaterImg) {
 		super();
 		this.no = no;
 		this.type = type;
 		this.theaterImg = theaterImg;
-		this.price = price;
 	}
 	public String getNo() {
 		return no;
@@ -39,12 +38,5 @@ public class AdminTheaterVo {
 	public void setTheaterImg(String theaterImg) {
 		this.theaterImg = theaterImg;
 	}
-	public String getPrice() {
-		return price;
-	}
-	public void setPrice(String price) {
-		this.price = price;
-	}
-
 	
 }

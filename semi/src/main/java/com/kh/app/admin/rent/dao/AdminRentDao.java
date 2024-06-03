@@ -10,13 +10,13 @@ public class AdminRentDao {
 
 		
 	public List<AdminRentVo> list(SqlSession ss){
-		return ss.selectList("AdminMapper.selectList");
+		return ss.selectList("AdminMapper.rentList");
 	}
 
 
 
 	public AdminRentVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.rentSelectOne");
+		return ss.selectOne("AdminMapper.rentSelectOne" , no);
 	}
 
 	public int writer(SqlSession ss, AdminRentVo adminRentVo) {

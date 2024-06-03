@@ -19,7 +19,7 @@ public class AdminStoreDao {
 	    }
 
 	public int delete(SqlSession ss, String no) {
-		return ss.delete("AdminMapper.storeDelete", no);
+		return ss.update("AdminMapper.storeDelete", no);
 	}
 
 	public int edit(SqlSession ss ,AdminStoreVo vo) {
@@ -27,7 +27,7 @@ public class AdminStoreDao {
 	}
 
 	public AdminStoreVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.storeSelectOne");
+		return ss.selectOne("AdminMapper.storeSelectOne" , no);
 	}
 
 }

@@ -23,12 +23,12 @@ public class AdminNoticeDao {
 	}
 
 	public int edit(SqlSession ss, AdminNoticeVo vo) {
-		return ss.update("AdminMapper.noticeEdit");
+		return ss.update("AdminMapper.noticeEdit" , vo);
 	
 	}
 
 	public AdminNoticeVo selectOne(SqlSession ss, String no) {
-		return ss.selectOne("AdminMapper.noticeSelectOne");
+		return ss.selectOne("AdminMapper.noticeSelectOne" , no);
 	}
 
 }

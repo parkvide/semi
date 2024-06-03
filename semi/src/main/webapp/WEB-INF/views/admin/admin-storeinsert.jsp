@@ -33,6 +33,7 @@
               <input type="text" name="origin" placeholder="원산지">
               <input type="file" name="nutrientne" placeholder="영양성분표">
               <input type="file" name="product" placeholder="상품사진">
+              <input type="text" name="detail" placeholder="상세정보">
               <input type="submit" value="등록하기">
             </form>
           </div>

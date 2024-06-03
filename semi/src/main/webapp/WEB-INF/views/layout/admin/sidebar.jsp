@@ -18,10 +18,6 @@
 					목록</a></li>
 			<li class="side-menu menu-list"><a
 				href="/app/admin/movie/insert">영화 등록</a></li>
-			<li class="side-menu menu-list"><a href="/app/admin/movie/time/insert">상영시간
-					등록</a></li>
-			<li class="side-menu menu-list"><a
-				href="/app/admin/movie/time/list">상영시간 목록</a></li>
 		</div>
 
 		<li class="side-menu side-menu-theater">극장</li>
