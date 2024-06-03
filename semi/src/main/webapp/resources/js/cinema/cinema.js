@@ -11,7 +11,9 @@ function loadCinemaList(cinemaLocation){
 			let str = "";
 				str += "<ul>";
 			for(let i = 0; i < cinemaNameList.length; i++){
-				str += `<li><button onclick="loadCinemaDetail(`+ cinemaNameList[i].cinemaName+`);">`+cinemaNameList[i].cinemaName+"</button></li>";
+//				str += '<li><button onclick="loadCinemaDetail("+ cinemaNameList[i].cinemaName +");">+cinemaNameList[i].cinemaName+"</button></li>";
+//				str += "<li><button onclick='loadCinemaDetail(\"" + cinemaNameList[i].cinemaName +"\");'> " + cinemaNameList[i].cinemaName + "</button></li>";
+				str += `<li><button onclick='loadCinemaDetail("${cinemaNameList[i].cinemaName}");'>${cinemaNameList[i].cinemaName}</button></li>`; 
 			}
 				str += "</ul>";
 				
@@ -28,11 +30,13 @@ function loadCinemaList(cinemaLocation){
 
 function loadCinemaDetail(cinemaName){
 	
+	console.log("loadCinemaDetail called..");
+	
 	$.ajax({
 		url : "http://127.0.0.1:8888/app/cinema/detail",
 		method : "POST",
 		data:{"cinemaName":cinemaName},
-		seccess : function(data){
+		success : function(data){
 			const CinemaVo = JSON.parse(data);
 			console.log(CinemaVo);
 			
