@@ -113,11 +113,11 @@ main{
   margin: 0;
   display: flex;
 }
-main #menu a:hover{
+/* main #menu a:hover{
 	background-color: black;
 	color:white;
 	cursor:pointer
-}
+} */
 #main{
   margin: 0;
   display: grid;
@@ -173,21 +173,34 @@ main #menu a:hover{
   margin-top: 5px;
 }
 
-#menu{
+#menu {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 항목 */
+  grid-gap: 20px; /* 항목 간격을 설정할 수 있는 여백 */
   place-items: center;
 }
 
-#menu .evt-img{
+#menu .evt-img {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 80%;
+  width: 100%;
   border: 1px solid rgb(187, 187, 187);
+  background-color: white;
+  text-align: center; /* 텍스트 가운데 정렬 */
 }
+
+#menu .evt-img img {
+  width: 100%; /* 이미지가 링크 요소의 너비에 맞게 조정됨 */
+  height: auto; /* 이미지의 비율을 유지하면서 높이를 자동 조정 */
+}
+
+#menu .evt-img span {
+  padding: 10px 0; /* 텍스트와 이미지 사이의 간격을 설정 */
+  background-color: rgb(245, 244, 244); /* 텍스트 배경색 */
+  color: black; /* 텍스트 색상 */
+}
+
 
 
 

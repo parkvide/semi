@@ -45,13 +45,13 @@
                 
               </div>
               <div id="list">
-              <span>${vo.title}</span><span>${vo.uploadDate}</span><span>${vo.views}</span>
+              <span>${rentVo.title}</span><span>${rentVo.uploadDate}</span>
               <div class="sep"></div>
 			  <div class="title">
-			  	<span>${vo.rentalDate}</span>
-			  	<span>${vo.cinemaName}</span>
-			  	<span>${vo.theaterName}</span>
-			  	<span>${vo.content}</span>
+			  	<span>${rentVo.rentalDate}</span>
+			  	<span>${rentVo.cinemaName}</span>
+			  	<span>${rentVo.theaterName}</span>
+			  	<span>${rentVo.content}</span>
 			  </div>			
               </div>
             </div>
