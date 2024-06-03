@@ -360,12 +360,16 @@ ul{
   height: 90%;
   display: grid;
   grid-template-columns:  0.5fr 1fr 0.5fr 1fr 2fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr;
+}
 
 #content div{
   display: flex;
   justify-content: center;
   color: black;
+}
 
+#content form button{
+  color: black;
 }
 
 

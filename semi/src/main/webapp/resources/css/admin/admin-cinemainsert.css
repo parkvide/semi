@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: white;
   user-select: none;
 }
 
@@ -26,11 +26,6 @@ ul{
   flex-direction: column;
 }
 
-/* ul li{
-  margin-top: 50px;
-} */
-
-
 #side-menu{
   width: 186px;
   height: 80px;
@@ -44,9 +39,8 @@ ul{
   margin-left: 10px;
   padding: 24px 8px;
   align-items: center;
-
 }
- 
+
 .side-menu a{
   color: white;
   text-decoration: none;
@@ -92,39 +86,12 @@ ul{
   align-items: center;
 }
 
-#list #name{
+#name{
   width: 95%;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-#category{
-  width: 50x;
-  height: 25px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  border-radius: 5px;
-  color: black;
-  font-size: xx-small;
-}
-#category option{
-  color: black;
-}
-
-#name form input{
-  margin: 0;
-  width: 200px;
-  height: 25px;
-  border: 1px solid black;
-  border-radius: 5px;
-  color: black;
-}
-
-#name form button{
-  background-color: white;
-  border: none;
 }
 
 #name span{
@@ -134,10 +101,7 @@ ul{
   margin-left: 20px;
 }
 
-#name form{
-  margin-right: 20px;
-}
-#list #line{
+#line{
   width: 95%;
   height: 2px;
   background-color: black;
@@ -147,111 +111,37 @@ ul{
   width: 100%;
   height: 85%;
   display: flex;
-  flex-direction: column;  
-}
-#title{
-  width: 100%;
-  height: 10%;
-  display: flex;
-}
-#content #contentlist{
-  width: 100%;
-  height: 100%;
-  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form horizontally */
+  justify-content: center; /* Center the form vertically */
 }
 
-#content{
+#list-main form{
   width: 100%;
-  height: 90%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.no{
-  width: 5%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#list-main form input[type="text"], #list-main form input[type="file"], #list-main form input[type="submit"]{
+  width: 300px;
+  height: 30px;
+  margin: 10px 0;
+  padding: 5px;
   color: black;
 }
 
-.id{
-  width: 15%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#list-main form input[type="submit"]{
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid black;
   color: black;
-
+  cursor: pointer;
 }
 
-.name{
-  width: 10%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-}
-
-.num{
-  width: 15%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-
-}
-
-.email{
-  width: 20%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-
-}
-
-.birth{
-  width: 10%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-
-}
-
-.date{
-  width: 10%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-
-}
-
-.ny{
-  width: 5%;
-  height: 68.47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-
-}
-.modify{
-  width: 10%;
-  height: 68.47px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
+#list-main form input[type="submit"]:hover{
+  background-color: #f0f0f0;
 }
 
 .hidden {
@@ -260,7 +150,6 @@ ul{
 
 .side-menu {
   cursor: pointer;
-  
 }
 
 .side-menu:hover {

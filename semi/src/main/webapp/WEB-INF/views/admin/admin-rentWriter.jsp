@@ -20,20 +20,21 @@
 				<div id="name">
 					<span>대관문의 작성</span>
 				</div>
-				<div id="line"></div>
+				<div class="line"></div>
 				<div id="title">
-					
-						<div>제목 : <input type="text" value="${adminVoList.title}"></div>
-						<div>대관 문의 날자 <input type="text" value="${adminVoList.rentalDate}"></div>
-						<div>내 용 <input type="text" value="${adminVoList.content}"></div>
-				
+					<div>제목 : <input type="text" value="${adminVoList.title}"></div>
+					<div>대관 문의 날짜 : <input type="text" value="${adminVoList.rentalDate}"></div>
+					<div>내 용 : <input type="text" value="${adminVoList.content}"></div>
 				</div>
 				<div id="content">
+					<div class="line"></div>
 					<form action="/app/admin/rent/writer" method="post">
 						<input type="hidden" name="no" value="${adminVoList.no}">
-						<div>제목 : <input type="text"  name="answerTitle"></div>
-						<div>내용 : <input type="text"  name="answerContent"></div>
-						<input type="submit" value="작성하기">
+						<div>제목</div>
+						<div><input type="text"  name="answerTitle" id="rentTitle"></div>
+						<div>내용</div>
+						<div><textarea name="answerContent" id="rentcontent"></textarea></div>
+						<div><input type="submit" value="작성하기" id="button"></div>
 					</form>
 				</div>
 			</div>

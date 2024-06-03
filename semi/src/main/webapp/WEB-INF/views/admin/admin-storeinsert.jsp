@@ -25,7 +25,7 @@
           </div>
           <div id="line"></div>
           <div id="list-main">
-          <div id="store">
+          <div id="title">
             <form action="/app/admin/store/insert" method="post" enctype="multipart/form-data">
               <input type="text" name="category" placeholder="카테고리">
               <input type="text" name="name" placeholder="이름">

@@ -175,6 +175,9 @@ ul{
   justify-content: center;
 }
 
+#content form button{
+  color: black;
+}
 
 
 .hidden {

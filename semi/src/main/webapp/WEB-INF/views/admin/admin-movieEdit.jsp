@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/app/resources/css/admin/admin-movieinset.css">
+    <link rel="stylesheet" href="/app/resources/css/admin/admin-movieEdit.css">
   </head>
 
   <body>
@@ -25,15 +25,15 @@
           <div id="line"></div>
           <div id="title">
             <form action="/app/admin/movie/edit" method="post">
-              <input type="hidden" name="no" value="${adminMovieList.no}">
-              <input type="text" name="summary" placeholder="${adminMovieList.summary}">
-              <input type="text" value="${adminMovieList.title}">
-              <input type="text" value="${adminMovieList.age}">
-              <input type="text" value="${adminMovieList.type}">
-              <input type="text" value="${adminMovieList.cast}">
-              <input type="text" value="${adminMovieList.director}">
-              <input type="text" value="${adminMovieList.runningTime}">
-              <input type="text" value="${adminMovieList.releaseDate}">
+              <div><input type="hidden" name="no" value="${adminMovieList.no}"></div>
+              <div><span>제목</span><input type="text" value="${adminMovieList.title}"></div>
+              <div><span>내용</span><textarea name="summary" placeholder="${adminMovieList.summary}"></textarea></div>
+              <div><span>나이</span><input type="text" value="${adminMovieList.age}"></div>
+              <div><span>장르</span><input type="text" value="${adminMovieList.type}"></div>
+              <div><span>배우</span><input type="text" value="${adminMovieList.cast}"></div>
+              <div><span>감독</span><input type="text" value="${adminMovieList.director}"></div>
+              <div><span>상영시간</span><input type="text" value="${adminMovieList.runningTime}"></div>
+              <div><span>개봉일</span><input type="text" value="${adminMovieList.releaseDate}"></div>
               <input type="submit" value="수정하기">
             </form>
           </div>
