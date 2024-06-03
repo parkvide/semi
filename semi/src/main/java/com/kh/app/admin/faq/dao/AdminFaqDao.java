@@ -24,4 +24,8 @@ public class AdminFaqDao {
 		return ss.update("AdminMapper.faqEdit" , vo);
 	}
 
+	public AdminFaqVo selectOne(SqlSession ss, String no) {
+		return ss.selectOne("AdminMapper.faqSelectOne");
+	}
+
 }

@@ -20,6 +20,20 @@ public class CinemaEditController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		try {
+			
+			String no = req.getParameter("no");
+			
+			AdminCinemaService acs = new AdminCinemaService();
+			AdminCinemaVo adminCinemaVo = (AdminCinemaVo)acs.selectOne(no);
+			req.setAttribute("adminCinemaVo", adminCinemaVo);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-cinemaEdit.jsp").forward(req, resp);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override
@@ -61,7 +75,7 @@ try {
 			vo.setCinemaImg(img2);
 			
 			AdminCinemaService acs = new AdminCinemaService();
-			int result = acs.deit(vo);
+			int result = acs.edit(vo);
 			
 			if(result == 1) {
 				System.out.println("등록성공");

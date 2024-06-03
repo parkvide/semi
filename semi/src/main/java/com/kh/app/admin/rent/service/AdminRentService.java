@@ -29,29 +29,29 @@ public class AdminRentService {
 		return voList;
 		
 	}
-	//답변달기
-	public int answerUpdate(AdminRentVo adminRentVo) throws Exception {
-		
+	//이게 답변달기임
+	public int writer(AdminRentVo adminRentVo) throws Exception {
 		SqlSession ss = getSqlSession();
-		int result = dao.answerUpdate(ss, adminRentVo);
+		int result = dao.writer(ss,adminRentVo);
 		
 		if(result == 1) {
 			ss.commit();
 		}else {
 			ss.rollback();
 		}
-		ss.close();
-		
-		return result;
-	}
+	
+			ss.close();
+			return result;
+}
 
-	//화면에 특정값 가져가기
-	public List<AdminRentVo> select(String no) throws Exception {
+
+
+	public AdminRentVo selectOne(String no) throws Exception {
 		SqlSession ss = getSqlSession();
-		List<AdminRentVo> adminVoList = dao.select(ss, no);
+		AdminRentVo voList = (AdminRentVo)dao.selectOne(ss,no);
 		
 		ss.close();
-		return adminVoList;
+		return voList;
 	}
 
 

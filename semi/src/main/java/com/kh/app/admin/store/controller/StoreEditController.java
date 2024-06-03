@@ -26,6 +26,21 @@ public class StoreEditController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		try {
+				
+				String no = req.getParameter("no");
+				
+				AdminStoreService ass = new AdminStoreService();
+				AdminStoreVo adminStoreList = (AdminStoreVo)ass.selectOne(no);
+				req.setAttribute("adminStoreList", adminStoreList);
+				req.getRequestDispatcher("/WEB-INF/views/admin/admin-storeEdit.jsp").forward(req, resp);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			
+			}
+	
 	}
 	
 	@Override

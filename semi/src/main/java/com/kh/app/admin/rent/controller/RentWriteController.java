@@ -22,7 +22,7 @@ public class RentWriteController  extends HttpServlet{
 			String no = req.getParameter("no");
 			
 			AdminRentService ars = new AdminRentService();
-			List<AdminRentVo> adminVoList = ars.select(no);
+			AdminRentVo adminVoList = (AdminRentVo)ars.selectOne(no);
 			req.setAttribute("adminVoList", adminVoList);
 			req.getRequestDispatcher("/WEB-INF/views/admin/admin-rentWriter.jsp").forward(req, resp); // 주소 넣기
 		}catch(Exception e) {
@@ -46,7 +46,10 @@ public class RentWriteController  extends HttpServlet{
 			adminRentVo.setAnswerContent(answerContent);
 			
 			AdminRentService ars = new AdminRentService();
-			int result = ars.answerUpdate(adminRentVo);
+			int result = ars.writer(adminRentVo);
+			if(result==1) {
+				resp.sendRedirect("/app/admin/rent/list");
+			}
 			
 		}catch(Exception e) {
 			e.printStackTrace();

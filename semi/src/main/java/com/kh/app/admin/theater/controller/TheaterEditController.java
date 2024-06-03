@@ -20,8 +20,17 @@ public class TheaterEditController extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		try {
+			String no = req.getParameter("no");
+				
+			AdminTheaterService ats = new AdminTheaterService();
+			AdminTheaterVo adminTheaterList =(AdminTheaterVo)ats.selectOne(no);
+			req.setAttribute("adminTheaterList", adminTheaterList);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-theaterList.jsp").forward(req, resp);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}	
+		
 	}
 	
 	@Override

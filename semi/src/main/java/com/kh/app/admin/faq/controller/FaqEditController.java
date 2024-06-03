@@ -16,8 +16,18 @@ public class FaqEditController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		try {
+			
+			String no = req.getParameter("no");
+			AdminFaqService afs = new AdminFaqService();
+			AdminFaqVo adminFaqList = (AdminFaqVo)afs.selectOne(no);
+			req.setAttribute("adminFaqList", adminFaqList);
+			req.getRequestDispatcher("/WEB-INF/views/admin/admin-faqEdit.jsp").forward(req, resp);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		
+		}
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

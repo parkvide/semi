@@ -75,4 +75,13 @@ public class AdminNoticeService {
 		
 	}
 
+
+	public AdminNoticeVo selectOne(String no) throws Exception {
+		SqlSession ss = getSqlSession();
+		AdminNoticeVo voList = (AdminNoticeVo) dao.selectOne(ss,no);
+		
+		ss.close();
+		return voList;
+	}
+
 }

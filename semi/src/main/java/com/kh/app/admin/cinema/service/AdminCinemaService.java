@@ -55,19 +55,25 @@ public class AdminCinemaService {
 		return result;
 	}
 
-	public int deit(AdminCinemaVo vo) throws Exception {
-		
+
+	public AdminCinemaVo selectOne(String no) throws Exception{
 		SqlSession ss = getSqlSession();
+		AdminCinemaVo voList = (AdminCinemaVo)dao.selectOne(ss,no);
+		
+		ss.close();
+		return voList;
+	}
 
+	public int edit(AdminCinemaVo vo) throws Exception {
+		SqlSession ss = getSqlSession();
 		int result = dao.edit(ss, vo);
-
-		if (result == 1) {
+		
+		if(result == 1) {
 			ss.commit();
-		} else {
+		}else {
 			ss.rollback();
 		}
 		ss.close();
-
 		return result;
 		
 	}
