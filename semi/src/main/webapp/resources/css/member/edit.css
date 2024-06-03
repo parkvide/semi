@@ -2,24 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color: #fff; */
   user-select: none;
 }
 
 body {
   background-color: #ffffff;
- 
+}
 
 a {
   text-decoration: none;
 }
-.menu-list li a{
-  color: white;
-}
-.icon a {
+
+.menu-list li a {
   color: white;
 }
 
+.icon a {
+  color: white;
+}
 
 button {
   border: none;
@@ -37,10 +37,12 @@ nav {
   padding-top: 0.3em;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
 }
+
 nav .left {
   display: flex;
   margin-left: 2em;
 }
+
 nav .left .logo {
   display: flex;
   justify-content: center;
@@ -49,18 +51,23 @@ nav .left .logo {
   padding: 0.5em;
   width: 8rem;
 }
+
 nav .left .logo a {
   width: 100%;
 }
+
 nav .left .logo a img {
   max-width: 100%;
 }
+
 nav .left .mobile-menu {
   display: none;
 }
+
 nav .left .menu-list {
   display: flex;
 }
+
 nav .left .menu-list li {
   display: flex;
   align-items: center;
@@ -68,23 +75,29 @@ nav .left .menu-list li {
   list-style: none;
   padding: 0.2em 1em 0.5em 1em;
 }
+
 nav .left .menu-list li a {
   font-size: 0.8rem;
 }
+
 nav .right {
   display: flex;
   margin-right: 2em;
 }
+
 nav .right .icon {
   padding: 0.5em 1em 0.5em 1em;
 }
+
 nav .right .profile {
   padding: 0;
 }
+
 nav .right .profile a {
   display: flex;
   align-items: center;
 }
+
 nav .right .profile a .avatar-box {
   width: 30px;
   height: 30px;
@@ -92,22 +105,28 @@ nav .right .profile a .avatar-box {
   border-radius: 3px;
   margin-right: 10px;
 }
+
 nav .right .profile i {
   transition: all 300ms;
 }
+
 nav .right .profile:hover i {
   transform: rotate(180deg);
 }
+
 nav .right .search {
   border: 1px solid white;
   background-color: black;
 }
+
 nav .right .search .search-bar {
   display: flex;
 }
+
 nav .right .search .search-bar i {
   margin-right: 0.5em;
 }
+
 nav .right .search .search-bar input {
   background-color: transparent;
   border: none;
@@ -118,57 +137,53 @@ nav .right .search .search-bar input {
 
 .thick-line {
   width: 100%;
-  height: 10px; 
-  background-color: black; 
+  height: 10px;
+  background-color: black;
   margin-top: 5px;
 }
 
 .thin-line {
   width: 100%;
-  height: 2px; 
-  background-color: gray; 
-  margin-top: 7px; 
+  height: 2px;
+  background-color: gray;
+  margin-top: 7px;
 }
+
 /* ------------------------------------------------------- */
-body > .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-}
-.edit> img{
-  width: 100px;
-  height: 100px;
-}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff; 
+  background-color: #f0f0f0; /* 옅은 회색 배경색 */
+  width: 33.33%; /* 화면 너비의 1/3 */
+  height: 60%; /* 화면 높이의 3/5 */
+  margin: 120px auto; /* 위아래 50px 마진, 좌우 자동 */
 }
-
-
 .edit {
-  text-align: center;
+  text-align: left; /* 왼쪽 정렬 */
   background-color: gainsboro;
-  height: 45%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
+  padding: 1cm; /* 패딩을 사용해 양옆 1cm */
 }
 
-input[type="text"] {
+.edit > img {
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin: 0 auto 10px auto; /* 수직 중앙 정렬 및 아래 마진 */
   padding: 10px;
-  width: calc(100% - 100px); /* 입력 필드 너비 조정 */
+  width: calc(100% - 2cm); /* 입력 필드 너비 조정 */
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  margin-top: 10px;
 }
 
 .search-logo {
@@ -183,6 +198,7 @@ footer {
   width: 100%;
   background-color: rgb(198, 196, 196);
 }
+
 footer .wrap {
   width: 80%;
   margin: 0 auto;
@@ -190,15 +206,18 @@ footer .wrap {
   flex-direction: column;
   row-gap: 2em;
 }
+
 footer .wrap .social-icons i {
   font-size: 1.5rem;
   margin: 0 0.3em;
 }
+
 footer .wrap .options {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
 }
+
 footer .wrap .options .option {
   color: #676666;
 }
@@ -208,6 +227,7 @@ footer .wrap .options .option {
     bottom: 10%;
   }
 }
+
 @media screen and (max-width: 982px) {
   nav {
     position: relative;
@@ -217,10 +237,12 @@ footer .wrap .options .option {
     padding-top: 0.3em;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
   }
+
   nav .left {
     display: flex;
     margin-left: 2em;
   }
+
   nav .left .logo {
     display: flex;
     justify-content: center;
@@ -229,21 +251,26 @@ footer .wrap .options .option {
     padding: 0em;
     width: 5rem;
   }
+
   nav .left .logo a {
     width: 100%;
   }
+
   nav .left .logo a img {
     max-width: 100%;
   }
+
   nav .left .mobile-menu {
     z-index: 999;
     display: block;
     align-self: center;
     margin-left: 10px;
   }
+
   nav .left .mobile-menu:hover + .menu-list {
     display: flex;
   }
+
   nav .left .menu-list {
     display: none;
     top: 50px;
@@ -253,6 +280,7 @@ footer .wrap .options .option {
     background-color: rgba(0, 0, 0, 0.67);
     padding: 1em 4em;
   }
+
   nav .left .menu-list li {
     display: flex;
     align-items: center;
@@ -261,9 +289,11 @@ footer .wrap .options .option {
     padding: 0.2em 1em 0.5em 1em;
     margin: 0.3em 0;
   }
+
   nav .left .menu-list li a {
     font-size: 0.8rem;
   }
+
   nav .left .menu-list:before {
     position: absolute;
     content: "";
@@ -273,16 +303,20 @@ footer .wrap .options .option {
     top: 0;
     left: 0;
   }
+
   nav .right .search {
     border: none;
     background-color: transparent;
   }
+
   nav .right .search .search-bar {
     display: flex;
   }
+
   nav .right .search .search-bar i {
     margin-right: 0.5em;
   }
+
   nav .right .search .search-bar input {
     display: none;
     background-color: transparent;
@@ -291,6 +325,3 @@ footer .wrap .options .option {
     outline: none;
   }
 }
-
-
-/*# sourceMappingURL=index.css.map */

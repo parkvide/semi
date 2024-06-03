@@ -56,7 +56,7 @@
 			<div class="slider">
 				<c:forEach items="${eventImgList}" var="vo">
 					<a href="/app/board/eventlist"><img width="300" height="400"
-						src="${vo.contentImg}"> </a>
+						src="${vo.contentImg}"></a>
 				</c:forEach>
 			</div>
 			<div class="prev">
@@ -75,9 +75,11 @@
 					<div class="package">
 						<h2>패키지</h2>
 						<c:forEach items="${packList}" var="vo">
-							<div>
+							<div class="item">
 								<a href="/app/store/package"><img width="150" height="150"
-									src="${vo.productImg}" alt=""></a>
+									src="${vo.productImg}" alt="">
+									<span>${vo.price} 원</span>	
+								</a>
 							</div>
 						</c:forEach>
 					</div>
@@ -86,9 +88,11 @@
 					<div class="package">
 						<h2>콤보</h2>
 						<c:forEach items="${comboList}" var="vo">
-							<div>
-								<a href="/app/store/package"><img width="150" height="150"
-									src="${vo.productImg}" alt=""></a>
+							<div class="item">
+								<a href="/app/store/combo"><img width="150" height="150"
+									src="${vo.productImg}" alt="">
+									<span>${vo.price} 원</span>	
+								</a>
 							</div>
 						</c:forEach>
 					</div>
@@ -97,9 +101,11 @@
 					<div class="package">
 						<h2>영화관람권</h2>
 						<c:forEach items="${gtList}" var="vo">
-							<div>
-								<a href="/app/store/package"><img width="150" height="150"
-									src="${vo.productImg}" alt=""></a>
+							<div class="item">
+								<a href="/app/store/giftticket"><img width="150" height="150"
+									src="${vo.productImg}" alt="">
+									<span>${vo.price} 원</span>		
+								</a>
 							</div>
 						</c:forEach>
 					</div>
