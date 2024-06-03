@@ -54,15 +54,25 @@
 				<div id="main-list">
 					<div id="search">
 						<span id="title">공지사항</span>
-
 					</div>
+
+
 					<div id="list">
-						<span>${noticeVo.title}</span><span>${noticeVo.uploadDate}</span><span>${noticeVo.views}</span>
-						<div class="sep"></div>
-						<div class="title">
-							<span>${noticeVo.content}</span>
+						<div style="font-weight: bolder;">${noticeVo.title}</div>
+						<div style="display: flex; justify-content: end;">${noticeVo.uploadDate}</div>
+						<div>${noticeVo.views}</div>
+						<div>
+							<table>
+								<tr>
+									<th>내용</th>
+									<td>${noticeVo.content}</td>
+								</tr>
+							</table>
 						</div>
 					</div>
+
+
+
 				</div>
 				<div class="side"></div>
 			</div>

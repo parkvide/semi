@@ -91,7 +91,7 @@
 
 			</div>
 			<div class="buy-btn">
-				<button>장바구니</button>
+				<button onclick="addToCart(${vo.no})">장바구니</button>
 
 				<button>구매하기</button>
 			</div>

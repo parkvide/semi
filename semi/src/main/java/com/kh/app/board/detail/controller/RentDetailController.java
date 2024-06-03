@@ -19,6 +19,7 @@ public class RentDetailController extends HttpServlet{
 		
 		try {
 			String no = req.getParameter("no");
+			System.out.println("가져가는 넘버" +no);
 			BoardService bs = new BoardService();
 			RentVo rentVo = bs.selectRentListByNo(no);
 			System.out.println(rentVo);

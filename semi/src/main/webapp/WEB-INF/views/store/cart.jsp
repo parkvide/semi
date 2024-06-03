@@ -109,34 +109,34 @@
       
       <section id="image-carousel" class="splide" aria-label="Beautiful Images">
         <div class="with">
-          <span>이 상품과 함께 본 상품</span>
+          <span>다른건 어때요?</span>
           <div class="sep4"></div>
         </div>
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지1.jpg">
+              <img src="/app/resources/img/pop/팝콘사진.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지2.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지2.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지3.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지3.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지4.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지4.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지5.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지5.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지6.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지6.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지7.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지7.jpg">
             </li>
             <li class="splide__slide">
-              <img src="/app/resources/img/팝콘/팝콘이미지8.jpg">
+              <img src="/app/resources/img/pop/팝콘이미지8.jpg">
             </li>
           </ul>
         </div>

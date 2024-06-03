@@ -44,13 +44,25 @@
                 <span id="title">자주찾는질문</span>
                 
               </div>
-              <div id="list">
-              <span>${faqVo.title}</span><span>${faqVo.uploadDate}</span><span>${faqVo.views}</span>
-              <div class="sep"></div>
-			  <div class="title">
-			  	<span>${faqVo.content}</span>
-			  </div>			
-              </div>
+              
+              
+             <div id="list">
+						<div style="font-weight: bolder;">${noticeVo.title}</div>
+						<div style="display: flex; justify-content: end;">${noticeVo.uploadDate}</div>
+						<div>${noticeVo.views}</div>
+						<div>
+							<table>
+								<tr>
+									<th>내용</th>
+									<td>${noticeVo.content}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+              
+              
+              
             </div>
             <div class="side"></div>
             </div>

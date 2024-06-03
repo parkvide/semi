@@ -31,10 +31,10 @@
               <div id="line"></div>
             </div>
             <div id="side-category">
-              <div><a href="" class="ca">자주찾는질문</a></div>
-              <div><a href="" class="ca">공지사항</a></div>
-              <div><a href="" class="ca">대관문의</a></div>
-              <div><a href="" class="ca">이벤트</a></div>
+              <div><a href="/app/board/faqlist" class="ca">자주찾는질문</a></div>
+              <div><a href="/app/board/noticelist" class="ca">공지사항</a></div>
+              <div><a href="/app/board/rentlist" class="ca">대관문의</a></div>
+              <div><a href="/app/board/eventlist" class="ca">이벤트</a></div>
               <a id="ca" href="">
                 <img src="/app/resources/img/광고1.png" alt="">
               </a>
@@ -44,16 +44,32 @@
                 <span id="title">대관문의</span>
                 
               </div>
+              
               <div id="list">
-              <span>${rentVo.title}</span><span>${rentVo.uploadDate}</span>
-              <div class="sep"></div>
-			  <div class="title">
-			  	<span>${rentVo.rentalDate}</span>
-			  	<span>${rentVo.cinemaName}</span>
-			  	<span>${rentVo.theaterName}</span>
-			  	<span>${rentVo.content}</span>
-			  </div>			
-              </div>
+						<div style="font-weight: bolder;">${rentVo.title}</div>
+						<div style="display: flex; justify-content: end;">${rentVo.uploadDate}</div>
+						<div><strong>희망하는 대관 날짜 : </strong>${rentVo.rentalDate}</div>
+						<div><strong>희망하는 지점 : </strong>${rentVo.cinemaName}</div>
+						
+						<div>
+							<table>
+								<tr>
+									<th>내용</th>
+									<td>${rentVo.content}</td>
+								</tr>
+								<tr>
+									<th>관리자 제목</th>
+									<td>${rentVo.answerTitle}</td>
+								</tr>
+								<tr>
+									<th>관리자 내용</th>
+									<td>${rentVo.answerContent}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+                                                     
+              
             </div>
             <div class="side"></div>
             </div>
