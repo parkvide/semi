@@ -44,26 +44,27 @@
 			</div>
 			<div class="cinema_name">
 				<ul>
-					<li><a href="">강남</a></li>
-					<li><a href="">강변</a></li>
-					<li><a href="">건대입구</a></li>
-					<li><a href="">구로</a></li>
-					<li><a href="">대학로</a></li>
-					<li><a href="">동대문</a></li>
-					<li><a href="">등촌</a></li>
-					<li><a href="">명동</a></li>
-					<li><a href="">명동역 씨네라이브러리</a></li>
-					<li><a href="">미아</a></li>
-					<li><a href="">방학</a></li>
-					<li><a href="">블광</a></li>
-					<li><a href="">상봉</a></li>
-					<li><a href="">성신여대입구</a></li>
-					<li><a href="">송파</a></li>
-					<li><a href="">수유</a></li>
-					<li><a href="">신촌아트레온</a></li>
-					<li><a href="">압구정</a></li>
-					<li><a href="">여의도</a></li>
-					<li><a href="">연남</a></li>
+					<li><button type="button">강남</button></li>
+					<li><button type="button">강변</button></li>
+					<li><button type="button">건대입구</button></li>
+					<li><button type="button">구로</button></li>
+					<li><button type="button">대학로</button></li>
+					<li><button type="button">동대문</button></li>
+					<li><button type="button">등촌</button></li>
+					<li><button type="button">명동</button></li>
+					<li><button type="button">명동역</button></li>
+					<li><button type="button">미아</button></li>
+					<li><button type="button">방학</button></li>
+					<li><button type="button">블광</button></li>
+					<li><button type="button">상봉</button></li>
+					<li><button type="button">성신</button></li>
+					<li><button type="button">송파</button></li>
+					<li><button type="button">수유</button></li>
+					<li><button type="button">신촌</button></li>
+					<li><button type="button">압구정</button></li>
+					<li><button type="button">여의도</button></li>
+					<li><button type="button">연남</button></li>
+
 					
 				</ul>
 			</div>

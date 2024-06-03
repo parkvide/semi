@@ -109,8 +109,12 @@ main {
 
 .cinema_loc {
   border-bottom: 2px solid black;
-  background-color: #0000005d;
+  background-color:#f0f0f0;
   color: white;
+}
+
+.cinema_loc button:hover {
+	background-color:  rgb(176, 176, 176);
 }
 
 .cinema_loc ul {
@@ -118,6 +122,7 @@ main {
   justify-content: space-around;
   list-style: none;
   margin-top: 100px;
+
 }
 
 .cinema_loc ul li {
@@ -148,6 +153,7 @@ main {
   padding: 0;
   margin: 0;
   border-left: 1px solid black;
+  background-color:#f0f0f0;
 }
 
 .cinema_name ul li {
@@ -174,6 +180,13 @@ main {
 
 .cinema_name ul li a:hover {
   color: rgb(176, 176, 176);
+}
+
+
+.cinema_name ul button:hover{
+
+ background-color:  rgb(176, 176, 176);
+ 
 }
 
 .cinema_img {
@@ -204,6 +217,9 @@ main {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+
+
 .cinema_detail {
   width: 100%;
   height: 400px; 
@@ -213,12 +229,13 @@ main {
   border-radius: 15px;
 }
 
+
 .parking_detail {
   margin:10px;
 }
 .address pre{
   margin-top: 10px;
-  margin-left: -80px;
+  margin-left: 50px
 }
 
 /* ------------------------------------------------------------ */
