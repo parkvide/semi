@@ -24,24 +24,19 @@ public class SeatSelectController extends HttpServlet{
         
         // 서비스를 통해 티켓을 예약하고 결과를 받습니다.
         try {
-        	String buyerNo = req.getParameter("buyerNo");
-            String theaterNo = req.getParameter("theaterNo");
-            String screenInfo = req.getParameter("screenInfo");
-            String seat = req.getParameter("seat");
-            String headcount = req.getParameter("headcount");
-            String reservationDate = req.getParameter("reservationDate");
-            String price = req.getParameter("price");
-            TicketingVo vo = new TicketingVo();
-            vo.setBuyerNo(buyerNo);
-            vo.setHeadcount(headcount);
-            vo.setNo(theaterNo);
-            vo.setPrice(price);
-            vo.setReservationDate(reservationDate);
-            vo.setScreenInfo(screenInfo);
-            vo.setSeat(seat);
-            vo.setTheaterNo(theaterNo);
-            MovieTicketingService mts = new MovieTicketingService();
-			int result = mts.insertTicket(vo);
+			/*
+			 * String buyerNo = req.getParameter("buyerNo"); String theaterNo =
+			 * req.getParameter("theaterNo"); String screenInfo =
+			 * req.getParameter("screenInfo"); String seat = req.getParameter("seat");
+			 * String headcount = req.getParameter("headcount"); String reservationDate =
+			 * req.getParameter("reservationDate"); String price =
+			 * req.getParameter("price"); TicketingVo vo = new TicketingVo();
+			 * vo.setBuyerNo(buyerNo); vo.setHeadcount(headcount); vo.setNo(theaterNo);
+			 * vo.setPrice(price); vo.setReservationDate(reservationDate);
+			 * vo.setScreenInfo(screenInfo); vo.setSeat(seat); vo.setTheaterNo(theaterNo);
+			 * MovieTicketingService mts = new MovieTicketingService(); int result =
+			 * mts.insertTicket(vo);
+			 */
 			
 				
 		} catch (Exception e) {

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>대관문의</title>
 <link rel="stylesheet"
 	href="/app/resources/css/service/service-rentInsert.css">
 <%@ include file="/WEB-INF/views/layout/util.jsp"%>
@@ -50,11 +50,12 @@
 			<br>
 			<br>
 			<br>
-				<form action="/app/board/insert" method="post">
+				<form action="/app/board/rent/insert" method="post">
 					<input style="width: 730px;" type="text" name="title"
-						placeholder="제목"> <br> <select name="category">
-						<c:forEach var="cvo" items="${categoryVoList}">
-							<option value="${cvo.no}">${cvo.name}</option>
+						placeholder="제목"> <br> 
+					<select name="cinemaNo">
+						<c:forEach var="vo" items="${voList}">
+							<option value="${vo.no}">${vo.cinemaName}</option>
 						</c:forEach>
 					</select> <br> <input type="date" name="rentalDate"
 						placeholder="대관 날짜를 입력하세요"> <br> <br>

@@ -11,7 +11,7 @@ function loadCinemaList(cinemaLocation){
 			let str = "";
 				str += "<ul>";
 			for(let i = 0; i < cinemaNameList.length; i++){
-				str += `<li><button onclick="loadCinemaDetail(`+ cinemaNameList[i]+");>"+cinemaNameList[i]+"</button></li>";
+				str += `<li><button onclick="loadCinemaDetail(`+ cinemaNameList[i].cinemaName+`);">`+cinemaNameList[i].cinemaName+"</button></li>";
 			}
 				str += "</ul>";
 				

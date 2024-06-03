@@ -21,8 +21,8 @@ public class EventListController extends HttpServlet{
 			
 			BoardService bs = new BoardService();
 			List<EventVo> voList = bs.selectEventList();
-			
-			req.setAttribute("volist", voList);
+			System.out.println(voList);
+			req.setAttribute("voList", voList);
 			req.getRequestDispatcher("/WEB-INF/views/board/event.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -64,16 +64,7 @@
 					<li><a href="">압구정</a></li>
 					<li><a href="">여의도</a></li>
 					<li><a href="">연남</a></li>
-					<li><a href="">영등포</a></li>
-					<li><a href="">왕십리</a></li>
-					<li><a href="">용산아이파크몰</a></li>
-					<li><a href="">중계</a></li>
-					<li><a href="">천호</a></li>
-					<li><a href="">청담씨네시티</a></li>
-					<li><a href="">피카디리1958</a></li>
-					<li><a href="">하계</a></li>
-					<li><a href="">홍대</a></li>
-					<li><a href="">용사아안</a></li>
+					
 				</ul>
 			</div>
 			<div class="cinema_img">
@@ -83,7 +74,7 @@
 				<span class="name">FOURS 강남</span>
 				<button class="rent-btn">대관문의</button>
 				<div class="cinema_img">
-					<img src="/app/resources/img/지점사진/강남.jpg" alt="강남 Cinema Image">
+					<img src="/app/resources/img/cinemaImg/강남.jpg" alt="강남 Cinema Image">
 				</div>
 				<div class="cinema_detail">
 					<div class="address">

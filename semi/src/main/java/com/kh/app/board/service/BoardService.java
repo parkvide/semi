@@ -67,7 +67,7 @@ public class BoardService {
 		SqlSession ss = getSqlSession();
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("no", no);
-		map.put("type", "event");
+		map.put("type", "EVENT");
 		int result = dao.increaseHit(ss,map);
 		EventVo eventVo = dao.selectEventListByNo(ss , no);
 		
@@ -91,7 +91,7 @@ public class BoardService {
 		SqlSession ss = getSqlSession();
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("no", no);
-		map.put("type", "faq");
+		map.put("type", "FAQ");
 		int result = dao.increaseHit(ss,map);
 		FaqVo faqVo = dao.selectFaqListByNo(ss ,no);
 		if (result == 1 ) {
@@ -113,7 +113,7 @@ public class BoardService {
 		SqlSession ss = getSqlSession();
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("no", no);
-		map.put("type", "notice");
+		map.put("type", "NOTICE");
 		int result = dao.increaseHit(ss,map);
 		NoticeVo noticeVo = dao.selectNoticeListByNo(ss,no);
 		if (result == 1 ) {
@@ -134,21 +134,8 @@ public class BoardService {
 	public RentVo selectRentListByNo(String no) throws Exception {
 		
 		SqlSession ss = getSqlSession();
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("no", no);
-		map.put("type", "rent");
-		int result = dao.increaseHit(ss,map);
 		RentVo rentVo = dao.selectRentListByNo(ss, no);
-		if (result == 1 ) {
-			ss.commit();
-		} else {
-			ss.rollback();
-			if(result != 1) {
-				throw new Exception("[ERROR-B001]게시글 조회수 증가 실패 ...");
-			}else {
-				throw new Exception("[ERROR-B002]게시글 상세조회 실패 ...");
-			}
-		}
+		
 		ss.close();
 		
 		return rentVo;

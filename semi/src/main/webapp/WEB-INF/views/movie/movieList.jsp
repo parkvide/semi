@@ -44,7 +44,7 @@
       <ul class="list-style">
 	      <c:forEach items="${movieListVo}" var="vo">
 	        <li>
-	          <a href="">
+	          <a href="/app/movie/detail?no=${vo.no}">
 	            <span><img height="220" width="220" src="${vo.poster}" alt=""></span>
 	            <span class="list-title">${vo.title}</span>
 	            <span class="list-name">${vo.director} 감독</span>

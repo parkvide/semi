@@ -24,7 +24,7 @@ public class MovieDao {
 		return ss.selectList("MovieMapper.selectMovieHome");
 	}
 
-	public List<MovieVo> selectMovieDetail(SqlSession ss, String no) {
+	public MovieVo selectMovieDetail(SqlSession ss, String no) {
 		return ss.selectOne("MovieMapper.selectMovieDetail" ,no);
 		
 	}

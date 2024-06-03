@@ -31,10 +31,10 @@
               <div id="line"></div>
             </div>
             <div id="side-category">
-              <div><a href="" class="ca">자주찾는질문</a></div>
-              <div><a href="" class="ca">공지사항</a></div>
-              <div><a href="" class="ca">대관문의</a></div>
-              <div><a href="" class="ca">이벤트</a></div>
+              <div><a href="/app/board/faqlist" class="ca">자주찾는질문</a></div>
+              <div><a href="/app/board/noticelist" class="ca">공지사항</a></div>
+              <div><a href="/app/board/rentlist" class="ca">대관문의</a></div>
+              <div><a href="/app/board/eventlist" class="ca">이벤트</a></div>
               <a id="ca" href="">
                 <img src="/app/resources/img/광고1.png" alt="">
               </a>
@@ -45,10 +45,10 @@
                 
               </div>
               <div id="list">
-              <span>${vo.title}</span><span>${vo.uploadDate}</span><span>${vo.views}</span>
+              <span>${faqVo.title}</span><span>${faqVo.uploadDate}</span><span>${faqVo.views}</span>
               <div class="sep"></div>
 			  <div class="title">
-			  	<span>${vo.content}</span>
+			  	<span>${faqVo.content}</span>
 			  </div>			
               </div>
             </div>
