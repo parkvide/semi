@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #141414;
+  background-color: white;
 }
 
 a {
@@ -115,6 +115,7 @@ footer .wrap .options .option {
 }
 
 main {
+	background-color : white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +124,7 @@ main {
 }
 
 .container {
-    background-color: white;
+    background-color: gray;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -156,7 +157,7 @@ th, td {
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: gray;
     font-weight: bold;
 }
 
