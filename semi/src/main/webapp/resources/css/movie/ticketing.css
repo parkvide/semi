@@ -213,6 +213,7 @@ border: 6px double #5c5c5c;
 	float: left;
 	border-radius: 3px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	overflow-y: scroll;
 }
 
 .s1{
